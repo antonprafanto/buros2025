@@ -1,0 +1,18 @@
+# File instruksi internal (tidak untuk tim)
+CLAUDE.md
+instruksi.md
+
+# Folder tasks (tidak untuk tim)
+tasks/
+
+# Screenshot files (tidak diperlukan di repository)
+*.png
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
