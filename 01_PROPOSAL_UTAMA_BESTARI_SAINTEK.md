@@ -712,162 +712,64 @@ FASE:   │ Persiapan  │  Development │ Test │ Field Trial│ Eval │Fin
 ```
 
 **Iterasi 1 (Bulan 1-2): Desain dan Inisiasi**
-- Sprint Goal: Membangun fondasi proyek melalui user research, system design, dan procurement
-- Aktivitas Utama:
-  - Kick-off meeting dan MoU signing dengan KSOP Samarinda
-  - User research: interview 10 nahkoda, survey 20 operator, FGD dengan KSOP
-  - System design (hardware architecture, software flowchart, UI/UX mockup, mounting system)
-  - Procurement semua material dan sensor
-- Deliverables:
-  - MoU signed dengan KSOP Samarinda
-  - User Requirement Document (15-20 hal)
-  - System Design Document (25-30 hal)
-  - Bill of Materials (BoM) Complete
-  - All materials arrived & verified
-- Success Criteria:
-  - 100% material arrived on-time dan verified kualitas
-  - System design approved by expert reviewer external
-  - User requirement document approved oleh minimal 3 operator senior
 
-**Iterasi 2 (Bulan 3-4): Pengembangan Prototype Awal**
-- Sprint Goal: Membangun prototype v1.0 (MVP) yang fungsional untuk indoor testing
-- Aktivitas Utama:
-  - Hardware assembly (sensor integration, microcontroller setup, peripheral integration, power system)
-  - Software development (~980 lines of code: data acquisition, signal processing, decision logic, display driver, alarm controller, data logger, main program)
-  - Indoor testing (10 test cases: basic detection, blind zone, zone classification, response time, display functionality, audio alert, data logging, power consumption, continuous operation 8 jam, multi-reflectivity)
-  - Integration & optimization (dual sensor fusion, code optimization, casing & packaging)
-- Deliverables:
-  - Prototype Hardware v1.0 (1 unit sistem dengan 10 sensor assembled)
-  - Source Code & Firmware complete dengan dokumentasi
-  - Indoor Test Report (hasil semua test cases)
-  - Bug List & Resolution (critical bugs = 0)
-  - User Manual Draft v0.1
-- Success Criteria:
-  - Sensor dapat detect objek dengan akurasi ±10cm (sesuai spek)
-  - Response time ≤0.1 detik
-  - Display & alarm berfungsi dengan baik
-  - Data logging berfungsi tanpa error
-  - System dapat beroperasi kontinyu minimal 8 jam tanpa crash
-  - Zero critical bugs
+**Tujuan Sprint**: Membangun fondasi proyek melalui riset pengguna, desain sistem, dan pengadaan.
 
-**Iterasi 3 (Bulan 5): Testing dan Kalibrasi**
-- Sprint Goal: Mencapai performa optimal melalui kalibrasi presisi dan stress testing
-- Aktivitas Utama:
-  - Outdoor calibration (distance calibration 1-180m, reflectivity test 90%/50%/10%, angle calibration 0°-45°, ambient light test full sunlight-night)
-  - Stress testing (durability 24 jam, temperature stress 35°C/15°C, vibration test, water spray IP67 test, EMI test, power fluctuation 10V-14V)
-  - Algorithm optimization (moving average filter, Kalman filter, adaptive threshold, sleep mode, sensor fusion weighted average)
-  - A/B testing (before vs after optimization)
-- Deliverables:
-  - Calibration Certificate (calibration data, correction factors, validity period)
-  - Stress Test Report (all test results, failure analysis, corrective actions)
-  - Prototype v1.5 (Optimized) dengan firmware updated
-  - Performance Metrics Dashboard
-- Success Criteria:
-  - Calibration error <5% untuk range 1-100m
-  - All stress tests passed tanpa critical failure
-  - False positive rate <5%
-  - Response time ≤0.1 detik (target: 0.05 detik)
-  - Battery life ≥10 jam operasional
-  - System reliability >95%
+**Aktivitas Utama**: Pertemuan pembukaan dan penandatanganan MoU dengan KSOP Samarinda; Riset pengguna melalui wawancara 10 nahkoda, survei 20 operator, dan diskusi kelompok terpumpun (FGD) dengan KSOP; Desain sistem mencakup arsitektur perangkat keras, diagram alir perangkat lunak, mockup antarmuka pengguna, dan sistem pemasangan; Pengadaan semua material dan sensor.
+
+**Keluaran**: MoU yang ditandatangani dengan KSOP Samarinda; Dokumen Kebutuhan Pengguna (15-20 halaman); Dokumen Desain Sistem (25-30 halaman); Daftar Material lengkap; Semua material tiba dan terverifikasi.
+
+**Kriteria Keberhasilan**: 100% material tiba tepat waktu dan terverifikasi kualitas; Desain sistem disetujui oleh peninjau ahli eksternal; Dokumen kebutuhan pengguna disetujui oleh minimal 3 operator senior.
+
+**Iterasi 2 (Bulan 3-4): Pengembangan Prototipe Awal**
+
+**Tujuan Sprint**: Membangun prototipe v1.0 yang fungsional untuk pengujian dalam ruangan.
+
+**Aktivitas Utama**: Perakitan perangkat keras mencakup integrasi sensor, pengaturan mikrokontroler, integrasi periferal, dan sistem daya; Pengembangan perangkat lunak (~980 baris kode) untuk akuisisi data, pemrosesan sinyal, logika keputusan, pengendali display, pengendali alarm, pencatat data, dan program utama; Pengujian dalam ruangan dengan 10 kasus uji (deteksi dasar, zona buta, klasifikasi zona, waktu respons, fungsi display, peringatan audio, pencatatan data, konsumsi daya, operasi berkelanjutan 8 jam, reflektivitas multi-objek); Integrasi dan optimasi melalui sensor fusion ganda, optimasi kode, serta perancangan casing dan kemasan.
+
+**Keluaran**: Prototipe Perangkat Keras v1.0 (1 unit sistem dengan 10 sensor terakit); Source code dan firmware lengkap dengan dokumentasi; Laporan Uji Dalam Ruangan (hasil semua kasus uji); Daftar Bug dan Penyelesaian (bug kritis = 0); Draf Panduan Pengguna v0.1.
+
+**Kriteria Keberhasilan**: Sensor dapat mendeteksi objek dengan akurasi ±10cm (sesuai spesifikasi); Waktu respons ≤0,1 detik; Display dan alarm berfungsi dengan baik; Pencatatan data berfungsi tanpa kesalahan; Sistem dapat beroperasi berkelanjutan minimal 8 jam tanpa berhenti; Nol bug kritis.
+
+**Iterasi 3 (Bulan 5): Pengujian dan Kalibrasi**
+
+**Tujuan Sprint**: Mencapai kinerja optimal melalui kalibrasi presisi dan pengujian tekanan.
+
+**Aktivitas Utama**: Kalibrasi luar ruangan mencakup kalibrasi jarak 1-180m, uji reflektivitas 90%/50%/10%, kalibrasi sudut 0°-45°, dan uji cahaya ambien dari sinar matahari penuh hingga malam hari; Pengujian tekanan meliputi ketahanan 24 jam, stres suhu 35°C/15°C, uji getaran, uji percikan air IP67, uji interferensi elektromagnetik (EMI), dan fluktuasi daya 10V-14V; Optimasi algoritma dengan filter rata-rata bergerak, filter Kalman, ambang batas adaptif, mode tidur, dan sensor fusion rata-rata tertimbang; Pengujian A/B untuk membandingkan sebelum dan sesudah optimasi.
+
+**Keluaran**: Sertifikat Kalibrasi (data kalibrasi, faktor koreksi, periode validitas); Laporan Uji Tekanan (semua hasil uji, analisis kegagalan, tindakan korektif); Prototipe v1.5 (Teroptimasi) dengan firmware yang diperbarui; Dasbor Metrik Kinerja.
+
+**Kriteria Keberhasilan**: Kesalahan kalibrasi <5% untuk rentang 1-100m; Semua uji tekanan lulus tanpa kegagalan kritis; Tingkat alarm palsu <5%; Waktu respons ≤0,1 detik (target: 0,05 detik); Daya tahan baterai ≥10 jam operasional; Keandalan sistem >95%.
 
 **Iterasi 4 (Bulan 6-7): Uji Coba Lapangan Fase 1**
-- Sprint Goal: Validasi performa dalam kondisi operasional nyata dan mengumpulkan data lapangan
-- Aktivitas Utama:
-  - Instalasi sistem pada 1 tugboat pilot di Sungai Mahakam (2 hari instalasi & commissioning)
-  - Field operation & monitoring:
-    - Week 1: Intensive on-site monitoring (tim naik tugboat setiap hari)
-    - Week 2-3: Semi-intensive monitoring (3x per minggu, remote monitoring via data log)
-    - Week 4-5: Remote monitoring (1x site visit, operator report via WhatsApp)
-  - Data collection:
-    - Automatic log data (timestamp, distance, zone, alarm status) - kontinyu
-    - Operator log manual (incident, false alarm, system issue) - daily
-    - Interview semi-structured - weekly
-    - Video documentation - 2-3 trip per week
-  - Data analysis & documentation (data cleaning, statistical analysis, visualization, qualitative analysis thematic coding)
-- Deliverables:
-  - Field Test Report (40-50 hal)
-  - Data Log Raw Data (CSV files, minimal 100 jam operational data)
-  - Interview Transcripts (15-20 hal)
-  - Video Documentation (2-3 jam total)
-  - Issue Tracker & Resolution Log
-  - Operator Feedback Summary (5-7 hal)
-- Success Criteria:
-  - System uptime >95% selama periode field test
-  - True positive rate >90%
-  - False positive rate <5%
-  - Operator satisfaction score >7/10
-  - Zero critical system failure yang membahayakan keselamatan
-  - Minimal 100 jam operational data terkumpul
-  - Minimal 50 detection events recorded
 
-**Iterasi 5 (Bulan 8): Evaluasi dan Improvement**
-- Sprint Goal: Menganalisis hasil field test dan mengimplementasikan improvement final
-- Aktivitas Utama:
-  - Comprehensive evaluation workshop (2 hari intensive) dengan stakeholders:
-    - Session 1: Quantitative results presentation
-    - Session 2: Operator experience sharing (FGD)
-    - Session 3: Technical issues deep dive (root cause analysis)
-    - Session 4: Brainstorming improvement (design thinking)
-    - Session 5: Prioritization & roadmap (MoSCoW method)
-  - Gap analysis (target vs actual performance)
-  - Implementation of improvements:
-    - MUST: Auto-brightness display (PWM-based, ambient light sensor)
-    - MUST: Power-saving mode (MCU sleep when zona aman)
-    - MUST: Hydrophobic coating pada sensor lens (nano-coating)
-    - SHOULD: Improved alarm logic (graduated warning)
-    - SHOULD: Add mute button untuk false alarm (temporary 5 min mute)
-  - Re-testing & validation (1 minggu mini field test)
-  - Comparative analysis before-after improvement
-- Deliverables:
-  - Evaluation Report (comprehensive analysis, gap analysis, improvement roadmap)
-  - Prototype v2.0 (Final) dengan all improvements implemented
-  - Improvement Validation Report (comparative before-after)
-  - Updated Source Code (firmware final version)
-- Success Criteria:
-  - False positive rate <5%
-  - User satisfaction >8/10
-  - Battery life >10 jam
-  - All "MUST" improvements implemented dan validated
-  - Zero critical bugs remaining
+**Tujuan Sprint**: Validasi kinerja dalam kondisi operasional nyata dan mengumpulkan data lapangan.
 
-**Iterasi 6 (Bulan 9): Finalisasi dan Diseminasi**
-- Sprint Goal: Menyelesaikan dokumentasi, pelatihan massal, publikasi, dan handover
-- Aktivitas Utama:
-  - Documentation finalization:
-    - Installation Manual (15 hal)
-    - User Manual (20 hal)
-    - Maintenance Guide (12 hal)
-    - Technical Specification (10 hal)
-    - Training Module (25 hal)
-    - Research Report Final (60 hal)
-    - Internal review → External review KSOP → Operator review → Revisi → Final approval
-  - Mass training program:
-    - Duration: 2 hari (16 jam total)
-    - Participants: 20 operator tugboat
-    - Format: 40% teori, 60% praktik hands-on
-    - Pre-test, post-test (target score ≥80/100), training satisfaction survey
-    - Certification ceremony
-  - Publication & dissemination:
-    - Journal article submission (target: Sinta 2/3 atau international journal)
-    - Conference paper submission (optional)
-    - Stakeholder seminar (50+ participants: KSOP, operator, industri maritim, media, akademisi)
-    - Handover ceremony: Serah terima prototype ke KSOP dengan BAST (Berita Acara Serah Terima)
-- Deliverables:
-  - Complete Documentation Package (6 documents) - Printed + PDF
-  - 1 unit Prototype Final (v2.0) dengan full accessories
-  - Training Certificate (20 pcs) untuk trained operators
-  - Training Report
-  - Journal/Conference Paper (submitted)
-  - Final Research Report (untuk BESTARI SAINTEK)
-  - KSOP Recommendation Letter
-- Success Criteria:
-  - All documentation completed dan approved
-  - 20 operator trained dengan post-test score >80/100
-  - 1 unit prototype handed over to KSOP dengan BAST
-  - Journal paper submitted (accepted: bonus, tidak mandatory untuk project complete)
-  - Final report submitted to BESTARI SAINTEK
-  - KSOP recommendation letter obtained
-  - Stakeholder seminar executed successfully (≥50 participants)
+**Aktivitas Utama**: Instalasi sistem pada 1 tugboat percontohan di Sungai Mahakam dengan durasi 2 hari instalasi dan komisioning; Operasi lapangan dan pemantauan dilakukan dalam 3 tahap yaitu Minggu 1 dengan pemantauan intensif di lokasi (tim naik tugboat setiap hari), Minggu 2-3 dengan pemantauan semi-intensif (3x per minggu, pemantauan jarak jauh melalui log data), dan Minggu 4-5 dengan pemantauan jarak jauh (1x kunjungan lokasi, laporan operator via WhatsApp); Pengumpulan data mencakup log data otomatis (penanda waktu, jarak, zona, status alarm) secara berkelanjutan, log operator manual (insiden, alarm palsu, masalah sistem) setiap hari, wawancara semi-terstruktur mingguan, dan dokumentasi video 2-3 perjalanan per minggu; Analisis data dan dokumentasi meliputi pembersihan data, analisis statistik, visualisasi, dan analisis kualitatif dengan pengkodean tematik.
+
+**Keluaran**: Laporan Uji Lapangan (40-50 halaman); Data Log Mentah (file CSV, minimal 100 jam data operasional); Transkrip Wawancara (15-20 halaman); Dokumentasi Video (2-3 jam total); Pelacak Masalah dan Log Penyelesaian; Ringkasan Umpan Balik Operator (5-7 halaman).
+
+**Kriteria Keberhasilan**: Waktu aktif sistem >95% selama periode uji lapangan; Tingkat positif benar >90%; Tingkat alarm palsu <5%; Skor kepuasan operator >7/10; Nol kegagalan sistem kritis yang membahayakan keselamatan; Minimal 100 jam data operasional terkumpul; Minimal 50 kejadian deteksi tercatat.
+
+**Iterasi 5 (Bulan 8): Evaluasi dan Perbaikan**
+
+**Tujuan Sprint**: Menganalisis hasil uji lapangan dan mengimplementasikan perbaikan final.
+
+**Aktivitas Utama**: Lokakarya evaluasi komprehensif (2 hari intensif) dengan pemangku kepentingan mencakup 5 sesi yaitu Sesi 1 presentasi hasil kuantitatif, Sesi 2 berbagi pengalaman operator (FGD), Sesi 3 pembahasan mendalam masalah teknis (analisis akar penyebab), Sesi 4 curah gagasan perbaikan (design thinking), dan Sesi 5 prioritisasi dan peta jalan (metode MoSCoW); Analisis kesenjangan antara target dan kinerja aktual; Implementasi perbaikan dengan prioritas HARUS yaitu kecerahan otomatis display (berbasis PWM, sensor cahaya ambien), mode hemat daya (mikrokontroler tidur saat zona aman), dan lapisan hidrofobik pada lensa sensor (nano-coating), serta prioritas SEBAIKNYA yaitu logika alarm yang ditingkatkan (peringatan bertingkat) dan tombol bisu untuk alarm palsu (bisu sementara 5 menit); Pengujian ulang dan validasi melalui uji lapangan mini 1 minggu; Analisis komparatif sebelum-sesudah perbaikan.
+
+**Keluaran**: Laporan Evaluasi (analisis komprehensif, analisis kesenjangan, peta jalan perbaikan); Prototipe v2.0 (Final) dengan semua perbaikan diimplementasikan; Laporan Validasi Perbaikan (komparatif sebelum-sesudah); Source code yang Diperbarui (firmware versi final).
+
+**Kriteria Keberhasilan**: Tingkat alarm palsu <5%; Kepuasan pengguna >8/10; Daya tahan baterai >10 jam; Semua perbaikan prioritas "HARUS" diimplementasikan dan tervalidasi; Nol bug kritis tersisa.
+
+**Iterasi 6 (Bulan 9): Finalisasi dan Penyebarluasan**
+
+**Tujuan Sprint**: Menyelesaikan dokumentasi, pelatihan massal, publikasi, dan serah terima.
+
+**Aktivitas Utama**: Finalisasi dokumentasi mencakup Panduan Instalasi (15 halaman), Panduan Pengguna (20 halaman), Panduan Pemeliharaan (12 halaman), Spesifikasi Teknis (10 halaman), Modul Pelatihan (25 halaman), dan Laporan Penelitian Final (60 halaman) dengan alur tinjauan internal → tinjauan eksternal KSOP → tinjauan operator → revisi → persetujuan final; Program pelatihan massal dengan durasi 2 hari (16 jam total) untuk 20 operator tugboat dengan format 40% teori dan 60% praktik langsung, dilengkapi pra-uji, pasca-uji (target skor ≥80/100), survei kepuasan pelatihan, dan upacara sertifikasi; Publikasi dan penyebarluasan meliputi pengajuan artikel jurnal (target: Sinta 2/3 atau jurnal internasional), pengajuan makalah konferensi (opsional), seminar pemangku kepentingan (50+ peserta: KSOP, operator, industri maritim, media, akademisi), dan upacara serah terima prototipe ke KSOP dengan Berita Acara Serah Terima (BAST).
+
+**Keluaran**: Paket Dokumentasi Lengkap (6 dokumen) dalam bentuk cetak dan PDF; 1 unit Prototipe Final (v2.0) dengan aksesori lengkap; Sertifikat Pelatihan (20 lembar) untuk operator terlatih; Laporan Pelatihan; Makalah Jurnal/Konferensi (diajukan); Laporan Penelitian Final (untuk BESTARI SAINTEK); Surat Rekomendasi KSOP.
+
+**Kriteria Keberhasilan**: Semua dokumentasi selesai dan disetujui; 20 operator terlatih dengan skor pasca-uji >80/100; 1 unit prototipe diserahterimakan ke KSOP dengan BAST; Makalah jurnal diajukan (diterima: bonus, tidak wajib untuk penyelesaian proyek); Laporan final diajukan ke BESTARI SAINTEK; Surat rekomendasi KSOP diperoleh; Seminar pemangku kepentingan terlaksana sukses (≥50 peserta).
 
 ## 5.3 Monitoring & Control Mechanism
 
@@ -902,11 +804,11 @@ FASE:   │ Persiapan  │  Development │ Test │ Field Trial│ Eval │Fin
 
 | Posisi | Peran | Komitmen Waktu | Bidang Keahlian/Jenjang |
 |--------|-------|----------------|------------------------|
-| **Ketua Tim Peneliti** | Koordinator dan penanggung jawab keseluruhan proyek, desain arsitektur sistem hardware dan software, supervisi pengembangan prototype, koordinasi dengan KSOP Samarinda, penyusunan laporan akhir dan publikasi ilmiah | Full-time (9 bulan) | Sistem Embedded & Mikrokontroler, Sensor dan Instrumentasi, Internet of Things (IoT) |
-| **Anggota Peneliti 1** (Software Engineer) | Pengembangan firmware dan software sistem, implementasi algoritma deteksi dan decision logic, optimasi performa sistem (response time, accuracy), testing dan debugging software, dokumentasi teknis (source code documentation) | Full-time (9 bulan) | Software Engineering, Algorithm Development, Data Processing & Analysis |
-| **Anggota Peneliti 2** (Maritime Liaison) | Koordinator uji coba lapangan, liaison dengan operator tugboat dan KSOP, analisis kondisi operasional dan user requirement, pengumpulan dan analisis data lapangan, penyusunan training module untuk operator | Part-time (6 bulan, intensive pada fase field testing) | Teknik Navigasi & Sistem Maritim, Marine Safety Engineering |
-| **Asisten Peneliti / Mahasiswa 1** | Asisten teknis assembly hardware, data collection dan data entry, testing support (lab testing dan field testing), dokumentasi foto/video kegiatan penelitian, administrasi penelitian | Part-time (9 bulan) | S1 / S2 (Teknik Elektro / Teknik Komputer) |
-| **Asisten Peneliti / Mahasiswa 2** | Asisten software development, data analysis dan visualisasi, testing dan quality assurance, penyusunan user manual dan dokumentasi, administrasi penelitian | Part-time (9 bulan) | S1 / S2 (Teknik Informatika / Sistem Informasi) |
+| **Ketua Tim Peneliti** | Koordinator dan penanggung jawab keseluruhan proyek, desain arsitektur sistem perangkat keras dan perangkat lunak, supervisi pengembangan prototipe, koordinasi dengan KSOP Samarinda, penyusunan laporan akhir dan publikasi ilmiah | Penuh waktu (9 bulan) | Sistem Embedded & Mikrokontroler, Sensor dan Instrumentasi, Internet of Things (IoT) |
+| **Anggota Peneliti 1** (Insinyur Perangkat Lunak) | Pengembangan firmware dan perangkat lunak sistem, implementasi algoritma deteksi dan logika keputusan, optimasi kinerja sistem (waktu respons, akurasi), pengujian dan debugging perangkat lunak, dokumentasi teknis (dokumentasi source code) | Penuh waktu (9 bulan) | Rekayasa Perangkat Lunak, Pengembangan Algoritma, Pemrosesan dan Analisis Data |
+| **Anggota Peneliti 2** (Penghubung Maritim) | Koordinator uji coba lapangan, penghubung dengan operator tugboat dan KSOP, analisis kondisi operasional dan kebutuhan pengguna, pengumpulan dan analisis data lapangan, penyusunan modul pelatihan untuk operator | Paruh waktu (6 bulan, intensif pada fase uji lapangan) | Teknik Navigasi & Sistem Maritim, Rekayasa Keselamatan Maritim |
+| **Asisten Peneliti / Mahasiswa 1** | Asisten teknis perakitan perangkat keras, pengumpulan dan entri data, dukungan pengujian (uji laboratorium dan uji lapangan), dokumentasi foto/video kegiatan penelitian, administrasi penelitian | Paruh waktu (9 bulan) | S1 / S2 (Teknik Elektro / Teknik Komputer) |
+| **Asisten Peneliti / Mahasiswa 2** | Asisten pengembangan perangkat lunak, analisis data dan visualisasi, pengujian dan jaminan kualitas, penyusunan panduan pengguna dan dokumentasi, administrasi penelitian | Paruh waktu (9 bulan) | S1 / S2 (Teknik Informatika / Sistem Informasi) |
 
 ## 6.2 Mitra Penelitian
 
@@ -925,30 +827,30 @@ Kota Samarinda, Provinsi Kalimantan Timur
 |---------------------|-------------------|
 | **Akses Lapangan** | Izin operasional uji coba di Sungai Mahakam; Akses ke pelabuhan dan dermaga tugboat; Fasilitas koordinasi dengan operator tugboat di wilayah kerja KSOP |
 | **Data dan Informasi** | Data historis kecelakaan navigasi (collision, near-miss incidents) 3 tahun terakhir (2022-2024); Regulasi dan standar keselamatan maritim sungai; Peta jalur navigasi dan identifikasi area high-risk di Sungai Mahakam |
-| **Validasi dan Verifikasi** | Validasi kelayakan sistem sesuai standar keselamatan maritim; Review dan approval SOP penggunaan sistem; Sertifikasi kelayakan operasional (jika diperlukan) |
-| **Sosialisasi dan Implementasi** | Fasilitasi pelatihan operator tugboat (venue, koordinasi peserta); Dukungan sosialisasi hasil penelitian ke stakeholders (industri maritim, pemerintah daerah); Rekomendasi untuk implementasi lanjutan dan scaling-up |
-| **Dukungan Kelembagaan** | Partisipasi dalam steering committee penelitian (monthly meeting); Dukungan policy advocacy untuk scaling up dan replikasi ke wilayah lain; Network dengan industri maritim regional untuk potential commercialization |
+| **Validasi dan Verifikasi** | Validasi kelayakan sistem sesuai standar keselamatan maritim; Tinjauan dan persetujuan SOP penggunaan sistem; Sertifikasi kelayakan operasional (jika diperlukan) |
+| **Sosialisasi dan Implementasi** | Fasilitasi pelatihan operator tugboat (tempat, koordinasi peserta); Dukungan sosialisasi hasil penelitian ke pemangku kepentingan (industri maritim, pemerintah daerah); Rekomendasi untuk implementasi lanjutan dan peningkatan skala |
+| **Dukungan Kelembagaan** | Partisipasi dalam komite pengarah penelitian (pertemuan bulanan); Dukungan advokasi kebijakan untuk peningkatan skala dan replikasi ke wilayah lain; Jaringan dengan industri maritim regional untuk potensi komersialisasi |
 
 ### C. KOMITMEN JANGKA PANJANG MITRA
 
-Mitra berkomitmen untuk mendukung **sustainability** dan **scaling up** hasil penelitian melalui rekomendasi adopsi sistem pada armada tugboat di wilayah kerja KSOP Samarinda, integrasi sistem ke dalam program keselamatan pelayaran sungai, dukungan maintenance dan monitoring jangka panjang (koordinasi dengan operator, troubleshooting support), serta advokasi kepada Ditjen Perhubungan Laut untuk replikasi ke KSOP lain di Indonesia.
+Mitra berkomitmen untuk mendukung **keberlanjutan** dan **peningkatan skala** hasil penelitian melalui rekomendasi adopsi sistem pada armada tugboat di wilayah kerja KSOP Samarinda, integrasi sistem ke dalam program keselamatan pelayaran sungai, dukungan pemeliharaan dan pemantauan jangka panjang (koordinasi dengan operator, dukungan pemecahan masalah), serta advokasi kepada Ditjen Perhubungan Laut untuk replikasi ke KSOP lain di Indonesia.
 
-### D. OPERATOR TUGBOAT (END USER PARTICIPANTS)
+### D. OPERATOR TUGBOAT (PARTISIPAN PENGGUNA AKHIR)
 
 **Jumlah**: 20 operator tugboat (nahkoda dan awak kapal)
 
-**Peran dalam Penelitian**: Participants dalam user research (interview, survey, FGD); Co-creator dalam proses desain user interface dan threshold setting; Tester dalam field validation (1 nahkoda pilot untuk intensive field testing, 19 operator lain untuk training dan feedback); Recipients training dan sertifikasi kompetensi.
+**Peran dalam Penelitian**: Partisipan dalam riset pengguna (wawancara, survei, FGD); Pencipta bersama dalam proses desain antarmuka pengguna dan pengaturan ambang batas; Penguji dalam validasi lapangan (1 nahkoda percontohan untuk uji lapangan intensif, 19 operator lain untuk pelatihan dan umpan balik); Penerima pelatihan dan sertifikasi kompetensi.
 
-**Manfaat bagi Operator**: Peningkatan keselamatan navigasi dalam operasional daily; Kompetensi baru dalam penggunaan teknologi navigasi modern; Sertifikat pelatihan resmi dari peneliti dan KSOP; Prioritas akses untuk instalasi sistem pada fase scaling (setelah penelitian).
+**Manfaat bagi Operator**: Peningkatan keselamatan navigasi dalam operasional harian; Kompetensi baru dalam penggunaan teknologi navigasi modern; Sertifikat pelatihan resmi dari peneliti dan KSOP; Prioritas akses untuk instalasi sistem pada fase peningkatan skala (setelah penelitian).
 
 ## 6.3 Mekanisme Kolaborasi Multi-Stakeholder
 
 | Mekanisme | Komposisi/Mekanisme | Fungsi | Frekuensi |
 |-----------|---------------------|--------|-----------|
-| **Steering Committee** | 2 peneliti (Ketua + Anggota), 1 perwakilan KSOP, 1 perwakilan operator tugboat | Strategic decision making, conflict resolution, progress monitoring | Monthly (1 jam) |
-| **Working Group** | Seluruh tim peneliti + liaison officer KSOP | Operational coordination, technical problem solving, day-to-day execution | Weekly (1 jam) |
-| **User Feedback Loop** | WhatsApp group dengan operator pilot untuk immediate feedback selama field testing | Quick issue reporting, real-time troubleshooting, user experience sharing | Response time: <24 jam untuk non-critical issues, <4 jam untuk critical issues |
-| **Formal Communication** | Quarterly report kepada KSOP tentang progress penelitian; Presentation di KSOP stakeholder meeting (jika diminta); Final presentation dan handover ceremony | Pelaporan dan transparansi | Quarterly & event-based |
+| **Komite Pengarah** | 2 peneliti (Ketua + Anggota), 1 perwakilan KSOP, 1 perwakilan operator tugboat | Pengambilan keputusan strategis, penyelesaian konflik, pemantauan kemajuan | Bulanan (1 jam) |
+| **Kelompok Kerja** | Seluruh tim peneliti + petugas penghubung KSOP | Koordinasi operasional, penyelesaian masalah teknis, pelaksanaan harian | Mingguan (1 jam) |
+| **Lingkar Umpan Balik Pengguna** | Grup WhatsApp dengan operator percontohan untuk umpan balik langsung selama uji lapangan | Pelaporan masalah cepat, pemecahan masalah waktu-nyata, berbagi pengalaman pengguna | Waktu respons: <24 jam untuk masalah non-kritis, <4 jam untuk masalah kritis |
+| **Komunikasi Formal** | Laporan triwulanan kepada KSOP tentang kemajuan penelitian; Presentasi di pertemuan pemangku kepentingan KSOP (jika diminta); Presentasi final dan upacara serah terima | Pelaporan dan transparansi | Triwulanan & berbasis acara |
 
 ---
 
@@ -1256,12 +1158,12 @@ STARBOARD (Kiri)                  PORT (Kanan)
    - **Lab Safety**: Kacamata safety, face shield, masker N95, ESD strap, heat-resistant gloves, lab coat flame retardant
    - **Field Safety**: Helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, high-vis vest
    - **Emergency**: Maritime first aid kit, fire extinguisher ABC, emergency communication
-   - Total investment Rp 38.179.000 untuk melindungi tim peneliti selama lab work dan field testing
+   - Total investasi Rp 38.179.000 untuk melindungi tim peneliti selama kerja laboratorium dan uji lapangan
 
 4. **Biaya Sewa Tugboat**:
    - TIDAK termasuk dalam budget
    - Menggunakan pendekatan Living Lab dengan kolaborasi operator lokal
-   - Akses tugboat melalui kerjasama stakeholder (in-kind contribution dari operator)
+   - Akses tugboat melalui kerja sama pemangku kepentingan (kontribusi natura dari operator)
 
 5. **Potensi Efisiensi Budget**:
    - Institusi pendidikan/penelitian dapat mengajukan pembebasan/keringanan bea masuk
@@ -1271,7 +1173,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 6. **Asumsi Kurs**:
    - 1 USD = Rp 15.675 (referensi Bank Indonesia)
    - Kurs akan disesuaikan dengan nilai aktual saat pengadaan
-   - Contingency fund 10% juga cover fluktuasi kurs
+   - Dana kontingensi 10% juga menutupi fluktuasi kurs
 
 ---
 
