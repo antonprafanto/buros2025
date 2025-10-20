@@ -701,15 +701,39 @@ Penelitian ini mengadopsi **Agile Development Methodology** dengan 6 sprint/iter
 
 ## 5.2 Timeline 6 Iterasi (9 Bulan)
 
+### Visualisasi Timeline
+
 ```
-BULAN:  1      2      3      4      5      6      7      8      9
-        │      │      │      │      │      │      │      │      │
-        ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
-ITERASI:│  I1  │      │  I2  │      │  I3  │  I4  │      │  I5  │ I6
-        │      │      │      │      │      │      │      │      │
-FASE:   │ Persiapan  │  Development │ Test │ Field Trial│ Eval │Fin
-        └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘
+BULAN:     1      2      3      4      5      6      7      8      9
+           │      │      │      │      │      │      │      │      │
+           ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+ITERASI:   │  I-1 │      │  I-2 │      │ I-3  │  I-4 │      │ I-5  │ I-6
+           │◄────►│      │◄────►│      │◄────►│◄─────┼─────►│◄────►│◄───►│
+FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │ Fin │
+           └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴─────┘
 ```
+
+### Tabel Timeline Detail
+
+| Iterasi | Periode | Durasi | Fase | Fokus Utama | Deliverable Kunci |
+|---------|---------|--------|------|-------------|-------------------|
+| **I-1** | Bulan 1-2 | 2 bulan | Persiapan & Desain | Riset pengguna, desain sistem, pengadaan | MoU KSOP, Dokumen Desain, Material tiba |
+| **I-2** | Bulan 3-4 | 2 bulan | Development | Perakitan hardware, coding software | Prototipe v1.0, Source code lengkap |
+| **I-3** | Bulan 5 | 1 bulan | Testing | Kalibrasi outdoor, stress testing | Prototipe v1.5 (Optimized), Sertifikat Kalibrasi |
+| **I-4** | Bulan 6-7 | 2 bulan | Field Trial | Uji lapangan intensif, pengumpulan data | 100 jam data operasional, Laporan Uji Lapangan |
+| **I-5** | Bulan 8 | 1 bulan | Evaluation | Analisis hasil, implementasi perbaikan | Prototipe v2.0 (Final), Laporan Evaluasi |
+| **I-6** | Bulan 9 | 1 bulan | Finalisasi | Dokumentasi, pelatihan massal, publikasi | 6 Dokumen lengkap, 20 operator terlatih, Artikel jurnal |
+
+### Milestone Kritis
+
+| Milestone | Target Bulan | Kriteria Sukses |
+|-----------|--------------|-----------------|
+| MoU Signed dengan KSOP | Bulan 1 | Dokumen resmi ditandatangani |
+| Prototipe Hardware Selesai | Bulan 4 | Sistem 10 sensor berfungsi 100% |
+| Kalibrasi Lulus | Bulan 5 | Akurasi ≥95%, False positive <5% |
+| Field Testing Dimulai | Bulan 6 | Sistem terpasang di tugboat |
+| 100 Jam Data Terkumpul | Bulan 7 | Data operasional tercatat lengkap |
+| Pelatihan Massal Selesai | Bulan 9 | 20 operator bersertifikat |
 
 **Iterasi 1 (Bulan 1-2): Desain dan Inisiasi**
 
