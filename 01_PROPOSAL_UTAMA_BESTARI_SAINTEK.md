@@ -57,71 +57,69 @@ Penelitian ini hadir untuk menjawab gap tersebut dengan mengembangkan sistem sen
 
 ## 2.1 Tujuan Penelitian
 
-Tujuan umum penelitian ini adalah **mengembangkan dan memvalidasi sistem sensor LiDAR anti-collision untuk meningkatkan keselamatan navigasi tugboat di Sungai Mahakam Samarinda** melalui pendekatan Living Lab yang melibatkan kolaborasi aktif antara peneliti, KSOP Samarinda, dan operator tugboat.
+Tujuan umum penelitian ini adalah **mengembangkan dan memvalidasi sistem sensor LiDAR anti-tabrakan untuk meningkatkan keselamatan navigasi tugboat di Sungai Mahakam Samarinda** melalui pendekatan Living Lab yang melibatkan kolaborasi aktif antara peneliti, KSOP Samarinda, dan operator tugboat.
 
 Tujuan khusus penelitian meliputi:
 
-1. **Merancang dan membangun prototype sistem sensor LiDAR anti-collision** yang mampu mendeteksi objek atau kapal lain dengan jarak efektif 180-290 meter, akurasi ±10 cm, dan response time kurang dari 0,1 detik.
+1. **Merancang dan membangun prototipe sistem sensor LiDAR anti-tabrakan** yang mampu mendeteksi objek atau kapal lain dengan jarak efektif 180-290 meter, akurasi ±10 cm, dan waktu respons kurang dari 0,1 detik.
 
-2. **Mengembangkan algoritma deteksi objek dan decision logic** yang dapat mengklasifikasikan zona bahaya (aman, waspada, bahaya) dan memberikan early warning melalui display visual dan alarm audio bertingkat dengan tingkat false alarm di bawah 5%.
+2. **Mengembangkan algoritma deteksi objek dan logika keputusan** yang dapat mengklasifikasikan zona bahaya (aman, waspada, bahaya) dan memberikan peringatan dini melalui display visual dan alarm audio bertingkat dengan tingkat alarm palsu di bawah 5%.
 
-3. **Melakukan validasi lapangan** sistem dalam kondisi operasional nyata di Sungai Mahakam dengan minimal 100 jam operational data untuk mengukur performa teknis (akurasi, response time, system uptime) dan user acceptance.
+3. **Melakukan validasi lapangan** sistem dalam kondisi operasional nyata di Sungai Mahakam dengan minimal 100 jam data operasional untuk mengukur kinerja teknis (akurasi, waktu respons, waktu aktif sistem) dan penerimaan pengguna.
 
-4. **Membangun ekosistem Living Lab** yang sustainable dengan melibatkan KSOP Samarinda, operator tugboat, dan industri maritim dalam proses co-creation, co-design, co-implementation, dan co-evaluation.
+4. **Membangun ekosistem Living Lab** yang berkelanjutan dengan melibatkan KSOP Samarinda, operator tugboat, dan industri maritim dalam proses penciptaan bersama, perancangan bersama, implementasi bersama, dan evaluasi bersama.
 
-5. **Menghasilkan knowledge contribution** melalui publikasi ilmiah, pelatihan operator, dan rekomendasi kebijakan keselamatan maritim sungai kepada otoritas terkait.
+5. **Menghasilkan kontribusi pengetahuan** melalui publikasi ilmiah, pelatihan operator, dan rekomendasi kebijakan keselamatan maritim sungai kepada otoritas terkait.
 
 ## 2.2 Sasaran Program
 
-Sasaran konkret yang ingin dicapai dalam periode penelitian 9 bulan:
+Sasaran konkret yang ingin dicapai dalam periode penelitian 9 bulan disajikan dalam tabel berikut:
 
-**Sasaran Teknis:**
-- Menghasilkan **1 prototype sistem lengkap** dengan konfigurasi 10 sensor LiDAR (8 unit TF03 + 3 unit TFA300-L) untuk coverage 360 derajat dengan density tinggi pada bagian depan kapal
-- Detection accuracy ≥95% dalam berbagai kondisi visibilitas (kabut, hujan, malam hari)
-- False positive rate <5% melalui algoritma filtering dan sensor fusion
-- System uptime ≥98% dengan battery life minimal 10 jam operasional
-- Waterproof rating IP67 untuk ketahanan terhadap water spray dan high humidity
-
-**Sasaran Operasional:**
-- Instalasi dan field testing pada minimal 1 tugboat pilot di Sungai Mahakam
-- Pengumpulan minimal 100 jam operational data untuk analisis performa
-- Training 20 operator tugboat dengan post-test score minimal 80/100
-- User satisfaction score ≥8/10 dari operator yang menggunakan sistem
-
-**Sasaran Kolaborasi:**
-- Penandatanganan MoU dengan KSOP Samarinda sebagai mitra utama
-- Pembentukan steering committee dengan representasi dari peneliti, KSOP, dan operator tugboat
-- Pelaksanaan minimal 4 workshop co-creation dengan stakeholders
-
-**Sasaran Diseminasi:**
-- Submission 1 artikel jurnal ke jurnal nasional terakreditasi (Sinta 2/3) atau jurnal internasional
-- Presentasi hasil penelitian di seminar nasional atau internasional
-- Seminar hasil penelitian untuk stakeholders dan public dengan minimal 50 peserta
-- Dokumentasi lengkap (installation manual, user manual, maintenance guide) dalam Bahasa Indonesia
+| Kategori Sasaran | Target Capaian |
+|------------------|----------------|
+| **Sasaran Teknis** | |
+| Prototipe sistem | 1 unit lengkap dengan konfigurasi 10 sensor LiDAR (8 unit TF03 + 3 unit TFA300-L) untuk cakupan 360 derajat dengan kepadatan tinggi pada bagian depan kapal |
+| Akurasi deteksi | ≥95% dalam berbagai kondisi visibilitas (kabut, hujan, malam hari) |
+| Tingkat alarm palsu | <5% melalui algoritma penyaringan dan sensor fusion |
+| Waktu aktif sistem | ≥98% dengan daya tahan baterai minimal 10 jam operasional |
+| Tingkat ketahanan air | IP67 untuk ketahanan terhadap percikan air dan kelembaban tinggi |
+| **Sasaran Operasional** | |
+| Uji lapangan | Pemasangan dan pengujian pada minimal 1 tugboat percontohan di Sungai Mahakam |
+| Pengumpulan data | Minimal 100 jam data operasional untuk analisis kinerja |
+| Pelatihan operator | 20 operator tugboat dengan nilai pasca-ujian minimal 80/100 |
+| Kepuasan pengguna | Skor ≥8/10 dari operator yang menggunakan sistem |
+| **Sasaran Kolaborasi** | |
+| Kemitraan resmi | Penandatanganan Nota Kesepahaman dengan KSOP Samarinda sebagai mitra utama |
+| Komite pengarah | Pembentukan komite dengan perwakilan dari peneliti, KSOP, dan operator tugboat |
+| Lokakarya | Pelaksanaan minimal 4 lokakarya penciptaan bersama dengan pemangku kepentingan |
+| **Sasaran Diseminasi** | |
+| Publikasi ilmiah | Pengajuan 1 artikel jurnal ke jurnal nasional terakreditasi (Sinta 2/3) atau jurnal internasional |
+| Presentasi seminar | Presentasi hasil penelitian di seminar nasional atau internasional |
+| Seminar pemangku kepentingan | Seminar hasil penelitian dengan minimal 50 peserta |
+| Dokumentasi teknis | Panduan pemasangan, panduan pengguna, dan panduan pemeliharaan dalam Bahasa Indonesia |
 
 ## 2.3 Luaran yang Diharapkan
 
-**Luaran Wajib:**
-1. Prototype fungsional sistem sensor LiDAR anti-collision (1 unit lengkap dengan 10 sensor)
-2. Laporan akhir penelitian komprehensif untuk BESTARI SAINTEK
-3. Artikel ilmiah submitted ke jurnal nasional terakreditasi atau internasional
-4. Training module dan sertifikat pelatihan untuk 20 operator tugboat
+| Kategori Luaran | Rincian |
+|-----------------|---------|
+| **Luaran Wajib** | |
+| Prototipe fungsional | Sistem sensor LiDAR anti-tabrakan lengkap dengan 10 sensor |
+| Laporan penelitian | Laporan akhir penelitian komprehensif untuk BESTARI SAINTEK |
+| Publikasi ilmiah | Artikel ilmiah yang diajukan ke jurnal nasional terakreditasi atau internasional |
+| Modul pelatihan | Modul pelatihan dan sertifikat untuk 20 operator tugboat |
+| **Luaran Tambahan** | |
+| Hak Kekayaan Intelektual | Paten sederhana atau desain industri (jika memenuhi kriteria) |
+| Rekomendasi kebijakan | Rekomendasi kebijakan keselamatan maritim sungai dari KSOP Samarinda |
+| Publikasi media | Liputan media dan siaran pers untuk peningkatan kesadaran publik |
+| Jalur komersialisasi | Jalur untuk komersialisasi atau lisensi teknologi kepada vendor teknologi maritim |
 
-**Luaran Tambahan:**
-1. Hak Kekayaan Intelektual (HKI): Paten sederhana atau desain industri (jika memenuhi kriteria)
-2. Rekomendasi kebijakan keselamatan maritim sungai dari KSOP Samarinda
-3. Media coverage dan press release untuk public awareness
-4. Pathway untuk commercialization atau technology licensing kepada vendor maritime technology
+**Dampak Jangka Panjang:**
 
-**Dampak Jangka Panjang yang Diharapkan:**
-- Pengurangan near-miss incidents sebesar 40% pada tahun pertama implementasi
-- Pengurangan actual collision incidents sebesar 30% dalam 2-3 tahun
-- Peningkatan operator confidence level sebesar 50% (self-reported)
-- Replikasi sistem ke minimal 10 tugboat tambahan dalam 2 tahun setelah penelitian
-- Adopsi sistem sebagai standar rekomendasi KSOP untuk tugboat baru di Sungai Mahakam
+Penelitian ini diharapkan memberikan dampak berkelanjutan dalam bentuk pengurangan kejadian nyaris tabrakan sebesar 40% pada tahun pertama implementasi dan pengurangan insiden tabrakan aktual sebesar 30% dalam 2-3 tahun. Peningkatan tingkat kepercayaan operator sebesar 50% (dilaporkan sendiri) akan mendorong penerimaan teknologi yang lebih luas. Sistem ini ditargetkan untuk direplikasi ke minimal 10 tugboat tambahan dalam 2 tahun setelah penelitian dan diadopsi sebagai standar rekomendasi KSOP untuk tugboat baru di Sungai Mahakam.
 
 **Potensi Ekonomi dan Komersialisasi:**
-Penelitian ini dirancang dengan pathway komersialisasi yang jelas, membuka peluang technology licensing kepada vendor maritime technology atau pembentukan spin-off company yang dapat melayani pasar nasional. Dengan estimasi 500+ tugboat beroperasi di sungai-sungai besar Indonesia, potensi pasar mencapai nilai ekonomi signifikan sekaligus menciptakan lapangan kerja di sektor teknologi maritim domestik. Kolaborasi erat dengan KSOP dan operator sejak awal memastikan produk final yang market-ready dan sesuai kebutuhan industri.
+
+Penelitian ini dirancang dengan jalur komersialisasi yang jelas, membuka peluang lisensi teknologi kepada vendor teknologi maritim atau pembentukan perusahaan rintisan yang dapat melayani pasar nasional. Dengan estimasi 500+ tugboat beroperasi di sungai-sungai besar Indonesia, potensi pasar mencapai nilai ekonomi signifikan sekaligus menciptakan lapangan kerja di sektor teknologi maritim domestik. Kolaborasi erat dengan KSOP dan operator sejak awal memastikan produk akhir yang siap pasar dan sesuai kebutuhan industri.
 
 ---
 
