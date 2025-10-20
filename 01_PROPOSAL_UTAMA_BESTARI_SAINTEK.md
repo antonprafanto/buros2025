@@ -986,65 +986,62 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 **A. SENSOR DAN KOMPONEN ELEKTRONIK UTAMA** (Rp 96.246.000)
 
-**A.1 Sensor LiDAR (10 Unit untuk 1 Prototype System):**
-- TF03 LiDAR Sensor (Range 180m, IP67, 1KHz): 8 unit x Rp 4.213.000 = **Rp 33.704.000**
-- TFA300-L LiDAR Sensor (Range 290m, 10KHz): 3 unit x Rp 5.879.000 = **Rp 17.637.000**
-- **Subtotal A.1**: **Rp 51.341.000**
-
-**A.2 Mikrokontroler dan Processing Unit:**
-- Raspberry Pi 4 (8GB RAM) - Master Controller: 1 unit x Rp 1.590.000 = **Rp 1.590.000**
-- Arduino Mega 2560 - Sensor Interface: 3 unit x Rp 954.000 = **Rp 2.862.000**
-- CAN Bus Shield / Interface Module: 3 unit x Rp 531.000 = **Rp 1.593.000**
-- SD Card Module + 64GB High-Speed SD Card: 1 set x Rp 381.000 = **Rp 381.000**
-- USB Hub 10-Port (Industrial Grade): 1 unit x Rp 741.000 = **Rp 741.000**
-- **Subtotal A.2**: **Rp 7.167.000**
-
-**A.3 Display dan Alert System:**
-- OLED/LCD Touchscreen Display 7" Waterproof: 1 unit x Rp 1.376.000 = **Rp 1.376.000**
-- Active Buzzer + Multi-tone Piezo Alarm: 2 set x Rp 254.000 = **Rp 508.000**
-- LED Indicator Array (RGB + Housing): 3 set x Rp 170.000 = **Rp 510.000**
-- Emergency Stop Button (Marine-grade): 1 unit x Rp 318.000 = **Rp 318.000**
-- **Subtotal A.3**: **Rp 2.712.000**
-
-**A.4 Power Supply dan Battery System:**
-- DC-DC Converter 12V to 5V/3.3V (High Current): 3 unit x Rp 381.000 = **Rp 1.143.000**
-- Lithium Battery 12V 20Ah Deep Cycle + BMS: 1 set x Rp 1.800.000 = **Rp 1.800.000**
-- Battery Management System (BMS 12V 100A): 1 unit x Rp 529.000 = **Rp 529.000**
-- Power Distribution Board + Fuse Panel: 1 set x Rp 635.000 = **Rp 635.000**
-- **Subtotal A.4**: **Rp 4.107.000**
-
-**A.5 Enclosure dan Mounting Hardware:**
-- IP67 Waterproof Enclosure Large (custom): 1 unit x Rp 2.540.000 = **Rp 2.540.000**
-- Stainless Steel Mounting Bracket (adjustable): 10 set x Rp 593.000 = **Rp 5.930.000**
-- Marine-grade Gasket & Seal Kit: 3 set x Rp 254.000 = **Rp 762.000**
-- Vibration Damper Mounts: 10 set x Rp 127.000 = **Rp 1.270.000**
-- **Subtotal A.5**: **Rp 10.502.000**
-
-**A.6 Kabel dan Konektor:**
-- Marine-grade Cable 15m (shielded, waterproof): 50 m x Rp 106.000 = **Rp 5.300.000**
-- Waterproof Connector IP68 (Heavy Duty): 30 unit x Rp 212.000 = **Rp 6.360.000**
-- Cable Gland & Junction Box (Industrial): 15 set x Rp 170.000 = **Rp 2.550.000**
-- Cable Management Kit (Spiral, labels, ties): 2 set x Rp 318.000 = **Rp 636.000**
-- **Subtotal A.6**: **Rp 14.846.000**
-
-**A.7 Komponen Pendukung Elektronik:**
-- PCB Prototype Board + Components: 5 set x Rp 466.000 = **Rp 2.330.000**
-- Resistor, Capacitor, Diode Kit (Extended): 3 set x Rp 381.000 = **Rp 1.143.000**
-- Relay Module + Fuse Holder (Industrial): 3 set x Rp 318.000 = **Rp 954.000**
-- Heat Shrink Tube + Cable Ties Kit (Pro): 3 set x Rp 212.000 = **Rp 636.000**
-- Logic Level Converter + Voltage Regulator: 2 set x Rp 254.000 = **Rp 508.000**
-- **Subtotal A.7**: **Rp 5.571.000**
-
-**SUBTOTAL A (Sensor & Komponen)**: **Rp 96.246.000**
+| Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
+|--------------|------|-----|--------------|----------|
+| **A.1 Sensor LiDAR (10 Unit)** | | | | |
+| | TF03 LiDAR Sensor (Range 180m, IP67, 1KHz) | 8 unit | Rp 4.213.000 | Rp 33.704.000 |
+| | TFA300-L LiDAR Sensor (Range 290m, 10KHz) | 3 unit | Rp 5.879.000 | Rp 17.637.000 |
+| | | | **Subtotal A.1** | **Rp 51.341.000** |
+| **A.2 Mikrokontroler & Processing** | | | | |
+| | Raspberry Pi 4 (8GB RAM) - Master Controller | 1 unit | Rp 1.590.000 | Rp 1.590.000 |
+| | Arduino Mega 2560 - Sensor Interface | 3 unit | Rp 954.000 | Rp 2.862.000 |
+| | CAN Bus Shield / Interface Module | 3 unit | Rp 531.000 | Rp 1.593.000 |
+| | SD Card Module + 64GB High-Speed SD Card | 1 set | Rp 381.000 | Rp 381.000 |
+| | USB Hub 10-Port (Industrial Grade) | 1 unit | Rp 741.000 | Rp 741.000 |
+| | | | **Subtotal A.2** | **Rp 7.167.000** |
+| **A.3 Display & Alert System** | | | | |
+| | OLED/LCD Touchscreen Display 7" Waterproof | 1 unit | Rp 1.376.000 | Rp 1.376.000 |
+| | Active Buzzer + Multi-tone Piezo Alarm | 2 set | Rp 254.000 | Rp 508.000 |
+| | LED Indicator Array (RGB + Housing) | 3 set | Rp 170.000 | Rp 510.000 |
+| | Emergency Stop Button (Marine-grade) | 1 unit | Rp 318.000 | Rp 318.000 |
+| | | | **Subtotal A.3** | **Rp 2.712.000** |
+| **A.4 Power Supply & Battery** | | | | |
+| | DC-DC Converter 12V to 5V/3.3V (High Current) | 3 unit | Rp 381.000 | Rp 1.143.000 |
+| | Lithium Battery 12V 20Ah Deep Cycle + BMS | 1 set | Rp 1.800.000 | Rp 1.800.000 |
+| | Battery Management System (BMS 12V 100A) | 1 unit | Rp 529.000 | Rp 529.000 |
+| | Power Distribution Board + Fuse Panel | 1 set | Rp 635.000 | Rp 635.000 |
+| | | | **Subtotal A.4** | **Rp 4.107.000** |
+| **A.5 Enclosure & Mounting** | | | | |
+| | IP67 Waterproof Enclosure Large (custom) | 1 unit | Rp 2.540.000 | Rp 2.540.000 |
+| | Stainless Steel Mounting Bracket (adjustable) | 10 set | Rp 593.000 | Rp 5.930.000 |
+| | Marine-grade Gasket & Seal Kit | 3 set | Rp 254.000 | Rp 762.000 |
+| | Vibration Damper Mounts | 10 set | Rp 127.000 | Rp 1.270.000 |
+| | | | **Subtotal A.5** | **Rp 10.502.000** |
+| **A.6 Kabel & Konektor** | | | | |
+| | Marine-grade Cable 15m (shielded, waterproof) | 50 m | Rp 106.000 | Rp 5.300.000 |
+| | Waterproof Connector IP68 (Heavy Duty) | 30 unit | Rp 212.000 | Rp 6.360.000 |
+| | Cable Gland & Junction Box (Industrial) | 15 set | Rp 170.000 | Rp 2.550.000 |
+| | Cable Management Kit (Spiral, labels, ties) | 2 set | Rp 318.000 | Rp 636.000 |
+| | | | **Subtotal A.6** | **Rp 14.846.000** |
+| **A.7 Komponen Elektronik Pendukung** | | | | |
+| | PCB Prototype Board + Components | 5 set | Rp 466.000 | Rp 2.330.000 |
+| | Resistor, Capacitor, Diode Kit (Extended) | 3 set | Rp 381.000 | Rp 1.143.000 |
+| | Relay Module + Fuse Holder (Industrial) | 3 set | Rp 318.000 | Rp 954.000 |
+| | Heat Shrink Tube + Cable Ties Kit (Pro) | 3 set | Rp 212.000 | Rp 636.000 |
+| | Logic Level Converter + Voltage Regulator | 2 set | Rp 254.000 | Rp 508.000 |
+| | | | **Subtotal A.7** | **Rp 5.571.000** |
+| | | | **SUBTOTAL A** | **Rp 96.246.000** |
 
 ---
 
 **B. BEA CUKAI DAN PAJAK IMPOR** (Rp 33.173.000)
 
-- Bea Masuk (10% dari nilai import): **Rp 10.930.000**
-- PPN Impor (11% dari nilai import + bea masuk): **Rp 13.225.000**
-- PPh Pasal 22 Impor (7,5% dari nilai import + bea masuk): **Rp 9.018.000**
-- **SUBTOTAL B (Bea Cukai & Pajak)**: **Rp 33.173.000**
+| Jenis Biaya | Perhitungan | Jumlah |
+|-------------|-------------|---------|
+| Bea Masuk | 10% dari nilai import | Rp 10.930.000 |
+| PPN Impor | 11% dari nilai import + bea masuk | Rp 13.225.000 |
+| PPh Pasal 22 Impor | 7,5% dari nilai import + bea masuk | Rp 9.018.000 |
+| | **SUBTOTAL B** | **Rp 33.173.000** |
 
 **Catatan Bea Cukai:**
 - Kategori: Peralatan elektronik untuk penelitian pendidikan
@@ -1056,91 +1053,87 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 **C. TOOLS, EQUIPMENT & 3D PRINTING** (Rp 44.889.000)
 
-**C.1 3D Printing Setup (Rapid Prototyping):**
-- Creality K2 PLUS CFS Combo 3D Printer: 1 unit x Rp 23.500.000 = **Rp 23.500.000**
-  - Multi-material printing (PLA, PETG, TPU)
-  - Dual AI Cameras untuk quality control
-  - Build volume: 350x350x350mm
-  - Max speed: 600mm/s
-  - CFS filament system
-- PLA Filament 1kg (untuk prototype testing): 5 roll x Rp 424.000 = **Rp 2.120.000**
-- PETG Filament 1kg (weather-resistant): 3 roll x Rp 530.000 = **Rp 1.590.000**
-- TPU Filament 1kg (flexible gasket): 2 roll x Rp 636.000 = **Rp 1.272.000**
-- 3D Printer Accessories (nozzle, bed, tools): 1 set x Rp 847.000 = **Rp 847.000**
-- **Subtotal C.1**: **Rp 29.329.000**
-
-**C.2 Assembly dan Testing Tools:**
-- Soldering Station Professional + Solder Wire: 1 set x Rp 2.540.000 = **Rp 2.540.000**
-- Digital Multimeter + Clamp Meter (Fluke-grade): 2 unit x Rp 1.270.000 = **Rp 2.540.000**
-- Oscilloscope 2-Channel 100MHz: 1 unit x Rp 3.810.000 = **Rp 3.810.000**
-- Logic Analyzer 8-Channel: 1 unit x Rp 1.059.000 = **Rp 1.059.000**
-- Crimping Tool Set Professional: 1 set x Rp 1.270.000 = **Rp 1.270.000**
-- Hand Tools Kit (Screwdriver, Pliers, Wrench): 1 set x Rp 1.482.000 = **Rp 1.482.000**
-- Power Drill + Impact Driver + Bits: 1 set x Rp 1.906.000 = **Rp 1.906.000**
-- Heat Gun + Hot Air Station: 1 set x Rp 953.000 = **Rp 953.000**
-- **Subtotal C.2**: **Rp 15.560.000**
-
-**SUBTOTAL C (Tools & 3D Printing)**: **Rp 44.889.000**
+| Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
+|--------------|------|-----|--------------|----------|
+| **C.1 3D Printing Setup** | | | | |
+| | Creality K2 PLUS CFS Combo 3D Printer | 1 unit | Rp 23.500.000 | Rp 23.500.000 |
+| | - Multi-material printing (PLA, PETG, TPU) | | | |
+| | - Dual AI Cameras untuk quality control | | | |
+| | - Build volume: 350x350x350mm | | | |
+| | - Max speed: 600mm/s, CFS filament system | | | |
+| | PLA Filament 1kg (untuk prototype testing) | 5 roll | Rp 424.000 | Rp 2.120.000 |
+| | PETG Filament 1kg (weather-resistant) | 3 roll | Rp 530.000 | Rp 1.590.000 |
+| | TPU Filament 1kg (flexible gasket) | 2 roll | Rp 636.000 | Rp 1.272.000 |
+| | 3D Printer Accessories (nozzle, bed, tools) | 1 set | Rp 847.000 | Rp 847.000 |
+| | | | **Subtotal C.1** | **Rp 29.329.000** |
+| **C.2 Assembly & Testing Tools** | | | | |
+| | Soldering Station Professional + Solder Wire | 1 set | Rp 2.540.000 | Rp 2.540.000 |
+| | Digital Multimeter + Clamp Meter (Fluke-grade) | 2 unit | Rp 1.270.000 | Rp 2.540.000 |
+| | Oscilloscope 2-Channel 100MHz | 1 unit | Rp 3.810.000 | Rp 3.810.000 |
+| | Logic Analyzer 8-Channel | 1 unit | Rp 1.059.000 | Rp 1.059.000 |
+| | Crimping Tool Set Professional | 1 set | Rp 1.270.000 | Rp 1.270.000 |
+| | Hand Tools Kit (Screwdriver, Pliers, Wrench) | 1 set | Rp 1.482.000 | Rp 1.482.000 |
+| | Power Drill + Impact Driver + Bits | 1 set | Rp 1.906.000 | Rp 1.906.000 |
+| | Heat Gun + Hot Air Station | 1 set | Rp 953.000 | Rp 953.000 |
+| | | | **Subtotal C.2** | **Rp 15.560.000** |
+| | | | **SUBTOTAL C** | **Rp 44.889.000** |
 
 ---
 
 **D. BIAYA OPERASIONAL LAPANGAN & SAFETY EQUIPMENT** (Rp 65.268.000)
 
-**D.1 Instalasi dan Field Testing:**
-- Transportation & Logistics (Material + Tim): **Rp 4.232.000**
-- Accommodation & Meals (Tim 5 orang, 20 hari): **Rp 8.465.000**
-- Fuel & Boat Operations (kolaborasi operator): **Rp 3.174.000**
-- **Subtotal D.1**: **Rp 15.871.000**
-
-**D.2 Safety Equipment / PPE (Standar Industri):**
-
-**Lab Safety (Assembly & Elektronik):**
-- Safety Glasses (Anti-splash, UV protection): 5 unit x Rp 318.000 = **Rp 1.590.000**
-- Face Shield (Heat resistant): 3 unit x Rp 297.000 = **Rp 891.000**
-- N95 Respirator Mask (box 20pcs): 3 box x Rp 636.000 = **Rp 1.908.000**
-- ESD Wrist Strap + Mat Kit (Anti-static): 5 set x Rp 297.000 = **Rp 1.485.000**
-- Heat-resistant Gloves (Soldering): 5 pair x Rp 254.000 = **Rp 1.270.000**
-- Lab Coat (Flame retardant): 5 pcs x Rp 529.000 = **Rp 2.645.000**
-- **Subtotal Lab Safety**: **Rp 9.789.000**
-
-**Field Safety (Marine Installation):**
-- Safety Helmet / Hard Hat (ANSI Z89.1): 6 unit x Rp 424.000 = **Rp 2.544.000**
-- Safety Goggles (Waterproof, Anti-fog): 6 unit x Rp 318.000 = **Rp 1.908.000**
-- Life Jacket / PFD Type II (USCG Approved): 6 unit x Rp 636.000 = **Rp 3.816.000**
-- Safety Shoes Steel Toe (Waterproof): 6 pair x Rp 1.059.000 = **Rp 6.354.000**
-- Work Gloves Cut-resistant (Marine-grade): 12 pair x Rp 212.000 = **Rp 2.544.000**
-- High Visibility Vest (ANSI Class 2): 6 pcs x Rp 254.000 = **Rp 1.524.000**
-- Fall Protection Harness + Lanyard: 3 set x Rp 1.482.000 = **Rp 4.446.000**
-- **Subtotal Field Safety**: **Rp 23.136.000**
-
-**Emergency & First Aid:**
-- Maritime First Aid Kit (100+ items): 2 set x Rp 1.270.000 = **Rp 2.540.000**
-- Fire Extinguisher 5kg ABC (Portable): 2 unit x Rp 847.000 = **Rp 1.694.000**
-- Emergency Whistle + Flashlight: 6 set x Rp 170.000 = **Rp 1.020.000**
-- **Subtotal Emergency**: **Rp 5.254.000**
-
-**Subtotal D.2 (Total Safety Equipment)**: **Rp 38.179.000**
-
-**D.3 Pelatihan dan Dokumentasi:**
-- Training Materials & Module Development: **Rp 2.540.000**
-- Certificate & Training Kit (20 peserta): **Rp 3.810.000**
-- Video Documentation & Photography: **Rp 3.174.000**
-- Printing & Binding (Manual, Poster, Laporan): **Rp 1.694.000**
-- **Subtotal D.3**: **Rp 11.218.000**
-
-**SUBTOTAL D (Operasional & Safety)**: **Rp 65.268.000**
+| Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
+|--------------|------|-----|--------------|----------|
+| **D.1 Instalasi & Field Testing** | | | | |
+| | Transportation & Logistics (Material + Tim) | - | - | Rp 4.232.000 |
+| | Accommodation & Meals (Tim 5 orang, 20 hari) | - | - | Rp 8.465.000 |
+| | Fuel & Boat Operations (kolaborasi operator) | - | - | Rp 3.174.000 |
+| | | | **Subtotal D.1** | **Rp 15.871.000** |
+| **D.2.1 Lab Safety Equipment** | | | | |
+| | Safety Glasses (Anti-splash, UV protection) | 5 unit | Rp 318.000 | Rp 1.590.000 |
+| | Face Shield (Heat resistant) | 3 unit | Rp 297.000 | Rp 891.000 |
+| | N95 Respirator Mask (box 20pcs) | 3 box | Rp 636.000 | Rp 1.908.000 |
+| | ESD Wrist Strap + Mat Kit (Anti-static) | 5 set | Rp 297.000 | Rp 1.485.000 |
+| | Heat-resistant Gloves (Soldering) | 5 pair | Rp 254.000 | Rp 1.270.000 |
+| | Lab Coat (Flame retardant) | 5 pcs | Rp 529.000 | Rp 2.645.000 |
+| | | | **Subtotal Lab Safety** | **Rp 9.789.000** |
+| **D.2.2 Field Safety Equipment** | | | | |
+| | Safety Helmet / Hard Hat (ANSI Z89.1) | 6 unit | Rp 424.000 | Rp 2.544.000 |
+| | Safety Goggles (Waterproof, Anti-fog) | 6 unit | Rp 318.000 | Rp 1.908.000 |
+| | Life Jacket / PFD Type II (USCG Approved) | 6 unit | Rp 636.000 | Rp 3.816.000 |
+| | Safety Shoes Steel Toe (Waterproof) | 6 pair | Rp 1.059.000 | Rp 6.354.000 |
+| | Work Gloves Cut-resistant (Marine-grade) | 12 pair | Rp 212.000 | Rp 2.544.000 |
+| | High Visibility Vest (ANSI Class 2) | 6 pcs | Rp 254.000 | Rp 1.524.000 |
+| | Fall Protection Harness + Lanyard | 3 set | Rp 1.482.000 | Rp 4.446.000 |
+| | | | **Subtotal Field Safety** | **Rp 23.136.000** |
+| **D.2.3 Emergency & First Aid** | | | | |
+| | Maritime First Aid Kit (100+ items) | 2 set | Rp 1.270.000 | Rp 2.540.000 |
+| | Fire Extinguisher 5kg ABC (Portable) | 2 unit | Rp 847.000 | Rp 1.694.000 |
+| | Emergency Whistle + Flashlight | 6 set | Rp 170.000 | Rp 1.020.000 |
+| | | | **Subtotal Emergency** | **Rp 5.254.000** |
+| | | | **Total D.2 (Safety Equipment)** | **Rp 38.179.000** |
+| **D.3 Pelatihan & Dokumentasi** | | | | |
+| | Training Materials & Module Development | - | - | Rp 2.540.000 |
+| | Certificate & Training Kit (20 peserta) | - | - | Rp 3.810.000 |
+| | Video Documentation & Photography | - | - | Rp 3.174.000 |
+| | Printing & Binding (Manual, Poster, Laporan) | - | - | Rp 1.694.000 |
+| | | | **Subtotal D.3** | **Rp 11.218.000** |
+| | | | **SUBTOTAL D** | **Rp 65.268.000** |
 
 ---
 
 **E. CONTINGENCY DAN MISCELLANEOUS** (Rp 29.114.000)
 
-- Contingency Fund (10% dari A+C+D): **Rp 22.766.000**
-- Shipping & Handling (Import, International): **Rp 4.232.000**
-- Customs Clearance & Documentation Fee: **Rp 2.116.000**
-- **SUBTOTAL E (Contingency)**: **Rp 29.114.000**
+| Item | Perhitungan/Keterangan | Jumlah |
+|------|------------------------|---------|
+| Contingency Fund | 10% dari A+C+D | Rp 22.766.000 |
+| Shipping & Handling | Import, International | Rp 4.232.000 |
+| Customs Clearance & Documentation Fee | - | Rp 2.116.000 |
+| | **SUBTOTAL E** | **Rp 29.114.000** |
 
 ---
 
+**TOTAL BUDGET PENELITIAN: Rp 289.900.000**
 ### B.3 Catatan Penting Budget
 
 1. **Sistem 10 Sensor LiDAR**:
