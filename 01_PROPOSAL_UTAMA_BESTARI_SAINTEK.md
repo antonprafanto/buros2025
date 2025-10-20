@@ -745,7 +745,7 @@ BULAN:     1      2      3      4      5      6      7      8      9
            ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
 ITERASI:   │  I-1 │      │  I-2 │      │ I-3  │  I-4 │      │ I-5  │ I-6
            │◄────►│      │◄────►│      │◄────►│◄─────┼─────►│◄────►│◄───►│
-FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │ Fin │
+FASE:      │ Persiapan  │  Pengembangan │ Uji  │ Uji Lapangan │ Eval │ Fin │
            └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴─────┘
 ```
 
@@ -754,11 +754,11 @@ FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │
 | Iterasi | Periode | Durasi | Fase | Fokus Utama | Deliverable Kunci |
 |---------|---------|--------|------|-------------|-------------------|
 | **I-1** | Bulan 1-2 | 2 bulan | Persiapan & Desain | Riset pengguna, desain sistem, pengadaan | MoU KSOP, Dokumen Desain, Material tiba |
-| **I-2** | Bulan 3-4 | 2 bulan | Development | Perakitan hardware, coding software | Prototipe v1.0, Source code lengkap |
-| **I-3** | Bulan 5 | 1 bulan | Testing | Kalibrasi outdoor, stress testing | Prototipe v1.5 (Optimized), Sertifikat Kalibrasi |
-| **I-4** | Bulan 6-7 | 2 bulan | Field Trial | Uji lapangan intensif, pengumpulan data | 100 jam data operasional, Laporan Uji Lapangan |
-| **I-5** | Bulan 8 | 1 bulan | Evaluation | Analisis hasil, implementasi perbaikan | Prototipe v2.0 (Final), Laporan Evaluasi |
-| **I-6** | Bulan 9 | 1 bulan | Finalisasi | Dokumentasi, pelatihan massal, publikasi | 6 Dokumen lengkap, 20 operator terlatih, Artikel jurnal |
+| **I-2** | Bulan 3-4 | 2 bulan | Pengembangan | Perakitan hardware, coding software | Prototipe v1.0, Kode sumber lengkap |
+| **I-3** | Bulan 5 | 1 bulan | Pengujian | Kalibrasi outdoor, stress testing | Prototipe v1.5 (Teroptimasi), Sertifikat Kalibrasi |
+| **I-4** | Bulan 6-7 | 2 bulan | Uji Coba Lapangan | Uji lapangan intensif, pengumpulan data | 100 jam data operasional, Laporan Uji Lapangan |
+| **I-5** | Bulan 8 | 1 bulan | Evaluasi | Analisis hasil, implementasi perbaikan | Prototipe v2.0 (Final), Laporan Evaluasi |
+| **I-6** | Bulan 9 | 1 bulan | Finalisasi | Dokumentasi, pelatihan massal, publikasi | 6 Dokumen lengkap, 20 operator terlatih, Artikel jurnal diajukan |
 
 ### Milestone Kritis
 
@@ -767,15 +767,15 @@ FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │
 | MoU Signed dengan KSOP | Bulan 1 | Dokumen resmi ditandatangani |
 | Prototipe Hardware Selesai | Bulan 4 | Sistem 10 sensor berfungsi 100% |
 | Kalibrasi Lulus | Bulan 5 | Akurasi ≥95%, False positive <5% |
-| Field Testing Dimulai | Bulan 6 | Sistem terpasang di tugboat |
+| Pengujian Lapangan Dimulai | Bulan 6 | Sistem terpasang di tugboat |
 | 100 Jam Data Terkumpul | Bulan 7 | Data operasional tercatat lengkap |
 | Pelatihan Massal Selesai | Bulan 9 | 20 operator bersertifikat |
 
 **Iterasi 1 (Bulan 1-2): Desain dan Inisiasi**
 
-**Tujuan Sprint**: Membangun fondasi proyek melalui riset pengguna, desain sistem, dan pengadaan.
+**Tujuan Iterasi**: Membangun fondasi proyek melalui riset pengguna, desain sistem, dan pengadaan.
 
-**Aktivitas Utama**: Pertemuan pembukaan dan penandatanganan MoU dengan KSOP Samarinda; Riset pengguna melalui wawancara 10 nahkoda, survei 20 operator, dan diskusi kelompok terpumpun (FGD) dengan KSOP; Desain sistem mencakup arsitektur perangkat keras, diagram alir perangkat lunak, mockup antarmuka pengguna, dan sistem pemasangan; Pengadaan semua material dan sensor.
+**Aktivitas Utama**: Pertemuan pembukaan dan penandatanganan MoU dengan KSOP Samarinda; Riset pengguna melalui wawancara 10 nahkoda, survei 20 operator, dan diskusi kelompok terpumpun (FGD) dengan KSOP; Desain sistem mencakup arsitektur perangkat keras, diagram alir perangkat lunak, rancangan visual antarmuka pengguna, dan sistem pemasangan; Pengadaan semua material dan sensor.
 
 **Keluaran**: MoU yang ditandatangani dengan KSOP Samarinda; Dokumen Kebutuhan Pengguna (15-20 halaman); Dokumen Desain Sistem (25-30 halaman); Daftar Material lengkap; Semua material tiba dan terverifikasi.
 
@@ -783,29 +783,56 @@ FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │
 
 **Iterasi 2 (Bulan 3-4): Pengembangan Prototipe Awal**
 
-**Tujuan Sprint**: Membangun prototipe v1.0 yang fungsional untuk pengujian dalam ruangan.
+**Tujuan Iterasi**: Membangun prototipe v1.0 yang fungsional untuk pengujian dalam ruangan.
 
-**Aktivitas Utama**: Perakitan perangkat keras mencakup integrasi sensor, pengaturan mikrokontroler, integrasi periferal, dan sistem daya; Pengembangan perangkat lunak (~980 baris kode) untuk akuisisi data, pemrosesan sinyal, logika keputusan, pengendali display, pengendali alarm, pencatat data, dan program utama; Pengujian dalam ruangan dengan 10 kasus uji (deteksi dasar, zona buta, klasifikasi zona, waktu respons, fungsi display, peringatan audio, pencatatan data, konsumsi daya, operasi berkelanjutan 8 jam, reflektivitas multi-objek); Integrasi dan optimasi melalui sensor fusion ganda, optimasi kode, serta perancangan casing dan kemasan.
+**Aktivitas Utama**: Perakitan perangkat keras mencakup integrasi sensor, pengaturan mikrokontroler, integrasi periferal, dan sistem daya; Pengembangan perangkat lunak (~980 baris kode) untuk akuisisi data, pemrosesan sinyal, logika keputusan, pengendali tampilan, pengendali alarm, pencatat data, dan program utama; Pengujian dalam ruangan dengan 10 kasus uji (deteksi dasar, zona buta, klasifikasi zona, waktu respons, fungsi tampilan, peringatan audio, pencatatan data, konsumsi daya, operasi berkelanjutan 8 jam, reflektivitas multi-objek); Integrasi dan optimasi melalui sensor fusion ganda, optimasi kode, serta perancangan casing dan kemasan.
 
-**Keluaran**: Prototipe Perangkat Keras v1.0 (1 unit sistem dengan 10 sensor terakit); Source code dan firmware lengkap dengan dokumentasi; Laporan Uji Dalam Ruangan (hasil semua kasus uji); Daftar Bug dan Penyelesaian (bug kritis = 0); Draf Panduan Pengguna v0.1.
+**Keluaran**: Prototipe Perangkat Keras v1.0 (1 unit sistem dengan 10 sensor terakit); Kode sumber dan perangkat tegar lengkap dengan dokumentasi; Laporan Uji Dalam Ruangan (hasil semua kasus uji); Daftar Kesalahan dan Penyelesaian (kesalahan kritis = 0); Draf Panduan Pengguna v0.1.
 
-**Kriteria Keberhasilan**: Sensor dapat mendeteksi objek dengan akurasi ±10cm (sesuai spesifikasi); Waktu respons ≤0,1 detik; Display dan alarm berfungsi dengan baik; Pencatatan data berfungsi tanpa kesalahan; Sistem dapat beroperasi berkelanjutan minimal 8 jam tanpa berhenti; Nol bug kritis.
+**Kriteria Keberhasilan**: Sensor dapat mendeteksi objek dengan akurasi ±10cm (sesuai spesifikasi); Waktu respons ≤0,1 detik; Tampilan dan alarm berfungsi dengan baik; Pencatatan data berfungsi tanpa kesalahan; Sistem dapat beroperasi berkelanjutan minimal 8 jam tanpa berhenti; Nol kesalahan kritis.
 
 **Iterasi 3 (Bulan 5): Pengujian dan Kalibrasi**
 
-**Tujuan Sprint**: Mencapai kinerja optimal melalui kalibrasi presisi dan pengujian tekanan.
+**Tujuan Iterasi**: Mencapai kinerja optimal melalui kalibrasi presisi dan pengujian tekanan.
 
-**Aktivitas Utama**: Kalibrasi luar ruangan mencakup kalibrasi jarak 1-180m, uji reflektivitas 90%/50%/10%, kalibrasi sudut 0°-45°, dan uji cahaya ambien dari sinar matahari penuh hingga malam hari; Pengujian tekanan meliputi ketahanan 24 jam, stres suhu 35°C/15°C, uji getaran, uji percikan air IP67, uji interferensi elektromagnetik (EMI), dan fluktuasi daya 10V-14V; Optimasi algoritma dengan filter rata-rata bergerak, filter Kalman, ambang batas adaptif, mode tidur, dan sensor fusion rata-rata tertimbang; Pengujian A/B untuk membandingkan sebelum dan sesudah optimasi.
+**Aktivitas Utama**: Kalibrasi luar ruangan mencakup kalibrasi jarak 1-180m, uji reflektivitas 90%/50%/10%, kalibrasi sudut 0°-45°, dan uji cahaya ambien dari sinar matahari penuh hingga malam hari; Pengujian tekanan meliputi ketahanan 24 jam, stres suhu 35°C/15°C, uji getaran, uji percikan air IP67, uji interferensi elektromagnetik (EMI), dan fluktuasi daya 10V-14V; Optimasi algoritma dengan filter rata-rata bergerak, filter Kalman, ambang batas adaptif, mode tidur, dan sensor fusion rata-rata tertimbang; Pengujian perbandingan untuk membandingkan kinerja sebelum dan sesudah optimasi.
 
-**Keluaran**: Sertifikat Kalibrasi (data kalibrasi, faktor koreksi, periode validitas); Laporan Uji Tekanan (semua hasil uji, analisis kegagalan, tindakan korektif); Prototipe v1.5 (Teroptimasi) dengan firmware yang diperbarui; Dasbor Metrik Kinerja.
+**Keluaran**: Sertifikat Kalibrasi (data kalibrasi, faktor koreksi, periode validitas); Laporan Uji Tekanan (semua hasil uji, analisis kegagalan, tindakan korektif); Prototipe v1.5 (Teroptimasi) dengan perangkat tegar yang diperbarui; Dasbor Metrik Kinerja.
 
 **Kriteria Keberhasilan**: Kesalahan kalibrasi <5% untuk rentang 1-100m; Semua uji tekanan lulus tanpa kegagalan kritis; Tingkat alarm palsu <5%; Waktu respons ≤0,1 detik (target: 0,05 detik); Daya tahan baterai ≥10 jam operasional; Keandalan sistem >95%.
 
 **Iterasi 4 (Bulan 6-7): Uji Coba Lapangan Fase 1**
 
-**Tujuan Sprint**: Validasi kinerja dalam kondisi operasional nyata dan mengumpulkan data lapangan.
+**Tujuan Iterasi**: Validasi kinerja dalam kondisi operasional nyata dan mengumpulkan data lapangan.
 
-**Aktivitas Utama**: Instalasi sistem pada 1 tugboat percontohan di Sungai Mahakam dengan durasi 2 hari instalasi dan komisioning; Operasi lapangan dan pemantauan dilakukan dalam 3 tahap yaitu Minggu 1 dengan pemantauan intensif di lokasi (tim naik tugboat setiap hari), Minggu 2-3 dengan pemantauan semi-intensif (3x per minggu, pemantauan jarak jauh melalui log data), dan Minggu 4-5 dengan pemantauan jarak jauh (1x kunjungan lokasi, laporan operator via WhatsApp); Pengumpulan data mencakup log data otomatis (penanda waktu, jarak, zona, status alarm) secara berkelanjutan, log operator manual (insiden, alarm palsu, masalah sistem) setiap hari, wawancara semi-terstruktur mingguan, dan dokumentasi video 2-3 perjalanan per minggu; Analisis data dan dokumentasi meliputi pembersihan data, analisis statistik, visualisasi, dan analisis kualitatif dengan pengkodean tematik.
+**Aktivitas Utama**:
+
+**A. Instalasi Sistem (Minggu 1 - Awal Bulan 6)**
+- Instalasi sistem pada 1 tugboat percontohan di Sungai Mahakam
+- Durasi: 2 hari instalasi dan pengoperasian awal
+- Pengujian awal fungsionalitas lengkap sebelum operasi penuh
+
+**B. Operasi Lapangan dan Pemantauan (8 Minggu)**
+
+*Bulan 6 (Minggu 1-4):*
+- **Minggu 1-2**: Pemantauan intensif di lokasi (tim naik tugboat setiap hari untuk observasi langsung)
+- **Minggu 3-4**: Pemantauan semi-intensif (kunjungan 3x per minggu, pemantauan jarak jauh melalui catatan data)
+
+*Bulan 7 (Minggu 5-8):*
+- **Minggu 5-6**: Pemantauan jarak jauh (1x kunjungan lokasi per minggu, laporan operator harian melalui WhatsApp)
+- **Minggu 7-8**: Pengumpulan data tambahan dan analisis awal untuk memastikan target 100 jam data tercapai
+
+**C. Pengumpulan Data (Berkelanjutan 8 Minggu)**
+- Catatan data otomatis (penanda waktu, jarak, zona, status alarm) - kontinyu 24/7
+- Catatan operator manual (insiden, alarm palsu, masalah sistem) - setiap hari
+- Wawancara semi-terstruktur dengan operator - mingguan
+- Dokumentasi video perjalanan tugboat - 2-3 perjalanan per minggu
+
+**D. Analisis Data dan Dokumentasi (Minggu 7-8)**
+- Pembersihan dan preprocessing data
+- Analisis statistik (rata-rata, standar deviasi, persentil)
+- Visualisasi (timeline plot, heatmap, distribusi)
+- Analisis kualitatif dengan pengkodean tematik dari wawancara
 
 **Keluaran**: Laporan Uji Lapangan (40-50 halaman); Data Log Mentah (file CSV, minimal 100 jam data operasional); Transkrip Wawancara (15-20 halaman); Dokumentasi Video (2-3 jam total); Pelacak Masalah dan Log Penyelesaian; Ringkasan Umpan Balik Operator (5-7 halaman).
 
@@ -813,19 +840,81 @@ FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │
 
 **Iterasi 5 (Bulan 8): Evaluasi dan Perbaikan**
 
-**Tujuan Sprint**: Menganalisis hasil uji lapangan dan mengimplementasikan perbaikan final.
+**Tujuan Iterasi**: Menganalisis hasil uji lapangan dan mengimplementasikan perbaikan final.
 
-**Aktivitas Utama**: Lokakarya evaluasi komprehensif (2 hari intensif) dengan pemangku kepentingan mencakup 5 sesi yaitu Sesi 1 presentasi hasil kuantitatif, Sesi 2 berbagi pengalaman operator (FGD), Sesi 3 pembahasan mendalam masalah teknis (analisis akar penyebab), Sesi 4 curah gagasan perbaikan (design thinking), dan Sesi 5 prioritisasi dan peta jalan (metode MoSCoW); Analisis kesenjangan antara target dan kinerja aktual; Implementasi perbaikan dengan prioritas HARUS yaitu kecerahan otomatis display (berbasis PWM, sensor cahaya ambien), mode hemat daya (mikrokontroler tidur saat zona aman), dan lapisan hidrofobik pada lensa sensor (nano-coating), serta prioritas SEBAIKNYA yaitu logika alarm yang ditingkatkan (peringatan bertingkat) dan tombol bisu untuk alarm palsu (bisu sementara 5 menit); Pengujian ulang dan validasi melalui uji lapangan mini 1 minggu; Analisis komparatif sebelum-sesudah perbaikan.
+**Aktivitas Utama**:
 
-**Keluaran**: Laporan Evaluasi (analisis komprehensif, analisis kesenjangan, peta jalan perbaikan); Prototipe v2.0 (Final) dengan semua perbaikan diimplementasikan; Laporan Validasi Perbaikan (komparatif sebelum-sesudah); Source code yang Diperbarui (firmware versi final).
+**A. Lokakarya Evaluasi Komprehensif (2 Hari Intensif)**
+- Sesi 1: Presentasi hasil kuantitatif
+- Sesi 2: Berbagi pengalaman operator (FGD)
+- Sesi 3: Pembahasan mendalam masalah teknis (analisis akar penyebab)
+- Sesi 4: Curah gagasan perbaikan
+- Sesi 5: Prioritisasi dan peta jalan (metode MoSCoW)
 
-**Kriteria Keberhasilan**: Tingkat alarm palsu <5%; Kepuasan pengguna >8/10; Daya tahan baterai >10 jam; Semua perbaikan prioritas "HARUS" diimplementasikan dan tervalidasi; Nol bug kritis tersisa.
+**B. Analisis Kesenjangan**
+- Perbandingan target vs kinerja aktual
+- Identifikasi gap dan area perbaikan
+- Dokumentasi lesson learned
+
+**C. Implementasi Perbaikan**
+
+*Prioritas HARUS:*
+- Kecerahan otomatis tampilan (berbasis PWM atau Pulse Width Modulation, sensor cahaya ambien)
+- Mode hemat daya (mikrokontroler tidur saat zona aman)
+- Lapisan hidrofobik pada lensa sensor (pelapisan nano)
+
+*Prioritas SEBAIKNYA:*
+- Logika alarm yang ditingkatkan (peringatan bertingkat)
+- Tombol bisu untuk alarm palsu (bisu sementara 5 menit)
+
+**D. Pengujian Ulang dan Validasi**
+- Uji lapangan mini 1 minggu
+- Analisis komparatif sebelum-sesudah perbaikan
+- Dokumentasi perbaikan yang diimplementasikan
+
+**E. Persiapan Awal Dokumentasi (Paralel dengan C & D)**
+- Mulai drafting dokumentasi teknis untuk Iterasi 6
+- Outline modul pelatihan
+- Draft artikel jurnal
+
+**Keluaran**: Laporan Evaluasi (analisis komprehensif, analisis kesenjangan, peta jalan perbaikan); Prototipe v2.0 (Final) dengan semua perbaikan diimplementasikan; Laporan Validasi Perbaikan (komparatif sebelum-sesudah); Kode sumber yang Diperbarui (perangkat tegar versi final); Draft awal dokumentasi dan modul pelatihan.
+
+**Kriteria Keberhasilan**: Tingkat alarm palsu <5%; Kepuasan pengguna >8/10; Daya tahan baterai >10 jam; Semua perbaikan prioritas "HARUS" diimplementasikan dan tervalidasi; Nol kesalahan kritis tersisa.
 
 **Iterasi 6 (Bulan 9): Finalisasi dan Penyebarluasan**
 
-**Tujuan Sprint**: Menyelesaikan dokumentasi, pelatihan massal, publikasi, dan serah terima.
+**Tujuan Iterasi**: Menyelesaikan dokumentasi, pelatihan massal, publikasi, dan serah terima.
 
-**Aktivitas Utama**: Finalisasi dokumentasi mencakup Panduan Instalasi (15 halaman), Panduan Pengguna (20 halaman), Panduan Pemeliharaan (12 halaman), Spesifikasi Teknis (10 halaman), Modul Pelatihan (25 halaman), dan Laporan Penelitian Final (60 halaman) dengan alur tinjauan internal → tinjauan eksternal KSOP → tinjauan operator → revisi → persetujuan final; Program pelatihan massal dengan durasi 2 hari (16 jam total) untuk 20 operator tugboat dengan format 40% teori dan 60% praktik langsung, dilengkapi pra-uji, pasca-uji (target skor ≥80/100), survei kepuasan pelatihan, dan upacara sertifikasi; Publikasi dan penyebarluasan meliputi pengajuan artikel jurnal (target: Sinta 2/3 atau jurnal internasional), pengajuan makalah konferensi (opsional), seminar pemangku kepentingan (50+ peserta: KSOP, operator, industri maritim, media, akademisi), dan upacara serah terima prototipe ke KSOP dengan Berita Acara Serah Terima (BAST).
+**Catatan**: Draft awal dokumentasi dan modul pelatihan sudah dimulai di Bulan 8 (Iterasi 5) untuk meringankan beban kerja Bulan 9.
+
+**Aktivitas Utama**:
+
+**A. Finalisasi Dokumentasi (6 Dokumen)**
+- Panduan Instalasi (15 halaman)
+- Panduan Pengguna (20 halaman)
+- Panduan Pemeliharaan (12 halaman)
+- Spesifikasi Teknis (10 halaman)
+- Modul Pelatihan (25 halaman)
+- Laporan Penelitian Final (60 halaman)
+
+*Alur Review*: Tinjauan internal → Tinjauan eksternal KSOP → Tinjauan operator → Revisi → Persetujuan final
+
+**B. Program Pelatihan Massal**
+- Durasi: 2 hari (16 jam total)
+- Peserta: 20 operator tugboat
+- Format: 40% teori + 60% praktik langsung
+- Komponen: Pra-uji, sesi pelatihan, pasca-uji (target skor ≥80/100), survei kepuasan
+- Penutupan: Upacara sertifikasi
+
+**C. Publikasi dan Penyebarluasan**
+- Pengajuan artikel jurnal (target: Sinta 2/3 atau jurnal internasional)
+- Pengajuan makalah konferensi (opsional)
+- Seminar pemangku kepentingan (target 50+ peserta: KSOP, operator, industri maritim, media, akademisi)
+
+**D. Serah Terima Resmi**
+- Upacara serah terima prototipe ke KSOP
+- Berita Acara Serah Terima (BAST)
+- Surat Rekomendasi KSOP
 
 **Keluaran**: Paket Dokumentasi Lengkap (6 dokumen) dalam bentuk cetak dan PDF; 1 unit Prototipe Final (v2.0) dengan aksesori lengkap; Sertifikat Pelatihan (20 lembar) untuk operator terlatih; Laporan Pelatihan; Makalah Jurnal/Konferensi (diajukan); Laporan Penelitian Final (untuk BESTARI SAINTEK); Surat Rekomendasi KSOP.
 
