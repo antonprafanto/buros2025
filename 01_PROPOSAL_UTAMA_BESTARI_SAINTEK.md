@@ -211,15 +211,10 @@ graph TB
 ```
 
 ### Layer 1: Sensor Input
-**Konfigurasi 10 Sensor LiDAR untuk Coverage 360 Derajat:**
-- **8 unit TF03 LiDAR** (Range 180m, Frame Rate 100Hz, IP67):
-  - 4 unit di bagian depan (bow) dengan sudut melebar untuk wide coverage
-  - 2 unit di sisi kanan dan kiri (starboard & port) untuk side detection
-  - 2 unit di sudut depan kanan dan kiri untuk blind spot coverage
 
-- **3 unit TFA300-L LiDAR** (Range 290m, Frame Rate 10KHz, Ultra-light):
-  - 2 unit di center depan untuk long-range early warning
-  - 1 unit di belakang (stern) untuk rear object detection
+**Konfigurasi 10 Sensor LiDAR untuk Cakupan 360 Derajat:**
+
+Sistem menggunakan dua jenis sensor LiDAR dengan karakteristik berbeda untuk memaksimalkan jangkauan deteksi. Sebanyak 8 unit TF03 LiDAR (jangkauan 180m, kecepatan pemindaian 100Hz, IP67) ditempatkan secara strategis dengan 4 unit di bagian depan (haluan) dengan sudut melebar untuk cakupan luas, 2 unit di sisi kanan dan kiri (lambung kanan & kiri) untuk deteksi samping, dan 2 unit di sudut depan kanan dan kiri untuk menutup titik buta. Sementara itu, 3 unit TFA300-L LiDAR (jangkauan 290m, kecepatan pemindaian 10KHz, ultra-ringan) ditempatkan dengan 2 unit di tengah depan untuk peringatan dini jarak jauh dan 1 unit di belakang (buritan) untuk deteksi objek dari arah belakang.
 
 ### Diagram Top View: Konfigurasi 10 Sensor LiDAR pada Tugboat
 
@@ -287,30 +282,33 @@ graph TB
 Sensor mounting menggunakan **stainless steel adjustable bracket** dengan vibration damper untuk mengurangi getaran mesin. Enclosure IP67 waterproof melindungi sensor dari water spray dan high humidity.
 
 ### Layer 2: Processing Unit
-**Master Controller**: Raspberry Pi 4 (8GB RAM) untuk sensor fusion dan decision making
-**Sensor Interface**: 3 unit Arduino Mega 2560 untuk data acquisition dari multiple sensors via UART/CAN
-**Storage**: SD Card 64GB high-speed untuk data logging dengan timestamp
 
-**Algoritma Processing:**
-1. **Data Acquisition Module**: Komunikasi UART/CAN, parsing data frame, validasi data
-2. **Signal Processing**: Moving average filter, Kalman filter untuk noise reduction, outlier detection
-3. **Sensor Fusion**: Weighted average dari multiple sensors untuk meningkatkan reliability
-4. **Decision Logic Engine**:
-   - Zona Aman (>100m): LED hijau, no alarm
-   - Zona Waspada (50-100m): LED kuning, slow beep
-   - Zona Bahaya (<50m): LED merah, fast continuous beep
-5. **Data Logger**: Recording timestamp, distance, zone classification untuk analisis post-operation
+| Komponen | Spesifikasi dan Fungsi |
+|----------|------------------------|
+| **Master Controller** | Raspberry Pi 4 (8GB RAM) untuk sensor fusion dan pengambilan keputusan |
+| **Sensor Interface** | 3 unit Arduino Mega 2560 untuk akuisisi data dari berbagai sensor via UART/CAN |
+| **Storage** | SD Card 64GB berkecepatan tinggi untuk pencatatan data dengan penanda waktu |
+
+**Algoritma Pemrosesan:**
+
+Sistem pemrosesan data dirancang dengan lima modul utama yang bekerja secara berurutan. Modul akuisisi data menangani komunikasi UART/CAN, penguraian frame data, dan validasi data. Pemrosesan sinyal menggunakan filter rata-rata bergerak dan filter Kalman untuk mengurangi noise serta deteksi outlier. Sensor fusion menerapkan rata-rata tertimbang dari berbagai sensor untuk meningkatkan keandalan. Mesin logika keputusan mengklasifikasikan tiga zona: Zona Aman (>100m) dengan LED hijau tanpa alarm, Zona Waspada (50-100m) dengan LED kuning dan bunyi lambat, dan Zona Bahaya (<50m) dengan LED merah dan bunyi cepat berkelanjutan. Pencatat data merekam penanda waktu, jarak, klasifikasi zona untuk analisis pasca-operasi.
 
 ### Layer 3: Output/Interface
-- **LCD Touchscreen 7" Waterproof**: Menampilkan jarak real-time, status zona, grafik trend
-- **LED Indicator Array**: RGB LED dengan color-coding (green/yellow/red) untuk quick visual feedback
-- **Audio Alarm System**: Multi-tone buzzer dengan graduated warning (slow beep → fast beep → continuous alarm)
-- **Emergency Stop Button**: Marine-grade button untuk temporary mute jika terjadi false alarm
+
+| Komponen | Fungsi |
+|----------|--------|
+| **LCD Touchscreen 7" Tahan Air** | Menampilkan jarak waktu-nyata, status zona, dan grafik tren |
+| **LED Indicator Array** | RGB LED dengan kode warna (hijau/kuning/merah) untuk umpan balik visual cepat |
+| **Audio Alarm System** | Buzzer multi-nada dengan peringatan bertahap (bunyi lambat → cepat → berkelanjutan) |
+| **Emergency Stop Button** | Tombol tingkat maritim untuk pembisuan sementara jika terjadi alarm palsu |
 
 ### Power System
-- **Primary Power**: DC 12V dari sistem kelistrikan tugboat dengan DC-DC converter
-- **Backup Battery**: Lithium Battery 12V 20Ah Deep Cycle dengan BMS untuk autonomy minimal 10 jam
-- **Protection**: Fuse panel dan voltage regulator untuk melindungi dari power fluctuation
+
+| Komponen | Spesifikasi |
+|----------|-------------|
+| **Primary Power** | DC 12V dari sistem kelistrikan tugboat dengan konverter DC-DC |
+| **Backup Battery** | Lithium Battery 12V 20Ah Deep Cycle dengan BMS untuk otonomi minimal 10 jam |
+| **Protection** | Panel sekring dan regulator tegangan untuk melindungi dari fluktuasi daya |
 
 ## 3.2 Proses Operasional
 
@@ -386,29 +384,17 @@ flowchart TD
     style ERROR fill:#f44336,color:#fff,stroke:#c62828,stroke-width:3px
 ```
 
-1. **System Initialization** (Engine ON):
-   - Self-check sensor connectivity dan functionality
-   - Jika sensor error → Buzzer error alert, display error message
-   - Jika sensor OK → System ready, LED indicator green
+**Tahapan Proses Operasional:**
 
-2. **Continuous Scanning Mode**:
-   - TF03 sensors scan pada 100Hz, TFA300-L pada 10KHz
-   - Data realtime diproses oleh Raspberry Pi
-   - Jarak objek terdekat ditampilkan di LCD (update setiap 0.1 detik)
+Sistem beroperasi melalui lima tahap utama yang berjalan secara otomatis dan berkelanjutan. Tahap pertama adalah inisialisasi sistem saat mesin dihidupkan, di mana sistem melakukan pemeriksaan mandiri terhadap konektivitas dan fungsi sensor. Jika terjadi kesalahan sensor, buzzer akan memberikan peringatan kesalahan dan menampilkan pesan kesalahan pada layar; jika semua sensor berfungsi normal, sistem siap dan indikator LED menunjukkan warna hijau.
 
-3. **Object Detection & Classification**:
-   - Jika objek terdeteksi → Measure distance → Classify zone
-   - **Zona Aman** (>100m): Display hijau "AMAN - Jarak XXX meter", LED hijau, no alarm
-   - **Zona Waspada** (50-100m): Display kuning "WASPADA - Jarak XXX meter", LED kuning, slow beep (1x per 2 detik)
-   - **Zona Bahaya** (<50m): Display merah "BAHAYA - Jarak XXX meter", LED merah, fast continuous beep
+Tahap kedua adalah mode pemindaian berkelanjutan, di mana sensor TF03 memindai pada 100Hz dan TFA300-L pada 10KHz, dengan data waktu-nyata diproses oleh Raspberry Pi dan jarak objek terdekat ditampilkan di LCD dengan pembaruan setiap 0,1 detik.
 
-4. **Data Logging**:
-   - Setiap detection event dicatat ke SD card: [timestamp, distance, zone, sensor_ID, GPS_coordinate]
-   - Data dapat didownload untuk analisis post-operation
+Tahap ketiga adalah deteksi dan klasifikasi objek. Ketika objek terdeteksi, sistem mengukur jarak dan mengklasifikasikan zona. Untuk Zona Aman (>100m), display menampilkan warna hijau "AMAN - Jarak XXX meter" dengan LED hijau tanpa alarm. Zona Waspada (50-100m) ditandai dengan display kuning "WASPADA - Jarak XXX meter", LED kuning, dan bunyi lambat (1x per 2 detik). Zona Bahaya (<50m) ditandai dengan display merah "BAHAYA - Jarak XXX meter", LED merah, dan bunyi cepat berkelanjutan.
 
-5. **Continuous Loop**:
-   - Sistem kembali ke scanning mode
-   - Operasional 24/7 selama engine ON atau sampai battery depleted (jika using backup power)
+Tahap keempat adalah pencatatan data, di mana setiap kejadian deteksi dicatat ke kartu SD dengan format [penanda waktu, jarak, zona, ID sensor, koordinat GPS], dan data dapat diunduh untuk analisis pasca-operasi.
+
+Tahap kelima adalah pengulangan berkelanjutan, di mana sistem kembali ke mode pemindaian dan beroperasi 24/7 selama mesin menyala atau sampai baterai habis (jika menggunakan daya cadangan).
 
 ## 3.3 Model Ekosistem Living Lab
 
@@ -528,66 +514,30 @@ flowchart LR
 
 ### Stakeholder Mapping
 
-**1. Perguruan Tinggi (Peneliti)**
-- **Kontribusi**: Expertise teknologi, fasilitas riset, SDM peneliti dan mahasiswa
-- **Manfaat**: Publikasi ilmiah, HKI, pengalaman praktis mahasiswa, networking dengan industri
-- **Peran**: Lead development, technical innovation, quality assurance
-
-**2. KSOP Samarinda (Regulator & Fasilitator)**
-- **Kontribusi**: Akses lapangan, data kecelakaan, regulasi & standar keselamatan, izin operasional, network dengan operator tugboat
-- **Manfaat**: Teknologi untuk monitoring keselamatan, data untuk policy-making, rekomendasi kebijakan berbasis evidence
-- **Peran**: Field access facilitator, validator sistem terhadap regulasi, policy advocate
-
-**3. Operator Tugboat (End User)**
-- **Kontribusi**: Insight operasional, feedback user real-time, partisipasi uji coba, operational data
-- **Manfaat**: Peningkatan keselamatan navigasi, kompetensi teknologi, sertifikat pelatihan, prioritas akses teknologi
-- **Peran**: Co-creator (memberikan input kebutuhan), tester (field validation), early adopter
-
-**4. Industri Maritim (Potential Adopter & Investor)**
-- **Kontribusi**: Dukungan finansial (optional), akses armada untuk scale-up, business network
-- **Manfaat**: Inovasi kompetitif, CSR program, first mover advantage jika komersialisasi
-- **Peran**: Observer fase awal, potential partner untuk scaling dan commercialization
+| Pemangku Kepentingan | Kontribusi | Manfaat | Peran |
+|----------------------|------------|---------|-------|
+| **Perguruan Tinggi (Peneliti)** | Keahlian teknologi, fasilitas riset, SDM peneliti dan mahasiswa | Publikasi ilmiah, HKI, pengalaman praktis mahasiswa, jejaring dengan industri | Pemimpin pengembangan, inovasi teknis, jaminan kualitas |
+| **KSOP Samarinda (Regulator & Fasilitator)** | Akses lapangan, data kecelakaan, regulasi & standar keselamatan, izin operasional, jejaring dengan operator tugboat | Teknologi untuk pemantauan keselamatan, data untuk pembuatan kebijakan, rekomendasi berbasis bukti | Fasilitator akses lapangan, validator sistem terhadap regulasi, advokat kebijakan |
+| **Operator Tugboat (Pengguna Akhir)** | Wawasan operasional, umpan balik pengguna waktu-nyata, partisipasi uji coba, data operasional | Peningkatan keselamatan navigasi, kompetensi teknologi, sertifikat pelatihan, prioritas akses teknologi | Pencipta bersama (memberikan masukan kebutuhan), penguji (validasi lapangan), pengadopsi awal |
+| **Industri Maritim (Pengadopsi & Investor Potensial)** | Dukungan finansial (opsional), akses armada untuk peningkatan skala, jejaring bisnis | Inovasi kompetitif, program CSR, keuntungan penggerak pertama jika dikomersialisasikan | Pengamat fase awal, mitra potensial untuk peningkatan skala dan komersialisasi |
 
 ### Living Lab Cycle
 
-**1. Co-Creation Phase** (Iterasi 1):
-- Workshop dengan stakeholders untuk identifikasi pain points keselamatan navigasi
-- User research: interview 10 nahkoda, survey 20 operator, FGD dengan expert KSOP
-- Output: User requirement document yang mencerminkan kebutuhan riil
+**Fase 1: Penciptaan Bersama (Iterasi 1)** – Fase ini dimulai dengan lokakarya bersama pemangku kepentingan untuk mengidentifikasi titik permasalahan keselamatan navigasi, dilanjutkan dengan riset pengguna melalui wawancara 10 nahkoda, survei 20 operator, dan diskusi kelompok terfokus dengan pakar KSOP, menghasilkan dokumen persyaratan pengguna yang mencerminkan kebutuhan riil.
 
-**2. Co-Design Phase** (Iterasi 1-2):
-- Melibatkan operator dalam desain user interface (warna, layout, size font, brightness level)
-- Diskusi threshold alarm: pada jarak berapa alarm harus berbunyi? Seberapa loud? Pattern beep seperti apa?
-- Output: System design yang user-centric dan culturally appropriate
+**Fase 2: Perancangan Bersama (Iterasi 1-2)** – Operator dilibatkan dalam perancangan antarmuka pengguna (warna, tata letak, ukuran huruf, tingkat kecerahan) dan diskusi ambang batas alarm (pada jarak berapa alarm harus berbunyi, seberapa keras, pola bunyi seperti apa), menghasilkan desain sistem yang berpusat pada pengguna dan sesuai konteks budaya.
 
-**3. Co-Implementation Phase** (Iterasi 3-4):
-- Instalasi sistem bersama operator dan teknisi KSOP
-- Uji coba lapangan dengan monitoring real-time dari tim peneliti
-- Operator memberikan feedback immediate jika ada issue atau ketidaknyamanan
-- Output: Prototype yang validated dalam kondisi operasional nyata
+**Fase 3: Implementasi Bersama (Iterasi 3-4)** – Pemasangan sistem dilakukan bersama operator dan teknisi KSOP, dengan uji coba lapangan yang dipantau waktu-nyata oleh tim peneliti, di mana operator memberikan umpan balik segera jika ada masalah atau ketidaknyamanan, menghasilkan prototipe yang tervalidasi dalam kondisi operasional nyata.
 
-**4. Co-Evaluation Phase** (Iterasi 5):
-- Evaluation workshop dengan semua stakeholders
-- Review quantitative data (detection accuracy, false alarm rate) dan qualitative feedback (user satisfaction)
-- Brainstorming improvement dan prioritization
-- Output: Improvement roadmap dan commitment untuk scaling
+**Fase 4: Evaluasi Bersama (Iterasi 5)** – Lokakarya evaluasi dengan semua pemangku kepentingan untuk meninjau data kuantitatif (akurasi deteksi, tingkat alarm palsu) dan umpan balik kualitatif (kepuasan pengguna), dilanjutkan dengan curah pendapat perbaikan dan penetapan prioritas, menghasilkan peta jalan perbaikan dan komitmen untuk peningkatan skala.
 
-### Sustainability Model
+### Model Keberlanjutan
 
-**Keberlanjutan Teknologi**:
-- Maintenance protocol dengan spare parts availability melalui distributor lokal
-- Technical support hotline (24/7 emergency contact selama penelitian, transition ke vendor setelahnya)
-- Annual calibration service
-
-**Keberlanjutan Finansial**:
-- Fase Pilot (Bulan 1-9): Grant funding BESTARI SAINTEK
-- Fase Adoption (Bulan 10-24): Cost-sharing dengan operator (operator membayar 50% dari harga)
-- Fase Scale-up (Tahun 3+): Full commercialization melalui technology licensing atau spin-off company
-
-**Keberlanjutan Kelembagaan**:
-- Pembentukan "Maritime Technology Innovation Hub" di institusi peneliti sebagai center of excellence
-- Long-term partnership agreement dengan KSOP Samarinda (5 tahun MoU)
-- Community of practice untuk operator tugboat: Forum komunikasi, sharing best practices, continuous learning
+| Aspek Keberlanjutan | Strategi |
+|---------------------|----------|
+| **Teknologi** | Protokol pemeliharaan dengan ketersediaan suku cadang melalui distributor lokal, hotline dukungan teknis (kontak darurat 24/7 selama penelitian, transisi ke vendor setelahnya), layanan kalibrasi tahunan |
+| **Finansial** | Fase Percontohan (Bulan 1-9) dengan pendanaan hibah BESTARI SAINTEK; Fase Adopsi (Bulan 10-24) dengan pembagian biaya bersama operator (operator membayar 50% dari harga); Fase Peningkatan Skala (Tahun 3+) dengan komersialisasi penuh melalui lisensi teknologi atau perusahaan rintisan |
+| **Kelembagaan** | Pembentukan "Pusat Inovasi Teknologi Maritim" di institusi peneliti sebagai pusat keunggulan, perjanjian kemitraan jangka panjang dengan KSOP Samarinda (MoU 5 tahun), komunitas praktik untuk operator tugboat dengan forum komunikasi, berbagi praktik terbaik, dan pembelajaran berkelanjutan |
 
 ---
 
