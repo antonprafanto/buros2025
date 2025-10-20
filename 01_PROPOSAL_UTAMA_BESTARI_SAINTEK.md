@@ -1136,16 +1136,22 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 | No | Kategori Biaya | Jumlah (Rp) | Persentase |
 |----|----------------|-------------|------------|
-| A | Sensor & Komponen Elektronik (10 Sensor LiDAR System) | Rp 96.246.000 | 33,2% |
+| A | Sensor & Komponen Elektronik (10 Sensor LiDAR System + Minor Components) | Rp 128.126.000 | 36,7% |
 | B | Bea Cukai & Pajak Impor | Rp 43.125.000 | 12,3% |
-| C | Tools, Equipment & 3D Printing | Rp 58.364.000 | 16,7% |
+| C | Tools, Equipment & 3D Printing (termasuk Cable Tester) | Rp 58.864.000 | 16,8% |
 | D | Operasional Lapangan & Safety Equipment (K3/PPE) | Rp 84.848.000 | 24,3% |
-| E | Contingency & Miscellaneous | Rp 37.849.000 | 10,8% |
+| F | **Perangkat Komputasi & Komunikasi Penelitian (BARU)** | **Rp 33.300.000** | **9,5%** |
+| G | Contingency & Miscellaneous | Rp 519.000 | 0,15% |
 |  | **TOTAL BUDGET** | **Rp 349.300.000** | **100%** |
+
+**Catatan Budget Update**:
+- **Kategori F (Komputasi & Komunikasi)** ditambahkan untuk mendukung development, data analysis, remote monitoring, dan dokumentasi penelitian
+- **8 komponen minor** ditambahkan ke Kategori A untuk meningkatkan reliability dan data logging capability (GPS, RTC, Cooling, Voltage Monitor, Cable Tester, Dessicant, Spare Arduino, Extra Cable)
+- **Contingency 0,15%** (Rp 519.000) sangat tight - memerlukan manajemen budget yang ketat dan disiplin
 
 ### B.2 Breakdown Detail Budget
 
-**B.2.1 SENSOR DAN KOMPONEN ELEKTRONIK UTAMA** (Rp 96.246.000)
+**B.2.1 SENSOR DAN KOMPONEN ELEKTRONIK UTAMA** (Rp 128.126.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1155,11 +1161,13 @@ STARBOARD (Kiri)                  PORT (Kanan)
 | | | | **Subtotal A.1** | **Rp 66.745.000** |
 | **A.2 Mikrokontroler & Processing** | | | | |
 | | Raspberry Pi 4 (8GB RAM) - Master Controller | 1 unit | Rp 2.067.000 | Rp 2.067.000 |
+| | Raspberry Pi Heatsink + Cooling Fan Kit | 1 set | Rp 150.000 | Rp 150.000 |
 | | Arduino Mega 2560 - Sensor Interface | 3 unit | Rp 1.240.000 | Rp 3.720.000 |
+| | Spare Arduino Mega 2560 (Backup Unit) | 1 unit | Rp 1.200.000 | Rp 1.200.000 |
 | | CAN Bus Shield / Interface Module | 3 unit | Rp 690.000 | Rp 2.070.000 |
 | | SD Card Module + 64GB High-Speed SD Card | 1 set | Rp 495.000 | Rp 495.000 |
 | | USB Hub 10-Port (Industrial Grade) | 1 unit | Rp 963.000 | Rp 963.000 |
-| | | | **Subtotal A.2** | **Rp 9.315.000** |
+| | | | **Subtotal A.2** | **Rp 10.665.000** |
 | **A.3 Display & Alert System** | | | | |
 | | OLED/LCD Touchscreen Display 7" Waterproof | 1 unit | Rp 1.789.000 | Rp 1.789.000 |
 | | Active Buzzer + Multi-tone Piezo Alarm | 2 set | Rp 330.000 | Rp 660.000 |
@@ -1170,28 +1178,33 @@ STARBOARD (Kiri)                  PORT (Kanan)
 | | DC-DC Converter 12V to 5V/3.3V (High Current) | 3 unit | Rp 495.000 | Rp 1.486.000 |
 | | Lithium Battery 12V 20Ah Deep Cycle + BMS | 1 set | Rp 2.340.000 | Rp 2.340.000 |
 | | Battery Management System (BMS 12V 100A) | 1 unit | Rp 688.000 | Rp 688.000 |
+| | Digital Voltage Monitor 0-30V DC | 1 unit | Rp 150.000 | Rp 150.000 |
 | | Power Distribution Board + Fuse Panel | 1 set | Rp 826.000 | Rp 826.000 |
-| | | | **Subtotal A.4** | **Rp 5.340.000** |
+| | | | **Subtotal A.4** | **Rp 5.490.000** |
 | **A.5 Enclosure & Mounting** | | | | |
 | | IP67 Waterproof Enclosure Large (custom) | 1 unit | Rp 3.302.000 | Rp 3.302.000 |
 | | Stainless Steel Mounting Bracket (adjustable) | 10 set | Rp 771.000 | Rp 7.710.000 |
 | | Marine-grade Gasket & Seal Kit | 3 set | Rp 330.000 | Rp 991.000 |
 | | Vibration Damper Mounts | 10 set | Rp 165.000 | Rp 1.651.000 |
-| | | | **Subtotal A.5** | **Rp 13.654.000** |
+| | Dessicant Packs Silica Gel (100 pcs) | 1 box | Rp 50.000 | Rp 50.000 |
+| | | | **Subtotal A.5** | **Rp 13.704.000** |
 | **A.6 Kabel & Konektor** | | | | |
 | | Marine-grade Cable 15m (shielded, waterproof) | 50 m | Rp 138.000 | Rp 6.890.000 |
+| | Extra Marine-grade Cable 10m (spare/routing) | 10 m | Rp 138.000 | Rp 1.380.000 |
 | | Waterproof Connector IP68 (Heavy Duty) | 30 unit | Rp 276.000 | Rp 8.268.000 |
 | | Cable Gland & Junction Box (Industrial) | 15 set | Rp 221.000 | Rp 3.315.000 |
 | | Cable Management Kit (Spiral, labels, ties) | 2 set | Rp 413.000 | Rp 827.000 |
-| | | | **Subtotal A.6** | **Rp 19.300.000** |
+| | | | **Subtotal A.6** | **Rp 20.680.000** |
 | **A.7 Komponen Elektronik Pendukung** | | | | |
+| | GPS Module NEO-M8N (Geolocation & Timestamp) | 1 unit | Rp 500.000 | Rp 500.000 |
+| | Real-Time Clock Module DS3231 (RTC) | 1 unit | Rp 100.000 | Rp 100.000 |
 | | PCB Prototype Board + Components | 5 set | Rp 606.000 | Rp 3.029.000 |
 | | Resistor, Capacitor, Diode Kit (Extended) | 3 set | Rp 495.000 | Rp 1.486.000 |
 | | Relay Module + Fuse Holder (Industrial) | 3 set | Rp 413.000 | Rp 1.240.000 |
 | | Heat Shrink Tube + Cable Ties Kit (Pro) | 3 set | Rp 276.000 | Rp 827.000 |
 | | Logic Level Converter + Voltage Regulator | 2 set | Rp 330.000 | Rp 660.000 |
-| | | | **Subtotal A.7** | **Rp 7.242.000** |
-| | | | **SUBTOTAL A** | **Rp 125.121.000** |
+| | | | **Subtotal A.7** | **Rp 7.842.000** |
+| | | | **SUBTOTAL A** | **Rp 128.126.000** |
 
 ---
 
@@ -1212,7 +1225,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**B.2.3 TOOLS, EQUIPMENT & 3D PRINTING** (Rp 44.889.000)
+**B.2.3 TOOLS, EQUIPMENT & 3D PRINTING** (Rp 58.864.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1232,16 +1245,17 @@ STARBOARD (Kiri)                  PORT (Kanan)
 | | Digital Multimeter + Clamp Meter (Fluke-grade) | 2 unit | Rp 1.651.000 | Rp 3.302.000 |
 | | Oscilloscope 2-Channel 100MHz | 1 unit | Rp 4.953.000 | Rp 4.953.000 |
 | | Logic Analyzer 8-Channel | 1 unit | Rp 1.377.000 | Rp 1.377.000 |
+| | Cable Tester Multifunctional (Continuity/Short) | 1 unit | Rp 500.000 | Rp 500.000 |
 | | Crimping Tool Set Professional | 1 set | Rp 1.651.000 | Rp 1.651.000 |
 | | Hand Tools Kit (Screwdriver, Pliers, Wrench) | 1 set | Rp 1.927.000 | Rp 1.927.000 |
 | | Power Drill + Impact Driver + Bits | 1 set | Rp 2.478.000 | Rp 2.478.000 |
 | | Heat Gun + Hot Air Station | 1 set | Rp 1.239.000 | Rp 1.239.000 |
-| | | | **Subtotal C.2** | **Rp 20.229.000** |
-| | | | **SUBTOTAL C** | **Rp 58.364.000** |
+| | | | **Subtotal C.2** | **Rp 20.729.000** |
+| | | | **SUBTOTAL C** | **Rp 58.864.000** |
 
 ---
 
-**B.2.4 BIAYA OPERASIONAL LAPANGAN & SAFETY EQUIPMENT** (Rp 65.268.000)
+**B.2.4 BIAYA OPERASIONAL LAPANGAN & SAFETY EQUIPMENT** (Rp 84.848.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1283,51 +1297,115 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**B.2.5 CONTINGENCY DAN MISCELLANEOUS** (Rp 29.114.000)
+**B.2.6 PERANGKAT KOMPUTASI DAN KOMUNIKASI PENELITIAN** (Rp 33.300.000)
+
+| Sub-kategori | Item | Qty | Harga Satuan | Subtotal | Justifikasi Penggunaan |
+|--------------|------|-----|--------------|----------|------------------------|
+| **F.1 Komputasi Development & Analysis** | | | | | |
+| | **Lenovo Yoga Slim 7X 14Q8X9** | 1 unit | Rp 24.000.000 | Rp 24.000.000 | **WAJIB** untuk penelitian: |
+| | - Processor: Snapdragon X Elite (12-core ARM) | | | | (1) Development firmware & coding (~980 baris Python/C++) |
+| | - RAM: 32GB LPDDR5x (non-upgradeable) | | | | (2) Data analysis 100 jam operasional (~50-100GB dataset) |
+| | - Storage: 1TB NVMe PCIe Gen 4 SSD | | | | (3) Machine learning optimization (NPU 45 TOPS untuk AI inference) |
+| | - Display: 14.5" 2.8K OLED (2880x1800), 90Hz | | | | (4) Penyusunan 6 dokumentasi penelitian (142 halaman total) |
+| | - Battery: 70Wh (22+ jam, excellent untuk field work) | | | | (5) Field work dengan mobility tinggi (1.28kg ultra-lightweight) |
+| | - Weight: 1.28kg (ultra-portable untuk lapangan) | | | | (6) Remote monitoring & debugging sistem di tugboat |
+| | Monitor Eksternal LG 24MP400 (24" FHD IPS, 75Hz) | 1 unit | Rp 1.500.000 | Rp 1.500.000 | Dual-screen setup untuk productivity: coding di satu layar, documentation/data visualization di layar lain (boost efficiency 30-40%) |
+| | **Subtotal F.1** | | | **Rp 25.500.000** | |
+| **F.2 Komunikasi & Remote Monitoring** | | | | | |
+| | **Huawei Mobile WiFi M23 Pro XL** | 1 unit | Rp 1.800.000 | Rp 1.800.000 | **WAJIB** untuk: |
+| | - Network: 4G LTE Cat 12 (600Mbps DL, 100Mbps UL) | | | | (1) Remote monitoring sistem di tugboat (SSH ke Raspberry Pi) |
+| | - WiFi: WiFi 6 (802.11ax), dual-band 2.4GHz + 5GHz | | | | (2) Upload data log ke cloud backup setiap minggu |
+| | - Battery: 4000mAh (10-12 jam field operation) | | | | (3) Real-time communication WhatsApp dengan operator tugboat |
+| | - Display: 1.45" TFT LCD (monitoring data usage) | | | | (4) Akses jurnal ilmiah & download library untuk development |
+| | - Max Devices: 32 devices simultaneous | | | | (5) Collaboration GitHub, email, video call dengan KSOP Samarinda |
+| | **Paket Data Internet XL GO IZI (9 bulan)** | 9 bulan | - | Rp 1.100.000 | Strategi flexible data plan: |
+| | - Bulan 1: 25GB GRATIS (bundle modem M23 Pro) | | | | - Bulan 1: 25GB gratis (bundle modem) |
+| | - Bulan 2-5, 8-9: XL GO IZI 25GB @ Rp 100k/bulan | | | | - Bulan 2-5, 8-9: 25GB @ Rp 100k/bulan = Rp 700k (development, documentation) |
+| | - Bulan 6-7: XL GO IZI 75GB @ Rp 200k/bulan | | | | - Bulan 6-7: 75GB @ Rp 200k/bulan = Rp 400k (field trial intensive: remote monitoring + data upload 50GB + video call) |
+| | | | | | Total 9 bulan: Rp 1.100.000 (hemat Rp 1.150.000 vs paket fixed) |
+| | **Subtotal F.2** | | | **Rp 2.900.000** | |
+| **F.3 Backup & Protection** | | | | | |
+| | External HDD WD My Passport 2TB (USB 3.2, Hardware Encryption) | 1 unit | Rp 1.200.000 | Rp 1.200.000 | **WAJIB** untuk backup 100 jam data operasional (~50-100GB), source code, dokumentasi, video; disaster recovery & long-term archival |
+| | UPS Prolink PRO700SFC (700VA/360W, ~20 menit runtime) | 1 unit | Rp 1.200.000 | Rp 1.200.000 | Proteksi laptop + Raspberry Pi + display dari sudden power loss (data corruption prevention) dan voltage fluctuation (hardware damage prevention) |
+| | **Subtotal F.3** | | | **Rp 2.400.000** | |
+| **F.4 Dokumentasi & Output** | | | | | |
+| | Printer Canon PIXMA G3010 (Ink Tank, WiFi, Print/Scan/Copy) | 1 unit | Rp 2.500.000 | Rp 2.500.000 | Print modul pelatihan 20 operator, form evaluasi lapangan, survey questionnaire, laporan interim/final; Ink tank = low cost per page untuk volume tinggi (~200+ halaman dokumentasi) |
+| | **Subtotal F.4** | | | **Rp 2.500.000** | |
+| | | | **SUBTOTAL F** | **Rp 33.300.000** | |
+
+**Catatan Penting Perangkat Komputasi:**
+- **Laptop ARM (Snapdragon X Elite)** dipilih untuk battery life exceptional (22+ jam) dan portability (1.28kg) yang critical untuk field work di Sungai Mahakam
+- **Risk Mitigation Oscilloscope Software**: Software oscilloscope PC-based (Saleae Logic, PulseView) tidak support Windows ARM. Solusi: (1) Gunakan oscilloscope standalone di laboratorium institusi untuk debugging hardware Iterasi 3, atau (2) Remote desktop ke PC x86 untuk analysis (dengan trade-off latency)
+- **Arduino IDE Compatibility**: Arduino IDE 2.x tersedia untuk ARM64, namun beberapa board library mungkin perlu testing. Mitigation: Early testing di Bulan 1 dan gunakan Arduino CLI jika diperlukan
+- **NPU 45 TOPS** memberikan advantage significant untuk machine learning optimization di Iterasi 5 (false positive reduction algorithm)
+
+---
+
+**B.2.7 CONTINGENCY DAN MISCELLANEOUS** (Rp 519.000)
 
 | Item | Perhitungan/Keterangan | Jumlah |
 |------|------------------------|---------|
-| Contingency Fund | 10% dari A+C+D | Rp 29.596.000 |
-| Shipping & Handling | Import, International | Rp 5.502.000 |
-| Customs Clearance & Documentation Fee | - | Rp 2.751.000 |
-| | **SUBTOTAL E** | **Rp 37.849.000** |
+| Contingency Fund | Sisa setelah alokasi A+C+D+F | Rp 519.000 |
+| | **Note**: Contingency 0.15% (very tight) - Manajemen budget ketat diperlukan | |
+| | **SUBTOTAL G** | **Rp 519.000** |
 
 ---
 
 **TOTAL BUDGET PENELITIAN: Rp 349.300.000**
 ### B.3 Catatan Penting Budget
 
-1. **Sistem 10 Sensor LiDAR**:
-   - Konfigurasi: 8 unit TF03 (range 180m) + 3 unit TFA300-L (range 290m)
+1. **Sistem 10 Sensor LiDAR + 8 Komponen Minor**:
+   - Konfigurasi sensor: 8 unit TF03 (range 180m) + 3 unit TFA300-L (range 290m)
    - Memberikan coverage 360 derajat dengan density tinggi di bagian depan kapal
-   - Total 1 prototype system lengkap
+   - **Komponen minor ditambahkan**: GPS Module (geolocation), RTC Module (timestamp), Raspberry Pi Cooling (thermal management), Voltage Monitor (battery monitoring), Cable Tester (QA instalasi), Dessicant Packs (humidity control), Spare Arduino (backup), Extra Marine Cable 10m (routing flexibility)
+   - Total 1 prototype system lengkap dengan reliability enhancement
 
-2. **3D Printer Creality K2 PLUS CFS Combo**:
+2. **Perangkat Komputasi & Komunikasi** (Kategori Baru - Rp 33.300.000):
+   - **Lenovo Yoga Slim 7X** (Snapdragon X Elite, 32GB, 1TB, 2.8K OLED): Development firmware, data analysis 50-100GB, ML optimization dengan NPU 45 TOPS, dokumentasi 142 halaman, field work mobility (22+ jam battery, 1.28kg)
+   - **Huawei Modem M23 Pro XL**: Remote monitoring tugboat via SSH, upload data cloud, komunikasi WhatsApp, collaboration (4G LTE Cat 12, WiFi 6, 4000mAh)
+   - **Paket Data XL GO IZI Flexible 9 bulan**: Hemat Rp 1.150.000 dengan strategi adaptive (25GB bulan normal, 75GB saat field trial)
+   - **External HDD 2TB**: Backup 100 jam data operasional, disaster recovery
+   - **UPS 700VA**: Proteksi laptop + Raspberry Pi dari power loss dan voltage fluctuation
+   - **Monitor 24" FHD**: Dual-screen productivity boost 30-40% untuk coding dan data analysis
+   - **Printer Ink Tank**: Low cost per page untuk modul pelatihan 20 operator dan dokumentasi 200+ halaman
+
+3. **3D Printer Creality K2 PLUS CFS Combo**:
    - Untuk rapid prototyping custom enclosure, mounting bracket, gasket
    - Multi-material capability (PLA, PETG, TPU)
    - Build volume besar (350x350x350mm) untuk komponen custom
    - AI cameras untuk quality control printing
 
-3. **Safety Equipment (K3/PPE) Standar Industri**:
+4. **Safety Equipment (K3/PPE) Standar Industri**:
    - **Lab Safety**: Kacamata safety, face shield, masker N95, ESD strap, heat-resistant gloves, lab coat flame retardant
    - **Field Safety**: Helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, high-vis vest
    - **Emergency**: Maritime first aid kit, fire extinguisher ABC, emergency communication
    - Total investasi Rp 49.632.000 untuk melindungi tim peneliti selama kerja laboratorium dan uji lapangan
 
-4. **Biaya Sewa Tugboat**:
+5. **Biaya Sewa Tugboat**:
    - TIDAK termasuk dalam budget
    - Menggunakan pendekatan Laboratorium Hidup (Living Lab) dengan kolaborasi operator lokal
    - Akses tugboat melalui kerja sama pemangku kepentingan (kontribusi natura dari operator)
 
-5. **Potensi Efisiensi Budget**:
+6. **Risk Mitigation - Laptop ARM (Snapdragon X Elite)**:
+   - **Oscilloscope Software Issue**: Software PC-based (Saleae Logic, PulseView) tidak support Windows ARM
+   - **Solusi**: (1) Gunakan oscilloscope standalone di laboratorium institusi untuk debugging hardware Iterasi 3, atau (2) Remote desktop ke PC x86 (dengan trade-off latency)
+   - **Arduino IDE**: Arduino IDE 2.x tersedia untuk ARM64, early testing di Bulan 1 untuk detect compatibility issues
+   - **Advantage**: NPU 45 TOPS excellent untuk ML optimization, battery 22+ jam critical untuk field work
+
+7. **Contingency Fund 0,15%** (Rp 519.000):
+   - **WARNING**: Sangat tight, hampir tidak ada buffer untuk unforeseen expenses
+   - **Mitigation**: Manajemen budget disiplin, track setiap pengeluaran, hindari scope creep
+   - **Alternative**: Jika ada komponen yang harganya naik, perlu realokasi dari kategori lain
+
+8. **Potensi Efisiensi Budget**:
    - Institusi pendidikan/penelitian dapat mengajukan pembebasan/keringanan bea masuk
    - Konsultasi dengan Bea Cukai untuk fasilitas impor penelitian (KITE, API-U, dll)
-   - Potensi pengurangan biaya bea cukai hingga 50%, menghemat ~Rp 16 juta
+   - Potensi pengurangan biaya bea cukai hingga 50%, menghemat ~Rp 16 juta (bisa dialokasikan ke contingency)
 
-6. **Asumsi Kurs**:
+9. **Asumsi Kurs**:
    - 1 USD = Rp 15.675 (referensi Bank Indonesia)
    - Kurs akan disesuaikan dengan nilai aktual saat pengadaan
-   - Dana kontingensi 10% juga menutupi fluktuasi kurs
+   - Fluktuasi kurs perlu dimonitor ketat karena contingency terbatas
 
 ---
 
