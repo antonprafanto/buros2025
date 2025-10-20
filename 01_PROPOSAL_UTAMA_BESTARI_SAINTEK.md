@@ -136,32 +136,50 @@ Sistem sensor LiDAR anti-collision dirancang dengan arsitektur **three-layer** y
 ```mermaid
 graph TB
     subgraph Layer1["Layer 1: Sensor Input"]
-        TF03_1[TF03 Sensor 1<br/>180m Range]
-        TF03_2[TF03 Sensor 2<br/>180m Range]
-        TF03_3[TF03 Sensor 3-8<br/>180m Range]
-        TFA_1[TFA300-L Sensor 1-2<br/>290m Long Range]
-        TFA_2[TFA300-L Sensor 3<br/>290m Rear]
+        TF03_1["TF03 Sensor 1
+        180m Range"]
+        TF03_2["TF03 Sensor 2
+        180m Range"]
+        TF03_3["TF03 Sensor 3-8
+        180m Range"]
+        TFA_1["TFA300-L Sensor 1-2
+        290m Long Range"]
+        TFA_2["TFA300-L Sensor 3
+        290m Rear"]
     end
 
     subgraph Layer2["Layer 2: Processing Unit"]
-        ARD1[Arduino Mega 1<br/>Data Acquisition]
-        ARD2[Arduino Mega 2<br/>Data Acquisition]
-        ARD3[Arduino Mega 3<br/>Data Acquisition]
-        RPI[Raspberry Pi 4<br/>Master Controller<br/>Sensor Fusion]
-        SD[SD Card 64GB<br/>Data Logger]
+        ARD1["Arduino Mega 1
+        Data Acquisition"]
+        ARD2["Arduino Mega 2
+        Data Acquisition"]
+        ARD3["Arduino Mega 3
+        Data Acquisition"]
+        RPI["Raspberry Pi 4
+        Master Controller
+        Sensor Fusion"]
+        SD["SD Card 64GB
+        Data Logger"]
     end
 
     subgraph Layer3["Layer 3: Output/Interface"]
-        LCD[LCD 7" Touchscreen<br/>Real-time Display]
-        LED[LED Indicator<br/>RGB Array]
-        ALARM[Audio Alarm<br/>Multi-tone Buzzer]
-        ESTOP[Emergency Stop<br/>Button]
+        LCD["LCD 7inch Touchscreen
+        Real-time Display"]
+        LED["LED Indicator
+        RGB Array"]
+        ALARM["Audio Alarm
+        Multi-tone Buzzer"]
+        ESTOP["Emergency Stop
+        Button"]
     end
 
     subgraph Power["Power System"]
-        BOAT[Tugboat 12V DC<br/>Primary Power]
-        BATT[Lithium Battery<br/>12V 20Ah Backup]
-        CONV[DC-DC Converter<br/>12V to 5V/3.3V]
+        BOAT["Tugboat 12V DC
+        Primary Power"]
+        BATT["Lithium Battery
+        12V 20Ah Backup"]
+        CONV["DC-DC Converter
+        12V to 5V/3.3V"]
     end
 
     TF03_1 --> ARD1
@@ -207,28 +225,36 @@ graph TB
 ### Diagram Top View: Konfigurasi 10 Sensor LiDAR pada Tugboat
 
 ```mermaid
-graph TD
-    subgraph TUGBOAT["TUGBOAT - TOP VIEW (360° COVERAGE)"]
-        direction TB
+graph TB
+    subgraph BOW["BOW - Haluan Depan"]
+        TFA1["TFA300-L #1
+        290m Long Range"]
+        TFA2["TFA300-L #2
+        290m Long Range"]
+        TF03_F1["TF03 #1
+        180m"]
+        TF03_F2["TF03 #2
+        180m"]
+        TF03_F3["TF03 #3
+        180m"]
+        TF03_F4["TF03 #4
+        180m"]
+    end
 
-        subgraph BOW["⬆️ BOW (Haluan)"]
-            TFA1["🔴 TFA300-L #1<br/>290m Long Range"]
-            TFA2["🔴 TFA300-L #2<br/>290m Long Range"]
-            TF03_F1["🔵 TF03 #1<br/>180m"]
-            TF03_F2["🔵 TF03 #2<br/>180m"]
-            TF03_F3["🔵 TF03 #3<br/>180m"]
-            TF03_F4["🔵 TF03 #4<br/>180m"]
-        end
+    subgraph SIDES["SIDES - Sisi Kiri dan Kanan"]
+        TF03_L["TF03 #5
+        180m
+        Starboard"]
+        BODY["TUGBOAT BODY
+        Central Position"]
+        TF03_R["TF03 #6
+        180m
+        Port"]
+    end
 
-        subgraph SIDES["◀️ STARBOARD ═══ TUGBOAT BODY ═══ PORT ▶️"]
-            TF03_L["🔵 TF03 #5<br/>180m<br/>(Kiri/Starboard)"]
-            BODY[" "]
-            TF03_R["🔵 TF03 #6<br/>180m<br/>(Kanan/Port)"]
-        end
-
-        subgraph STERN["⬇️ STERN (Buritan)"]
-            TFA3["🔴 TFA300-L #3<br/>290m Rear Detection"]
-        end
+    subgraph STERN["STERN - Buritan Belakang"]
+        TFA3["TFA300-L #3
+        290m Rear Detection"]
     end
 
     style BOW fill:#e3f2fd
@@ -294,35 +320,59 @@ Sistem beroperasi secara otomatis dengan flow sebagai berikut:
 
 ```mermaid
 flowchart TD
-    START([Engine ON]) --> INIT[System Initialization<br/>Self-check Sensors]
-    INIT --> CHECK{All Sensors<br/>OK?}
-    CHECK -->|No| ERROR[Buzzer Error Alert<br/>Display Error Message]
-    ERROR --> MANUAL[Manual Mode<br/>Operator Decision]
-    CHECK -->|Yes| READY[System Ready<br/>LED Green]
+    START([Engine ON]) --> INIT["System Initialization
+    Self-check Sensors"]
+    INIT --> CHECK{"All Sensors
+    OK?"}
+    CHECK -->|No| ERROR["Buzzer Error Alert
+    Display Error Message"]
+    ERROR --> MANUAL["Manual Mode
+    Operator Decision"]
+    CHECK -->|Yes| READY["System Ready
+    LED Green"]
 
-    READY --> SCAN[Continuous Scanning Mode<br/>TF03: 100Hz<br/>TFA300-L: 10KHz]
+    READY --> SCAN["Continuous Scanning Mode
+    TF03: 100Hz
+    TFA300-L: 10KHz"]
 
-    SCAN --> DETECT{Object<br/>Detected?}
+    SCAN --> DETECT{"Object
+    Detected?"}
     DETECT -->|No| SCAN
-    DETECT -->|Yes| MEASURE[Measure Distance<br/>All Active Sensors]
+    DETECT -->|Yes| MEASURE["Measure Distance
+    All Active Sensors"]
 
-    MEASURE --> FUSION[Sensor Fusion<br/>Weighted Average]
-    FUSION --> CLASSIFY{Classify<br/>Zone}
+    MEASURE --> FUSION["Sensor Fusion
+    Weighted Average"]
+    FUSION --> CLASSIFY{"Classify
+    Zone"}
 
-    CLASSIFY -->|>100m| SAFE[ZONA AMAN<br/>Display: Hijau<br/>LED: Hijau<br/>Alarm: OFF]
-    CLASSIFY -->|50-100m| WARN[ZONA WASPADA<br/>Display: Kuning<br/>LED: Kuning<br/>Alarm: Slow Beep]
-    CLASSIFY -->|<50m| DANGER[ZONA BAHAYA<br/>Display: Merah<br/>LED: Merah<br/>Alarm: Fast Beep]
+    CLASSIFY -->|">100m"| SAFE["ZONA AMAN
+    Display: Hijau
+    LED: Hijau
+    Alarm: OFF"]
+    CLASSIFY -->|"50-100m"| WARN["ZONA WASPADA
+    Display: Kuning
+    LED: Kuning
+    Alarm: Slow Beep"]
+    CLASSIFY -->|"<50m"| DANGER["ZONA BAHAYA
+    Display: Merah
+    LED: Merah
+    Alarm: Fast Beep"]
 
-    SAFE --> LOG[Data Logging to SD Card<br/>Timestamp, Distance, Zone]
+    SAFE --> LOG["Data Logging to SD Card
+    Timestamp, Distance, Zone"]
     WARN --> LOG
     DANGER --> LOG
 
-    LOG --> ESTOP{Emergency<br/>Stop Pressed?}
-    ESTOP -->|Yes| MUTE[Mute Alarm<br/>5 Minutes]
+    LOG --> ESTOP{"Emergency
+    Stop Pressed?"}
+    ESTOP -->|Yes| MUTE["Mute Alarm
+    5 Minutes"]
     MUTE --> SCAN
     ESTOP -->|No| SCAN
 
-    MANUAL --> SHUTDOWN{Engine<br/>OFF?}
+    MANUAL --> SHUTDOWN{"Engine
+    OFF?"}
     SCAN --> SHUTDOWN
     SHUTDOWN -->|Yes| END([System Shutdown])
     SHUTDOWN -->|No| SCAN
@@ -368,24 +418,50 @@ Penelitian ini mengadopsi pendekatan **Living Lab** yang menekankan kolaborasi m
 ```mermaid
 graph LR
     subgraph Core["CORE TEAM"]
-        PT[Perguruan Tinggi<br/>PENELITI<br/>━━━━━━━<br/>• Technical Innovation<br/>• Research Lead<br/>• Quality Assurance]
+        PT["Perguruan Tinggi
+        PENELITI
+        ━━━━━━━
+        Technical Innovation
+        Research Lead
+        Quality Assurance"]
     end
 
     subgraph Gov["GOVERNMENT"]
-        KSOP[KSOP Samarinda<br/>REGULATOR<br/>━━━━━━━<br/>• Field Access<br/>• Policy Support<br/>• Validation]
+        KSOP["KSOP Samarinda
+        REGULATOR
+        ━━━━━━━
+        Field Access
+        Policy Support
+        Validation"]
     end
 
     subgraph Industry["INDUSTRY"]
-        OPR[Operator Tugboat<br/>END USER<br/>━━━━━━━<br/>• User Insight<br/>• Field Testing<br/>• Co-Creation]
-        MAR[Industri Maritim<br/>POTENTIAL ADOPTER<br/>━━━━━━━<br/>• CSR Support<br/>• Scaling Partner<br/>• Commercialization]
+        OPR["Operator Tugboat
+        END USER
+        ━━━━━━━
+        User Insight
+        Field Testing
+        Co-Creation"]
+        MAR["Industri Maritim
+        POTENTIAL ADOPTER
+        ━━━━━━━
+        CSR Support
+        Scaling Partner
+        Commercialization"]
     end
 
-    PT <-->|MoU<br/>Collaboration| KSOP
-    PT <-->|Co-Design<br/>Training| OPR
-    KSOP <-->|Coordination<br/>Network| OPR
-    KSOP <-->|Recommendation<br/>Advocacy| MAR
-    PT <-->|Technology Transfer<br/>Licensing| MAR
-    OPR <-->|Early Adoption<br/>Feedback| MAR
+    PT <-->|"MoU
+    Collaboration"| KSOP
+    PT <-->|"Co-Design
+    Training"| OPR
+    KSOP <-->|"Coordination
+    Network"| OPR
+    KSOP <-->|"Recommendation
+    Advocacy"| MAR
+    PT <-->|"Technology Transfer
+    Licensing"| MAR
+    OPR <-->|"Early Adoption
+    Feedback"| MAR
 
     style PT fill:#2196f3,color:#fff
     style KSOP fill:#4caf50,color:#fff
@@ -397,19 +473,45 @@ graph LR
 
 ```mermaid
 flowchart LR
-    A[1. CO-CREATION<br/>━━━━━━━━━<br/>Workshop Stakeholders<br/>User Research<br/>Pain Points ID<br/>━━━━━━━━━<br/>Output: User Requirements]
+    A["1. CO-CREATION
+    ━━━━━━━━━
+    Workshop Stakeholders
+    User Research
+    Pain Points ID
+    ━━━━━━━━━
+    Output: User Requirements"]
 
-    B[2. CO-DESIGN<br/>━━━━━━━━━<br/>UI/UX Design<br/>Threshold Setting<br/>Operator Input<br/>━━━━━━━━━<br/>Output: System Design]
+    B["2. CO-DESIGN
+    ━━━━━━━━━
+    UI/UX Design
+    Threshold Setting
+    Operator Input
+    ━━━━━━━━━
+    Output: System Design"]
 
-    C[3. CO-IMPLEMENTATION<br/>━━━━━━━━━<br/>Instalasi Bersama<br/>Field Testing<br/>Real-time Feedback<br/>━━━━━━━━━<br/>Output: Validated Prototype]
+    C["3. CO-IMPLEMENTATION
+    ━━━━━━━━━
+    Instalasi Bersama
+    Field Testing
+    Real-time Feedback
+    ━━━━━━━━━
+    Output: Validated Prototype"]
 
-    D[4. CO-EVALUATION<br/>━━━━━━━━━<br/>Evaluation Workshop<br/>Data Analysis<br/>Improvement Plan<br/>━━━━━━━━━<br/>Output: Final System]
+    D["4. CO-EVALUATION
+    ━━━━━━━━━
+    Evaluation Workshop
+    Data Analysis
+    Improvement Plan
+    ━━━━━━━━━
+    Output: Final System"]
 
-    A -->|Iterasi 1| B
-    B -->|Iterasi 1-2| C
-    C -->|Iterasi 3-4| D
-    D -->|Iterasi 5| A
-    D -->|Finalisasi<br/>Iterasi 6| E[Scaling &<br/>Sustainability]
+    A -->|"Iterasi 1"| B
+    B -->|"Iterasi 1-2"| C
+    C -->|"Iterasi 3-4"| D
+    D -->|"Iterasi 5"| A
+    D -->|"Finalisasi
+    Iterasi 6"| E["Scaling and
+    Sustainability"]
 
     style A fill:#e1f5fe
     style B fill:#fff3e0
