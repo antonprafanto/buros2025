@@ -134,7 +134,7 @@ Sistem sensor LiDAR anti-collision dirancang dengan arsitektur **three-layer** y
 ### Diagram Arsitektur Sistem
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e1f5fe','primaryTextColor':'#000','primaryBorderColor':'#01579b','lineColor':'#000','secondaryColor':'#fff3e0','tertiaryColor':'#f3e5f5','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#f5f5f5','clusterBkg':'#e1f5fe','clusterBorder':'#01579b','edgeLabelBackground':'#ffffff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e1f5fe','primaryTextColor':'#000','primaryBorderColor':'#01579b','lineColor':'#000','secondaryColor':'#fff3e0','tertiaryColor':'#f3e5f5','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','clusterBkg':'#e1f5fe','clusterBorder':'#01579b','edgeLabelBackground':'#ffffff','fontFamily':'arial','fontSize':'14px','textColor':'#000','nodeBorder':'#000','nodeTextColor':'#000','arrowheadColor':'#000'}}}%%
 graph TB
     subgraph Layer1["Layer 1: Sensor Input"]
         TF03_1["TF03 Sensor 1
@@ -226,7 +226,7 @@ graph TB
 ### Diagram Top View: Konfigurasi 10 Sensor LiDAR pada Tugboat
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','clusterBkg':'#e3f2fd','clusterBorder':'#01579b'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','clusterBkg':'#e3f2fd','clusterBorder':'#01579b','edgeLabelBackground':'#ffffff','fontFamily':'arial','fontSize':'14px','textColor':'#000','nodeBorder':'#000','nodeTextColor':'#000','arrowheadColor':'#000'}}}%%
 graph TB
     subgraph BOW["BOW - Haluan Depan"]
         TFA1["TFA300-L #1
@@ -321,7 +321,7 @@ Sistem beroperasi secara otomatis dengan flow sebagai berikut:
 ### Diagram Flowchart Proses Operasional
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','nodeTextColor':'#000'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','edgeLabelBackground':'#ffffff','fontFamily':'arial','fontSize':'14px','textColor':'#000','nodeBorder':'#000','nodeTextColor':'#000','arrowheadColor':'#000'}}}%%
 flowchart TD
     START([Engine ON]) --> INIT["System Initialization
     Self-check Sensors"]
@@ -419,7 +419,7 @@ Penelitian ini mengadopsi pendekatan **Living Lab** yang menekankan kolaborasi m
 ### Diagram Ekosistem Living Lab
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','clusterBkg':'#f5f5f5','clusterBorder':'#666'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','edgeLabelBackground':'#ffffff','clusterBkg':'#f5f5f5','clusterBorder':'#666','fontFamily':'arial','fontSize':'14px','textColor':'#000','nodeBorder':'#000','nodeTextColor':'#000','arrowheadColor':'#000'}}}%%
 graph LR
     subgraph Core["CORE TEAM"]
         PT["Perguruan Tinggi
@@ -479,7 +479,7 @@ graph LR
 ### Diagram Living Lab Cycle (4 Fase)
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','nodeTextColor':'#000'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','edgeLabelBackground':'#ffffff','fontFamily':'arial','fontSize':'14px','textColor':'#000','nodeBorder':'#000','nodeTextColor':'#000','arrowheadColor':'#000'}}}%%
 flowchart LR
     A["1. CO-CREATION
     ━━━━━━━━━
