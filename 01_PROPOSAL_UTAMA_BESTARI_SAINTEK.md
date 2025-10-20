@@ -268,14 +268,11 @@ graph TB
 ```
 
 **Keterangan Diagram:**
-- 🔴 **TFA300-L (3 unit)**: Sensor long-range 290m untuk early warning
-  - **#1 & #2**: Posisi center bow untuk mendeteksi kapal dari jarak jauh
-  - **#3**: Posisi stern untuk mendeteksi kapal yang mendekat dari belakang
 
-- 🔵 **TF03 (8 unit)**: Sensor standard-range 180m untuk wide coverage
-  - **#1-#4**: Posisi bow dengan sudut melebar untuk coverage depan 180°
-  - **#5 & #6**: Posisi starboard/port untuk deteksi samping
-  - **#7 & #8**: Posisi sudut depan kiri/kanan (tidak ditampilkan) untuk blind spot coverage
+| Tipe Sensor | Fungsi & Range | Posisi | Coverage |
+|-------------|----------------|--------|----------|
+| 🔴 **TFA300-L** (3 unit) | Long-range 290m untuk early warning | **#1 & #2**: Center bow untuk mendeteksi kapal dari jarak jauh<br>**#3**: Stern untuk mendeteksi kapal yang mendekat dari belakang | Early warning zone |
+| 🔵 **TF03** (8 unit) | Standard-range 180m untuk wide coverage | **#1-#4**: Bow dengan sudut melebar untuk coverage depan 180°<br>**#5 & #6**: Starboard/port untuk deteksi samping<br>**#7 & #8**: Sudut depan kiri/kanan untuk blind spot coverage | Wide area coverage |
 
 **Total Coverage**: 360 derajat dengan density tinggi di bagian depan (area kritis collision avoidance)
 
@@ -589,15 +586,9 @@ Total Budget: **Rp 289.900.000**
 | Contingency & Miscellaneous | Rp 29.114.000 | 10,0% |
 | **TOTAL** | **Rp 289.900.000** | **100%** |
 
-**Catatan Budget:**
-- Safety Equipment (PPE/K3) standar industri lengkap: kacamata safety, masker N95, helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, first aid kit maritime, APAR
-- Bea Cukai: Bea Masuk (10%), PPN Impor (11%), PPh Pasal 22 Impor (7,5%)
-- Contingency fund 10% untuk handling unforeseen expenses
-- TIDAK termasuk biaya sewa tugboat (kolaborasi dengan operator lokal melalui Living Lab approach)
+**Catatan Budget:** Safety Equipment (PPE/K3) standar industri lengkap mencakup kacamata safety, masker N95, helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, first aid kit maritime, APAR. Bea Cukai mencakup Bea Masuk (10%), PPN Impor (11%), PPh Pasal 22 Impor (7,5%). Contingency fund 10% dialokasikan untuk handling unforeseen expenses. Budget TIDAK termasuk biaya sewa tugboat karena menggunakan kolaborasi dengan operator lokal melalui Living Lab approach.
 
-**D. Sumber Daya Waktu:**
-- Durasi penelitian: 9 bulan
-- 6 iterasi Agile development dengan sprint 1-2 bulan per iterasi
+**D. Sumber Daya Waktu:** Durasi penelitian 9 bulan dengan 6 iterasi Agile development (sprint 1-2 bulan per iterasi).
 
 ### ACTIVITIES (Aktivitas)
 
