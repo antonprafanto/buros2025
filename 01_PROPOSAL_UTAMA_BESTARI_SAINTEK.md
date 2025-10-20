@@ -134,6 +134,7 @@ Sistem sensor LiDAR anti-collision dirancang dengan arsitektur **three-layer** y
 ### Diagram Arsitektur Sistem
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e1f5fe','primaryTextColor':'#000','primaryBorderColor':'#01579b','lineColor':'#000','secondaryColor':'#fff3e0','tertiaryColor':'#f3e5f5','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#f5f5f5','clusterBkg':'#e1f5fe','clusterBorder':'#01579b','edgeLabelBackground':'#ffffff'}}}%%
 graph TB
     subgraph Layer1["Layer 1: Sensor Input"]
         TF03_1["TF03 Sensor 1
@@ -205,10 +206,10 @@ graph TB
     CONV --> ARD3
     CONV --> RPI
 
-    style Layer1 fill:#e1f5fe
-    style Layer2 fill:#fff3e0
-    style Layer3 fill:#f3e5f5
-    style Power fill:#e8f5e9
+    style Layer1 fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+    style Layer2 fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+    style Layer3 fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000
+    style Power fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000
 ```
 
 ### Layer 1: Sensor Input
@@ -225,6 +226,7 @@ graph TB
 ### Diagram Top View: Konfigurasi 10 Sensor LiDAR pada Tugboat
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','clusterBkg':'#e3f2fd','clusterBorder':'#01579b'}}}%%
 graph TB
     subgraph BOW["BOW - Haluan Depan"]
         TFA1["TFA300-L #1
@@ -257,19 +259,19 @@ graph TB
         290m Rear Detection"]
     end
 
-    style BOW fill:#e3f2fd
-    style SIDES fill:#fff3e0
-    style STERN fill:#fce4ec
-    style TFA1 fill:#ff5252,color:#fff
-    style TFA2 fill:#ff5252,color:#fff
-    style TFA3 fill:#ff5252,color:#fff
-    style TF03_F1 fill:#2196f3,color:#fff
-    style TF03_F2 fill:#2196f3,color:#fff
-    style TF03_F3 fill:#2196f3,color:#fff
-    style TF03_F4 fill:#2196f3,color:#fff
-    style TF03_L fill:#2196f3,color:#fff
-    style TF03_R fill:#2196f3,color:#fff
-    style BODY fill:#90a4ae,color:#fff
+    style BOW fill:#e3f2fd,stroke:#01579b,stroke-width:2px,color:#000
+    style SIDES fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+    style STERN fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    style TFA1 fill:#ff5252,color:#fff,stroke:#c62828,stroke-width:2px
+    style TFA2 fill:#ff5252,color:#fff,stroke:#c62828,stroke-width:2px
+    style TFA3 fill:#ff5252,color:#fff,stroke:#c62828,stroke-width:2px
+    style TF03_F1 fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style TF03_F2 fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style TF03_F3 fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style TF03_F4 fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style TF03_L fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style TF03_R fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style BODY fill:#90a4ae,color:#000,stroke:#37474f,stroke-width:2px
 ```
 
 **Keterangan Diagram:**
@@ -319,6 +321,7 @@ Sistem beroperasi secara otomatis dengan flow sebagai berikut:
 ### Diagram Flowchart Proses Operasional
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','tertiaryColor':'#ffffff','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','nodeTextColor':'#000'}}}%%
 flowchart TD
     START([Engine ON]) --> INIT["System Initialization
     Self-check Sensors"]
@@ -377,12 +380,12 @@ flowchart TD
     SHUTDOWN -->|Yes| END([System Shutdown])
     SHUTDOWN -->|No| SCAN
 
-    style START fill:#4caf50,color:#fff
-    style END fill:#f44336,color:#fff
-    style SAFE fill:#4caf50,color:#fff
-    style WARN fill:#ff9800,color:#fff
-    style DANGER fill:#f44336,color:#fff
-    style ERROR fill:#f44336,color:#fff
+    style START fill:#4caf50,color:#fff,stroke:#2e7d32,stroke-width:2px
+    style END fill:#f44336,color:#fff,stroke:#c62828,stroke-width:2px
+    style SAFE fill:#4caf50,color:#fff,stroke:#2e7d32,stroke-width:2px
+    style WARN fill:#ff9800,color:#fff,stroke:#ef6c00,stroke-width:2px
+    style DANGER fill:#f44336,color:#fff,stroke:#c62828,stroke-width:2px
+    style ERROR fill:#f44336,color:#fff,stroke:#c62828,stroke-width:2px
 ```
 
 1. **System Initialization** (Engine ON):
@@ -416,6 +419,7 @@ Penelitian ini mengadopsi pendekatan **Living Lab** yang menekankan kolaborasi m
 ### Diagram Ekosistem Living Lab
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','clusterBkg':'#f5f5f5','clusterBorder':'#666'}}}%%
 graph LR
     subgraph Core["CORE TEAM"]
         PT["Perguruan Tinggi
@@ -463,15 +467,19 @@ graph LR
     OPR <-->|"Early Adoption
     Feedback"| MAR
 
-    style PT fill:#2196f3,color:#fff
-    style KSOP fill:#4caf50,color:#fff
-    style OPR fill:#ff9800,color:#fff
-    style MAR fill:#9c27b0,color:#fff
+    style PT fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
+    style KSOP fill:#4caf50,color:#fff,stroke:#2e7d32,stroke-width:2px
+    style OPR fill:#ff9800,color:#fff,stroke:#ef6c00,stroke-width:2px
+    style MAR fill:#9c27b0,color:#fff,stroke:#6a1b9a,stroke-width:2px
+    style Core fill:#e3f2fd,stroke:#01579b,stroke-width:2px,color:#000
+    style Gov fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000
+    style Industry fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
 ```
 
 ### Diagram Living Lab Cycle (4 Fase)
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ffffff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','background':'#ffffff','mainBkg':'#ffffff','edgeLabelBackground':'#ffffff','nodeTextColor':'#000'}}}%%
 flowchart LR
     A["1. CO-CREATION
     ━━━━━━━━━
@@ -513,11 +521,11 @@ flowchart LR
     Iterasi 6"| E["Scaling and
     Sustainability"]
 
-    style A fill:#e1f5fe
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
-    style D fill:#e8f5e9
-    style E fill:#4caf50,color:#fff
+    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+    style C fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000
+    style D fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#000
+    style E fill:#4caf50,color:#fff,stroke:#2e7d32,stroke-width:2px
 ```
 
 ### Stakeholder Mapping
