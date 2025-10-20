@@ -554,22 +554,28 @@ INPUT → ACTIVITIES → OUTPUT → OUTCOME → IMPACT
 ### INPUT (Sumber Daya)
 
 **A. Sumber Daya Manusia (28 orang):**
-- 1 Ketua Tim Peneliti (Full-time 9 bulan)
-- 2 Anggota Peneliti (Full-time software engineer, Part-time maritime liaison)
-- 2 Asisten Peneliti (Part-time 9 bulan)
-- 2 Mahasiswa (Part-time 6 bulan)
-- 1 Koordinator KSOP (Advisor 9 bulan)
-- 20 Operator Tugboat (On-demand 2 bulan untuk training dan testing)
+
+| Peran | Jumlah | Komitmen Waktu |
+|-------|--------|----------------|
+| Ketua Tim Peneliti | 1 orang | Penuh waktu 9 bulan |
+| Anggota Peneliti | 2 orang | Penuh waktu (insinyur perangkat lunak), Paruh waktu (penghubung maritim) |
+| Asisten Peneliti | 2 orang | Paruh waktu 9 bulan |
+| Mahasiswa | 2 orang | Paruh waktu 6 bulan |
+| Koordinator KSOP | 1 orang | Penasihat 9 bulan |
+| Operator Tugboat | 20 orang | Sesuai kebutuhan 2 bulan untuk pelatihan dan pengujian |
 
 **B. Sumber Daya Material:**
-- 10 Sensor LiDAR (8x TF03 + 3x TFA300-L)
-- Processing unit (Raspberry Pi 4, Arduino Mega 2560)
-- Display, LED, alarm system
-- Power supply dan battery backup
-- Enclosure waterproof IP67, mounting bracket stainless steel
-- Kabel marine-grade, connector IP68
-- 3D Printer Creality K2 PLUS CFS Combo untuk rapid prototyping
-- Tools profesional (soldering station, oscilloscope, multimeter, dll)
+
+| Kategori | Rincian |
+|----------|---------|
+| Sensor LiDAR | 10 unit (8x TF03 + 3x TFA300-L) |
+| Processing Unit | Raspberry Pi 4, Arduino Mega 2560 |
+| Antarmuka Pengguna | Display, LED, alarm system |
+| Sistem Daya | Power supply dan battery backup |
+| Perangkat Proteksi | Enclosure waterproof IP67, mounting bracket stainless steel |
+| Konektivitas | Kabel marine-grade, connector IP68 |
+| Peralatan Fabrikasi | 3D Printer Creality K2 PLUS CFS Combo untuk pembuatan prototipe cepat |
+| Peralatan Profesional | Soldering station, oscilloscope, multimeter, dan lainnya |
 
 **C. Sumber Daya Finansial:**
 Total Budget: **Rp 289.900.000**
@@ -595,120 +601,45 @@ Total Budget: **Rp 289.900.000**
 
 ### ACTIVITIES (Aktivitas)
 
-**Iterasi 1 (Bulan 1-2): Desain dan Inisiasi**
-- Kick-off meeting, alignment, MoU signing dengan KSOP
-- User research (interview 10 nahkoda, survey 20 operator)
-- System design (hardware architecture, software flowchart, UI/UX mockup)
-- Procurement sensor dan material
-
-**Iterasi 2 (Bulan 3-4): Pengembangan Prototype Awal**
-- Hardware assembly (sensor integration, microcontroller setup, peripheral integration)
-- Software development (~980 lines of code: data acquisition, signal processing, decision logic, display driver, alarm controller, data logger)
-- Indoor testing (10 test cases: basic detection, zone classification, response time, display functionality, data logging, continuous operation)
-
-**Iterasi 3 (Bulan 5): Testing dan Kalibrasi**
-- Outdoor calibration (distance calibration, reflectivity test, angle calibration, ambient light test)
-- Stress testing (durability 24 jam, temperature stress, vibration test, water spray test, EMI test, power fluctuation test)
-- Algorithm optimization (moving average filter, Kalman filter, adaptive threshold, sensor fusion)
-
-**Iterasi 4 (Bulan 6-7): Uji Coba Lapangan Fase 1**
-- Instalasi sistem pada 1 tugboat pilot di Sungai Mahakam
-- Field testing intensif (minimal 100 jam operational data)
-- Data collection: automatic log, operator log, interview, video documentation
-- Weekly monitoring dan maintenance
-
-**Iterasi 5 (Bulan 8): Evaluasi dan Improvement**
-- Evaluation workshop dengan stakeholders
-- Gap analysis (target vs actual performance)
-- Implementation of improvements (auto-brightness, power-saving mode, hydrophobic coating, improved alarm logic)
-- Re-testing dan validation (1 minggu mini field test)
-
-**Iterasi 6 (Bulan 9): Finalisasi dan Diseminasi**
-- Finalisasi dokumentasi (installation manual, user manual, maintenance guide, training module, research report)
-- Mass training program (20 operator, 2 hari, sertifikasi)
-- Publikasi ilmiah (journal submission)
-- Stakeholder seminar dan handover ceremony ke KSOP
+| Iterasi | Periode | Fokus Kegiatan | Rincian |
+|---------|---------|----------------|---------|
+| **1** | Bulan 1-2 | Desain dan Inisiasi | Pertemuan awal, penyelarasan, penandatanganan MoU dengan KSOP; Riset pengguna (wawancara 10 nahkoda, survei 20 operator); Desain sistem (arsitektur perangkat keras, diagram alir perangkat lunak, mockup UI/UX); Pengadaan sensor dan material |
+| **2** | Bulan 3-4 | Pengembangan Prototipe Awal | Perakitan perangkat keras (integrasi sensor, pengaturan mikrokontroler, integrasi periferal); Pengembangan perangkat lunak (~980 baris kode: akuisisi data, pemrosesan sinyal, logika keputusan, pengendali display, pengendali alarm, pencatat data); Pengujian indoor (10 kasus uji: deteksi dasar, klasifikasi zona, waktu respons, fungsi display, pencatatan data, operasi berkelanjutan) |
+| **3** | Bulan 5 | Pengujian dan Kalibrasi | Kalibrasi outdoor (kalibrasi jarak, uji reflektivitas, kalibrasi sudut, uji cahaya ambien); Pengujian stres (daya tahan 24 jam, stres suhu, uji getaran, uji percikan air, uji EMI, uji fluktuasi daya); Optimasi algoritma (filter rata-rata bergerak, filter Kalman, ambang batas adaptif, sensor fusion) |
+| **4** | Bulan 6-7 | Uji Coba Lapangan Fase 1 | Pemasangan sistem pada 1 tugboat percontohan di Sungai Mahakam; Pengujian lapangan intensif (minimal 100 jam data operasional); Pengumpulan data: log otomatis, log operator, wawancara, dokumentasi video; Pemantauan dan pemeliharaan mingguan |
+| **5** | Bulan 8 | Evaluasi dan Perbaikan | Lokakarya evaluasi dengan pemangku kepentingan; Analisis kesenjangan (target vs kinerja aktual); Implementasi perbaikan (kecerahan otomatis, mode hemat daya, lapisan hidrofobik, logika alarm yang ditingkatkan); Re-testing dan validasi (1 minggu mini field test) |
+| **6** | Bulan 9 | Finalisasi dan Diseminasi | Finalisasi dokumentasi (installation manual, user manual, maintenance guide, training module, research report); Mass training program (20 operator, 2 hari, sertifikasi); Publikasi ilmiah (journal submission); Stakeholder seminar dan handover ceremony ke KSOP |
 
 ### OUTPUT (Hasil Langsung)
 
-**Deliverable Teknis:**
-- 1 unit prototype sistem sensor LiDAR anti-collision fully functional dengan 10 sensor
-- Source code dan firmware lengkap dengan dokumentasi
-- Complete documentation package (6 dokumen: installation, user, maintenance, technical spec, training module, research report)
+Hasil langsung penelitian ini mencakup deliverable teknis, data, capacity building, publikasi, dan kolaborasi. **Secara teknis**, penelitian menghasilkan 1 unit prototipe sistem sensor LiDAR anti-collision yang berfungsi penuh dengan 10 sensor, dilengkapi source code dan firmware lengkap dengan dokumentasi, serta paket dokumentasi komprehensif (6 dokumen: installation manual, user manual, maintenance guide, technical specification, training module, research report).
 
-**Deliverable Data:**
-- Minimal 100 jam operational data dari field testing
-- Field test report komprehensif (40-50 halaman)
-- Performance metrics dashboard (accuracy, response time, false positive rate, uptime, user satisfaction)
+**Dari sisi data**, penelitian mengumpulkan minimal 100 jam data operasional dari field testing, menghasilkan field test report komprehensif (40-50 halaman), serta performance metrics dashboard yang mencakup accuracy, response time, false positive rate, uptime, dan user satisfaction.
 
-**Deliverable Capacity Building:**
-- 20 operator tugboat terlatih dengan sertifikat kompetensi
-- Training module yang dapat direplikasi untuk training masa depan
+**Untuk capacity building**, program melatih 20 operator tugboat dengan sertifikat kompetensi dan mengembangkan training module yang dapat direplikasi untuk pelatihan masa depan. **Publikasi ilmiah** mencakup 1 artikel jurnal yang disubmit (target: Sinta 2/3 atau internasional), seminar hasil penelitian dengan minimal 50 peserta stakeholders, serta media coverage dan press release.
 
-**Deliverable Publikasi:**
-- 1 artikel jurnal submitted (target: Sinta 2/3 atau internasional)
-- Seminar hasil penelitian dengan minimal 50 peserta stakeholders
-- Media coverage dan press release
-
-**Deliverable Kolaborasi:**
-- MoU signed dengan KSOP Samarinda
-- Recommendation letter dari KSOP untuk implementasi lanjutan
-- Partnership framework untuk scaling dan sustainability
+**Aspek kolaborasi** ditandai dengan MoU yang ditandatangani dengan KSOP Samarinda, recommendation letter dari KSOP untuk implementasi lanjutan, dan partnership framework untuk scaling dan sustainability.
 
 ### OUTCOME (Perubahan Jangka Pendek - 1-2 Tahun)
 
-**Technical Outcome:**
-- Sistem sensor LiDAR anti-collision terbukti mampu mendeteksi objek dengan **accuracy ≥95%**, **response time ≤0.1 detik**, **false positive rate <5%**, dan **system uptime ≥98%**
-- Teknologi terbukti reliable dalam kondisi ekstrem Sungai Mahakam (kabut, hujan, high humidity, vibration)
-
-**Behavioral Outcome:**
-- **70% operator yang dilatih** mengadopsi penggunaan sistem secara konsisten dalam operasional daily
-- **User satisfaction score ≥8/10** menunjukkan sistem diterima dengan baik oleh end-user
-- **Peningkatan operator confidence level +50%** (self-reported) dalam navigasi kondisi visibilitas rendah
-
-**Safety Outcome:**
-- **Pengurangan near-miss incidents sebesar 40%** pada tugboat yang equipped dengan sistem (comparative analysis dengan baseline data KSOP)
-- **Zero critical system failure** yang membahayakan keselamatan selama periode field testing
-
-**Institutional Outcome:**
-- KSOP Samarinda memberikan **rekomendasi resmi** untuk adopsi sistem pada armada tugboat di wilayah kerja mereka
-- Terbentuknya **Maritime Technology Innovation Hub** di institusi peneliti sebagai center of excellence untuk riset maritim lanjutan
-- **Partnership agreement** jangka panjang antara perguruan tinggi dan KSOP untuk collaborative research berkelanjutan
-
-**Knowledge Outcome:**
-- Publikasi ilmiah di jurnal nasional terakreditasi atau internasional yang berkontribusi pada body of knowledge teknologi keselamatan maritim
-- Disseminasi hasil penelitian melalui seminar dan media massa meningkatkan public awareness tentang pentingnya teknologi keselamatan navigasi
+| Kategori Outcome | Target Capaian |
+|------------------|----------------|
+| **Technical Outcome** | Sistem sensor LiDAR anti-collision terbukti mampu mendeteksi objek dengan **accuracy ≥95%**, **response time ≤0.1 detik**, **false positive rate <5%**, dan **system uptime ≥98%**. Teknologi terbukti reliable dalam kondisi ekstrem Sungai Mahakam (kabut, hujan, high humidity, vibration) |
+| **Behavioral Outcome** | **70% operator yang dilatih** mengadopsi penggunaan sistem secara konsisten dalam operasional daily. **User satisfaction score ≥8/10** menunjukkan sistem diterima dengan baik oleh end-user. **Peningkatan operator confidence level +50%** (self-reported) dalam navigasi kondisi visibilitas rendah |
+| **Safety Outcome** | **Pengurangan near-miss incidents sebesar 40%** pada tugboat yang dilengkapi sistem (analisis komparatif dengan baseline data KSOP). **Zero critical system failure** yang membahayakan keselamatan selama periode field testing |
+| **Institutional Outcome** | KSOP Samarinda memberikan **rekomendasi resmi** untuk adopsi sistem pada armada tugboat di wilayah kerja mereka. Terbentuknya **Maritime Technology Innovation Hub** di institusi peneliti sebagai center of excellence untuk riset maritim lanjutan. **Partnership agreement** jangka panjang antara perguruan tinggi dan KSOP untuk collaborative research berkelanjutan |
+| **Knowledge Outcome** | Publikasi ilmiah di jurnal nasional terakreditasi atau internasional yang berkontribusi pada body of knowledge teknologi keselamatan maritim. Disseminasi hasil penelitian melalui seminar dan media massa meningkatkan public awareness tentang pentingnya teknologi keselamatan navigasi |
 
 ### IMPACT (Dampak Jangka Panjang - 3-5 Tahun)
 
-**Safety Impact:**
-- **Pengurangan actual collision incidents sebesar 30%** di Sungai Mahakam dalam 3 tahun setelah implementasi massal (target: 20+ tugboat equipped)
-- **Pengurangan fatality rate** terkait kecelakaan navigasi tugboat
-- **Pengurangan kerugian ekonomi** akibat kecelakaan (material damage, cargo loss, downtime)
-
-**Economic Impact:**
-- **Penghematan biaya operasional** operator tugboat melalui pengurangan kecelakaan dan downtime
-- **Peningkatan efisiensi logistik** melalui operasional yang lebih aman dan reliable
-- **Penciptaan nilai ekonomi baru** melalui commercialization teknologi (technology licensing, spin-off company) yang dapat menciptakan lapangan kerja di sektor teknologi maritim
-
-**Environmental Impact:**
-- **Pengurangan risiko tumpahan muatan** (batubara, CPO) ke Sungai Mahakam yang dapat mencemari lingkungan
-- **Perlindungan ekosistem sungai** melalui navigasi yang lebih aman dan terkontrol
-
-**Policy Impact:**
-- **Adopsi sistem sebagai standar rekomendasi KSOP** untuk tugboat baru atau renovasi di Sungai Mahakam
-- **Replikasi regulasi** ke KSOP lain di Indonesia untuk sungai-sungai besar (Kapuas, Barito, Musi)
-- **Policy advocacy** untuk mandatory anti-collision system pada tugboat di Indonesia (long-term vision)
-
-**Technological Impact:**
-- **Model replikasi** teknologi LiDAR anti-collision ke aplikasi maritim lainnya (kapal penumpang sungai, ferry, kapal patroli)
-- **Technology transfer** ke industri maritim lokal melalui licensing atau partnership
-- **Peningkatan kapasitas inovasi** institusi peneliti dalam R&D teknologi maritim
-
-**Social Impact:**
-- **Peningkatan keselamatan dan quality of life** awak kapal tugboat (reduced stress, fatigue dari worry tentang collision)
-- **Peningkatan kepercayaan public** terhadap keselamatan transportasi sungai
-- **Role model** kolaborasi multi-stakeholder (academia-government-industry) untuk menyelesaikan masalah sosial melalui inovasi teknologi
+| Kategori Impact | Dampak yang Diharapkan |
+|-----------------|------------------------|
+| **Safety Impact** | **Pengurangan actual collision incidents sebesar 30%** di Sungai Mahakam dalam 3 tahun setelah implementasi massal (target: 20+ tugboat equipped); **Pengurangan fatality rate** terkait kecelakaan navigasi tugboat; **Pengurangan kerugian ekonomi** akibat kecelakaan (material damage, cargo loss, downtime) |
+| **Economic Impact** | **Penghematan biaya operasional** operator tugboat melalui pengurangan kecelakaan dan downtime; **Peningkatan efisiensi logistik** melalui operasional yang lebih aman dan reliable; **Penciptaan nilai ekonomi baru** melalui commercialization teknologi (technology licensing, spin-off company) yang dapat menciptakan lapangan kerja di sektor teknologi maritim |
+| **Environmental Impact** | **Pengurangan risiko tumpahan muatan** (batubara, CPO) ke Sungai Mahakam yang dapat mencemari lingkungan; **Perlindungan ekosistem sungai** melalui navigasi yang lebih aman dan terkontrol |
+| **Policy Impact** | **Adopsi sistem sebagai standar rekomendasi KSOP** untuk tugboat baru atau renovasi di Sungai Mahakam; **Replikasi regulasi** ke KSOP lain di Indonesia untuk sungai-sungai besar (Kapuas, Barito, Musi); **Policy advocacy** untuk mandatory anti-collision system pada tugboat di Indonesia (long-term vision) |
+| **Technological Impact** | **Model replikasi** teknologi LiDAR anti-collision ke aplikasi maritim lainnya (kapal penumpang sungai, ferry, kapal patroli); **Technology transfer** ke industri maritim lokal melalui licensing atau partnership; **Peningkatan kapasitas inovasi** institusi peneliti dalam R&D teknologi maritim |
+| **Social Impact** | **Peningkatan keselamatan dan quality of life** awak kapal tugboat (reduced stress, fatigue dari worry tentang collision); **Peningkatan kepercayaan public** terhadap keselamatan transportasi sungai; **Role model** kolaborasi multi-stakeholder (academia-government-industry) untuk menyelesaikan masalah sosial melalui inovasi teknologi |
 
 ## 4.2 Teori Perubahan (Theory of Change) Pathway
 
@@ -726,40 +657,38 @@ Teori Perubahan penelitian ini menggambarkan pathway logis dari input menuju imp
 **ULTIMATELY CONTRIBUTING TO** transportasi sungai yang lebih aman, efisien, dan sustainable di Indonesia
 
 **Asumsi Kritis:**
-1. Operator tugboat willing to learn dan adopt teknologi baru (mitigasi: incentive, demonstration manfaat nyata, training intensif)
-2. KSOP committed untuk mendukung implementasi jangka panjang (mitigasi: MoU, clear benefit untuk KSOP dalam monitoring dan policy-making)
-3. Sensor LiDAR reliable dalam kondisi ekstrem Sungai Mahakam (mitigasi: extensive stress testing, waterproof enclosure IP67, vibration damper)
-4. Funding tersedia untuk scaling setelah fase pilot (mitigasi: pathway commercialization, seek CSR funding, demonstrate ROI yang jelas)
+
+| Asumsi | Strategi Mitigasi |
+|--------|-------------------|
+| Operator tugboat willing to learn dan adopt teknologi baru | Incentive, demonstration manfaat nyata, training intensif |
+| KSOP committed untuk mendukung implementasi jangka panjang | MoU, clear benefit untuk KSOP dalam monitoring dan policy-making |
+| Sensor LiDAR reliable dalam kondisi ekstrem Sungai Mahakam | Extensive stress testing, waterproof enclosure IP67, vibration damper |
+| Funding tersedia untuk scaling setelah fase pilot | Pathway commercialization, seek CSR funding, demonstrate ROI yang jelas |
 
 ## 4.3 Indikator Keberhasilan
 
-**Indikator Proses:**
-- MoU signed dengan KSOP Samarinda (Target: Bulan 1)
-- User requirement document approved oleh minimal 3 operator senior (Target: Bulan 2)
-- Prototype hardware fully assembled dan functioning (Target: Bulan 4)
-- Field testing dimulai on-schedule (Target: Bulan 6)
-- 20 operator trained dengan post-test score ≥80/100 (Target: Bulan 9)
-
-**Indikator Output:**
-- 1 unit prototype sistem lengkap dengan 10 sensor LiDAR delivered (Target: Bulan 9)
-- Complete documentation package (6 dokumen) finalized (Target: Bulan 9)
-- Minimal 100 jam operational data terkumpul (Target: Bulan 7)
-- 1 artikel jurnal submitted (Target: Bulan 9)
-
-**Indikator Outcome:**
-- Detection accuracy ≥95% (Measurement: field test data analysis)
-- Response time ≤0.1 detik (Measurement: automatic data log)
-- False positive rate <5% (Measurement: operator log + automatic log cross-verification)
-- System uptime ≥98% (Measurement: automatic log)
-- User satisfaction score ≥8/10 (Measurement: survey)
-- Operator confidence level increase +50% (Measurement: pre-post survey)
-- Near-miss incidents reduction target -40% (Measurement: KSOP incident report comparative analysis)
-
-**Indikator Impact (Long-term):**
-- Actual collision reduction -30% dalam 3 tahun (Measurement: KSOP incident report)
-- Minimal 10 tugboat additional equipped dalam 2 tahun setelah penelitian (Measurement: deployment tracking)
-- KSOP recommendation letter obtained (Measurement: official document)
-- Technology commercialization initiated (Measurement: licensing agreement atau spin-off company established)
+| Kategori Indikator | Indikator Spesifik | Target/Metode Pengukuran |
+|--------------------|--------------------|-----------------------|
+| **Proses** | MoU signed dengan KSOP Samarinda | Target: Bulan 1 |
+| | User requirement document approved oleh minimal 3 operator senior | Target: Bulan 2 |
+| | Prototype hardware fully assembled dan functioning | Target: Bulan 4 |
+| | Field testing dimulai on-schedule | Target: Bulan 6 |
+| | 20 operator trained dengan post-test score ≥80/100 | Target: Bulan 9 |
+| **Output** | 1 unit prototype sistem lengkap dengan 10 sensor LiDAR delivered | Target: Bulan 9 |
+| | Complete documentation package (6 dokumen) finalized | Target: Bulan 9 |
+| | Minimal 100 jam operational data terkumpul | Target: Bulan 7 |
+| | 1 artikel jurnal submitted | Target: Bulan 9 |
+| **Outcome** | Detection accuracy ≥95% | Pengukuran: field test data analysis |
+| | Response time ≤0.1 detik | Pengukuran: automatic data log |
+| | False positive rate <5% | Pengukuran: operator log + automatic log cross-verification |
+| | System uptime ≥98% | Pengukuran: automatic log |
+| | User satisfaction score ≥8/10 | Pengukuran: survey |
+| | Operator confidence level increase +50% | Pengukuran: pre-post survey |
+| | Near-miss incidents reduction target -40% | Pengukuran: KSOP incident report comparative analysis |
+| **Impact (Long-term)** | Actual collision reduction -30% dalam 3 tahun | Pengukuran: KSOP incident report |
+| | Minimal 10 tugboat additional equipped dalam 2 tahun setelah penelitian | Pengukuran: deployment tracking |
+| | KSOP recommendation letter obtained | Pengukuran: official document |
+| | Technology commercialization initiated | Pengukuran: licensing agreement atau spin-off company established |
 
 ---
 
@@ -770,11 +699,14 @@ Teori Perubahan penelitian ini menggambarkan pathway logis dari input menuju imp
 Penelitian ini mengadopsi **Agile Development Methodology** dengan 6 sprint/iterasi utama yang memungkinkan **continuous improvement** berdasarkan feedback dan evaluasi di setiap fase.
 
 **Prinsip Agile:**
-1. **Iterative Progress**: Pengembangan bertahap dengan evaluasi berkala
-2. **User-Centric**: Melibatkan operator tugboat sejak awal sebagai co-creator
-3. **Fail Fast, Learn Fast**: Identifikasi masalah sedini mungkin untuk perbaikan cepat
-4. **Flexible but Focused**: Adaptif terhadap feedback namun tetap pada tujuan utama
-5. **Collaborative**: Kerja sama erat antara peneliti, KSOP, dan operator
+
+| Prinsip | Penjelasan |
+|---------|------------|
+| **Iterative Progress** | Pengembangan bertahap dengan evaluasi berkala |
+| **User-Centric** | Melibatkan operator tugboat sejak awal sebagai co-creator |
+| **Fail Fast, Learn Fast** | Identifikasi masalah sedini mungkin untuk perbaikan cepat |
+| **Flexible but Focused** | Adaptif terhadap feedback namun tetap pada tujuan utama |
+| **Collaborative** | Kerja sama erat antara peneliti, KSOP, dan operator |
 
 ## 5.2 Timeline 6 Iterasi (9 Bulan)
 
@@ -949,23 +881,25 @@ FASE:   │ Persiapan  │  Development │ Test │ Field Trial│ Eval │Fin
 ## 5.3 Monitoring & Control Mechanism
 
 **Project Tracking Tools:**
-- **Gantt Chart**: Timeline tracking, milestone management (Update: Weekly)
-- **Issue Tracker**: Bug tracking, task assignment (Update: Daily)
-- **Sprint Board**: Visual task progress - To Do, In Progress, Done (Update: Daily)
-- **Budget Tracker**: Financial monitoring (Update: Bi-weekly)
-- **Risk Register**: Risk identification & mitigation (Update: Bi-weekly)
+
+| Tool | Fungsi | Frekuensi Update |
+|------|--------|------------------|
+| **Gantt Chart** | Timeline tracking, milestone management | Weekly |
+| **Issue Tracker** | Bug tracking, task assignment | Daily |
+| **Sprint Board** | Visual task progress - To Do, In Progress, Done | Daily |
+| **Budget Tracker** | Financial monitoring | Bi-weekly |
+| **Risk Register** | Risk identification & mitigation | Bi-weekly |
 
 **Regular Meetings:**
-- **Daily Stand-up** (Senin-Jumat, 15 menit): Yesterday, Today, Blockers
-- **Sprint Review** (End of each iteration, 2 jam): Demo, Feedback, Approval dengan KSOP dan operator pilot
-- **Sprint Retrospective** (End of each iteration, 1 jam, internal team only): What went well, What to improve
-- **Stakeholder Meeting** (Monthly, 1 jam): Progress update, Issues, Next steps
 
-**Risk Management:**
-- Review risk register setiap 2 minggu
-- Identify new risks yang muncul
-- Update mitigation strategy based on effectiveness
-- Escalation protocol berdasarkan severity (Critical <4 jam, High <24 jam, Medium 2-3 days, Low 1 week)
+| Meeting Type | Frekuensi & Durasi | Agenda & Peserta |
+|--------------|-------------------|------------------|
+| **Daily Stand-up** | Senin-Jumat, 15 menit | Yesterday, Today, Blockers |
+| **Sprint Review** | End of each iteration, 2 jam | Demo, Feedback, Approval dengan KSOP dan operator pilot |
+| **Sprint Retrospective** | End of each iteration, 1 jam | What went well, What to improve (internal team only) |
+| **Stakeholder Meeting** | Monthly, 1 jam | Progress update, Issues, Next steps |
+
+**Risk Management**: Penelitian menerapkan mekanisme risk management yang sistematis dengan review risk register setiap 2 minggu untuk identify new risks yang muncul, update mitigation strategy berdasarkan effectiveness, serta escalation protocol berdasarkan severity (Critical <4 jam, High <24 jam, Medium 2-3 days, Low 1 week).
 
 ---
 
@@ -975,30 +909,13 @@ FASE:   │ Persiapan  │  Development │ Test │ Field Trial│ Eval │Fin
 
 **Total Anggota Tim**: 7 orang + 20 operator tugboat (participants)
 
-### Ketua Tim Peneliti
-- **Peran**: Koordinator dan penanggung jawab keseluruhan proyek, desain arsitektur sistem hardware dan software, supervisi pengembangan prototype, koordinasi dengan KSOP Samarinda, penyusunan laporan akhir dan publikasi ilmiah
-- **Komitmen Waktu**: Full-time (9 bulan)
-- **Bidang Keahlian**: Sistem Embedded & Mikrokontroler, Sensor dan Instrumentasi, Internet of Things (IoT)
-
-### Anggota Peneliti 1 (Software Engineer)
-- **Peran**: Pengembangan firmware dan software sistem, implementasi algoritma deteksi dan decision logic, optimasi performa sistem (response time, accuracy), testing dan debugging software, dokumentasi teknis (source code documentation)
-- **Komitmen Waktu**: Full-time (9 bulan)
-- **Bidang Keahlian**: Software Engineering, Algorithm Development, Data Processing & Analysis
-
-### Anggota Peneliti 2 (Maritime Liaison)
-- **Peran**: Koordinator uji coba lapangan, liaison dengan operator tugboat dan KSOP, analisis kondisi operasional dan user requirement, pengumpulan dan analisis data lapangan, penyusunan training module untuk operator
-- **Komitmen Waktu**: Part-time (6 bulan, intensive pada fase field testing)
-- **Bidang Keahlian**: Teknik Navigasi & Sistem Maritim, Marine Safety Engineering
-
-### Asisten Peneliti / Mahasiswa 1
-- **Peran**: Asisten teknis assembly hardware, data collection dan data entry, testing support (lab testing dan field testing), dokumentasi foto/video kegiatan penelitian, administrasi penelitian
-- **Komitmen Waktu**: Part-time (9 bulan)
-- **Jenjang**: S1 / S2 (Teknik Elektro / Teknik Komputer)
-
-### Asisten Peneliti / Mahasiswa 2
-- **Peran**: Asisten software development, data analysis dan visualisasi, testing dan quality assurance, penyusunan user manual dan dokumentasi, administrasi penelitian
-- **Komitmen Waktu**: Part-time (9 bulan)
-- **Jenjang**: S1 / S2 (Teknik Informatika / Sistem Informasi)
+| Posisi | Peran | Komitmen Waktu | Bidang Keahlian/Jenjang |
+|--------|-------|----------------|------------------------|
+| **Ketua Tim Peneliti** | Koordinator dan penanggung jawab keseluruhan proyek, desain arsitektur sistem hardware dan software, supervisi pengembangan prototype, koordinasi dengan KSOP Samarinda, penyusunan laporan akhir dan publikasi ilmiah | Full-time (9 bulan) | Sistem Embedded & Mikrokontroler, Sensor dan Instrumentasi, Internet of Things (IoT) |
+| **Anggota Peneliti 1** (Software Engineer) | Pengembangan firmware dan software sistem, implementasi algoritma deteksi dan decision logic, optimasi performa sistem (response time, accuracy), testing dan debugging software, dokumentasi teknis (source code documentation) | Full-time (9 bulan) | Software Engineering, Algorithm Development, Data Processing & Analysis |
+| **Anggota Peneliti 2** (Maritime Liaison) | Koordinator uji coba lapangan, liaison dengan operator tugboat dan KSOP, analisis kondisi operasional dan user requirement, pengumpulan dan analisis data lapangan, penyusunan training module untuk operator | Part-time (6 bulan, intensive pada fase field testing) | Teknik Navigasi & Sistem Maritim, Marine Safety Engineering |
+| **Asisten Peneliti / Mahasiswa 1** | Asisten teknis assembly hardware, data collection dan data entry, testing support (lab testing dan field testing), dokumentasi foto/video kegiatan penelitian, administrasi penelitian | Part-time (9 bulan) | S1 / S2 (Teknik Elektro / Teknik Komputer) |
+| **Asisten Peneliti / Mahasiswa 2** | Asisten software development, data analysis dan visualisasi, testing dan quality assurance, penyusunan user manual dan dokumentasi, administrasi penelitian | Part-time (9 bulan) | S1 / S2 (Teknik Informatika / Sistem Informasi) |
 
 ## 6.2 Mitra Penelitian
 
@@ -1013,76 +930,34 @@ Kota Samarinda, Provinsi Kalimantan Timur
 
 ### B. KONTRIBUSI MITRA DALAM PENELITIAN
 
-**1. Akses Lapangan:**
-- Izin operasional uji coba di Sungai Mahakam
-- Akses ke pelabuhan dan dermaga tugboat
-- Fasilitas koordinasi dengan operator tugboat di wilayah kerja KSOP
-
-**2. Data dan Informasi:**
-- Data historis kecelakaan navigasi (collision, near-miss incidents) 3 tahun terakhir (2022-2024)
-- Regulasi dan standar keselamatan maritim sungai
-- Peta jalur navigasi dan identifikasi area high-risk di Sungai Mahakam
-
-**3. Validasi dan Verifikasi:**
-- Validasi kelayakan sistem sesuai standar keselamatan maritim
-- Review dan approval SOP penggunaan sistem
-- Sertifikasi kelayakan operasional (jika diperlukan)
-
-**4. Sosialisasi dan Implementasi:**
-- Fasilitasi pelatihan operator tugboat (venue, koordinasi peserta)
-- Dukungan sosialisasi hasil penelitian ke stakeholders (industri maritim, pemerintah daerah)
-- Rekomendasi untuk implementasi lanjutan dan scaling-up
-
-**5. Dukungan Kelembagaan:**
-- Partisipasi dalam steering committee penelitian (monthly meeting)
-- Dukungan policy advocacy untuk scaling up dan replikasi ke wilayah lain
-- Network dengan industri maritim regional untuk potential commercialization
+| Kategori Kontribusi | Rincian Kontribusi |
+|---------------------|-------------------|
+| **Akses Lapangan** | Izin operasional uji coba di Sungai Mahakam; Akses ke pelabuhan dan dermaga tugboat; Fasilitas koordinasi dengan operator tugboat di wilayah kerja KSOP |
+| **Data dan Informasi** | Data historis kecelakaan navigasi (collision, near-miss incidents) 3 tahun terakhir (2022-2024); Regulasi dan standar keselamatan maritim sungai; Peta jalur navigasi dan identifikasi area high-risk di Sungai Mahakam |
+| **Validasi dan Verifikasi** | Validasi kelayakan sistem sesuai standar keselamatan maritim; Review dan approval SOP penggunaan sistem; Sertifikasi kelayakan operasional (jika diperlukan) |
+| **Sosialisasi dan Implementasi** | Fasilitasi pelatihan operator tugboat (venue, koordinasi peserta); Dukungan sosialisasi hasil penelitian ke stakeholders (industri maritim, pemerintah daerah); Rekomendasi untuk implementasi lanjutan dan scaling-up |
+| **Dukungan Kelembagaan** | Partisipasi dalam steering committee penelitian (monthly meeting); Dukungan policy advocacy untuk scaling up dan replikasi ke wilayah lain; Network dengan industri maritim regional untuk potential commercialization |
 
 ### C. KOMITMEN JANGKA PANJANG MITRA
 
-Mitra berkomitmen untuk mendukung **sustainability** dan **scaling up** hasil penelitian melalui:
-- Rekomendasi adopsi sistem pada armada tugboat di wilayah kerja KSOP Samarinda
-- Integrasi sistem ke dalam program keselamatan pelayaran sungai
-- Dukungan maintenance dan monitoring jangka panjang (koordinasi dengan operator, troubleshooting support)
-- Advokasi kepada Ditjen Perhubungan Laut untuk replikasi ke KSOP lain di Indonesia
+Mitra berkomitmen untuk mendukung **sustainability** dan **scaling up** hasil penelitian melalui rekomendasi adopsi sistem pada armada tugboat di wilayah kerja KSOP Samarinda, integrasi sistem ke dalam program keselamatan pelayaran sungai, dukungan maintenance dan monitoring jangka panjang (koordinasi dengan operator, troubleshooting support), serta advokasi kepada Ditjen Perhubungan Laut untuk replikasi ke KSOP lain di Indonesia.
 
 ### D. OPERATOR TUGBOAT (END USER PARTICIPANTS)
 
 **Jumlah**: 20 operator tugboat (nahkoda dan awak kapal)
 
-**Peran dalam Penelitian:**
-- Participants dalam user research (interview, survey, FGD)
-- Co-creator dalam proses desain user interface dan threshold setting
-- Tester dalam field validation (1 nahkoda pilot untuk intensive field testing, 19 operator lain untuk training dan feedback)
-- Recipients training dan sertifikasi kompetensi
+**Peran dalam Penelitian**: Participants dalam user research (interview, survey, FGD); Co-creator dalam proses desain user interface dan threshold setting; Tester dalam field validation (1 nahkoda pilot untuk intensive field testing, 19 operator lain untuk training dan feedback); Recipients training dan sertifikasi kompetensi.
 
-**Manfaat bagi Operator:**
-- Peningkatan keselamatan navigasi dalam operasional daily
-- Kompetensi baru dalam penggunaan teknologi navigasi modern
-- Sertifikat pelatihan resmi dari peneliti dan KSOP
-- Prioritas akses untuk instalasi sistem pada fase scaling (setelah penelitian)
+**Manfaat bagi Operator**: Peningkatan keselamatan navigasi dalam operasional daily; Kompetensi baru dalam penggunaan teknologi navigasi modern; Sertifikat pelatihan resmi dari peneliti dan KSOP; Prioritas akses untuk instalasi sistem pada fase scaling (setelah penelitian).
 
 ## 6.3 Mekanisme Kolaborasi Multi-Stakeholder
 
-**Steering Committee:**
-- Komposisi: 2 peneliti (Ketua + Anggota), 1 perwakilan KSOP, 1 perwakilan operator tugboat
-- Fungsi: Strategic decision making, conflict resolution, progress monitoring
-- Frekuensi meeting: Monthly (1 jam)
-
-**Working Group:**
-- Komposisi: Seluruh tim peneliti + liaison officer KSOP
-- Fungsi: Operational coordination, technical problem solving, day-to-day execution
-- Frekuensi meeting: Weekly (1 jam)
-
-**User Feedback Loop:**
-- Mekanisme: WhatsApp group dengan operator pilot untuk immediate feedback selama field testing
-- Fungsi: Quick issue reporting, real-time troubleshooting, user experience sharing
-- Response time: <24 jam untuk non-critical issues, <4 jam untuk critical issues
-
-**Formal Communication:**
-- Quarterly report kepada KSOP tentang progress penelitian
-- Presentation di KSOP stakeholder meeting (jika diminta)
-- Final presentation dan handover ceremony di akhir penelitian
+| Mekanisme | Komposisi/Mekanisme | Fungsi | Frekuensi |
+|-----------|---------------------|--------|-----------|
+| **Steering Committee** | 2 peneliti (Ketua + Anggota), 1 perwakilan KSOP, 1 perwakilan operator tugboat | Strategic decision making, conflict resolution, progress monitoring | Monthly (1 jam) |
+| **Working Group** | Seluruh tim peneliti + liaison officer KSOP | Operational coordination, technical problem solving, day-to-day execution | Weekly (1 jam) |
+| **User Feedback Loop** | WhatsApp group dengan operator pilot untuk immediate feedback selama field testing | Quick issue reporting, real-time troubleshooting, user experience sharing | Response time: <24 jam untuk non-critical issues, <4 jam untuk critical issues |
+| **Formal Communication** | Quarterly report kepada KSOP tentang progress penelitian; Presentation di KSOP stakeholder meeting (jika diminta); Final presentation dan handover ceremony | Pelaporan dan transparansi | Quarterly & event-based |
 
 ---
 
