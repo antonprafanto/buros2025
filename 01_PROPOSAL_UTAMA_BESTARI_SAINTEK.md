@@ -37,6 +37,13 @@
 
 **Jumlah kata: 428 kata**
 
+> **📸 VISUAL PENDUKUNG**: Tambahkan gambar ilustrasi kondisi lapangan dan sensor
+> 1. Screenshot sensor/teknologi: `C:\Users\anton\OneDrive\Pictures\Screenshots\Screenshot 2025-10-17 111957.png`
+> 2. Screenshot sensor/teknologi: `C:\Users\anton\OneDrive\Pictures\Screenshots\Screenshot 2025-10-17 111751.png`
+> 3. Screenshot kondisi/analisis: `C:\Users\anton\OneDrive\Pictures\Screenshots\Screenshot 2025-10-17 204359.png`
+> - Copy ke folder `images/` dan beri nama deskriptif (misal: `sensor_lidar_spec.png`, `mahakam_conditions.png`)
+> - Sisipkan di paragraf yang relevan dengan caption yang jelas
+
 Transportasi sungai di Kalimantan Timur, khususnya Sungai Mahakam, menghadapi tantangan keselamatan navigasi yang serius. Dalam tiga tahun terakhir, KSOP Samarinda mencatat rata-rata 15-20 insiden tabrakan dan 30-40 kejadian nyaris tabrakan per tahun yang melibatkan tugboat dan kapal tongkang. Insiden ini menyebabkan kerugian ekonomi miliaran rupiah, mengancam keselamatan jiwa awak kapal, dan mengganggu kelancaran logistik regional yang vital bagi perekonomian Kalimantan Timur.
 
 Akar permasalahan terletak pada kombinasi faktor teknis dan operasional yang kompleks. Pertama, kondisi geografis Sungai Mahakam yang menantang dengan lebar bervariasi 200-500 meter, banyak tikungan tajam, arus kuat mencapai 3-5 knot, serta sedimentasi yang menyebabkan kedalaman tidak merata. Kedua, keterbatasan visibilitas ekstrem akibat kabut pagi hari yang mengurangi jarak pandang hingga di bawah 50 meter, operasional malam hari dengan minim lampu navigasi, dan hujan deras pada musim penghujan. Ketiga, traffic density tinggi di area pelabuhan Samarinda dan titik strategis lainnya, dengan 10-15 tugboat dapat melintas dalam waktu berdekatan di sungai yang relatif sempit.
@@ -45,7 +52,7 @@ Yang paling kritis adalah **ketiadaan sistem deteksi objek otomatis** pada mayor
 
 Solusi teknologi yang ada seperti radar maritim memiliki kendala signifikan. Harga radar berkisar Rp 50-150 juta per unit, memerlukan instalasi dan kalibrasi oleh tenaga ahli, serta biaya pemeliharaan tinggi, menjadikannya tidak layak secara ekonomis untuk mayoritas operator tugboat lokal dengan margin keuntungan yang tipis. AIS memerlukan bahwa semua kapal dilengkapi dengan perangkat yang sama, yang realitasnya tidak terjadi di Sungai Mahakam.
 
-Di sisi lain, teknologi sensor LiDAR telah berkembang pesat dengan harga yang semakin terjangkau dan performa yang terus meningkat. LiDAR menawarkan akurasi tinggi (±10 cm), response time sangat cepat (<0,1 detik), dan jarak deteksi hingga 180-290 meter, memenuhi kebutuhan teknis untuk early warning system pada tugboat. Namun, aplikasi LiDAR untuk keselamatan navigasi tugboat sungai di Indonesia **masih sangat jarang diteliti**, dengan gap riset signifikan dalam hal adaptasi teknologi terhadap kondisi operasional spesifik Indonesia seperti high humidity, water spray, vibration, dan keterbatasan skill operator.
+Di sisi lain, teknologi sensor LiDAR telah berkembang pesat dengan harga yang semakin terjangkau dan performa yang terus meningkat. LiDAR menawarkan akurasi tinggi (±10 cm), waktu respons sangat cepat (<0,1 detik), dan jarak deteksi hingga 180-290 meter, memenuhi kebutuhan teknis untuk sistem peringatan dini pada tugboat. Namun, aplikasi LiDAR untuk keselamatan navigasi tugboat sungai di Indonesia **masih sangat jarang diteliti**, dengan gap riset signifikan dalam hal adaptasi teknologi terhadap kondisi operasional spesifik Indonesia seperti kelembaban tinggi, percikan air, vibration, dan keterbatasan skill operator.
 
 Penelitian ini hadir untuk menjawab kesenjangan tersebut dengan mengembangkan sistem sensor LiDAR anti-collision yang tidak hanya secara teknis mampu, tetapi juga **sesuai konteks** untuk operator tugboat lokal — terjangkau, mudah digunakan, andal dalam kondisi ekstrem Sungai Mahakam, dan didukung oleh ekosistem pemangku kepentingan yang memastikan keberlanjutan jangka panjang.
 
@@ -57,17 +64,17 @@ Penelitian ini hadir untuk menjawab kesenjangan tersebut dengan mengembangkan si
 
 ## 2.1 Tujuan Penelitian
 
-Tujuan umum penelitian ini adalah **mengembangkan dan memvalidasi sistem sensor LiDAR anti-tabrakan untuk meningkatkan keselamatan navigasi tugboat di Sungai Mahakam Samarinda** melalui pendekatan Living Lab yang melibatkan kolaborasi aktif antara peneliti, KSOP Samarinda, dan operator tugboat.
+Tujuan umum penelitian ini adalah **mengembangkan dan memvalidasi sistem sensor LiDAR anti-tabrakan untuk meningkatkan keselamatan navigasi tugboat di Sungai Mahakam Samarinda** melalui pendekatan Laboratorium Hidup (*Living Lab*) yang melibatkan kolaborasi aktif antara peneliti, KSOP Samarinda, dan operator tugboat.
 
 Tujuan khusus penelitian meliputi:
 
 1. **Merancang dan membangun prototipe sistem sensor LiDAR anti-tabrakan** yang mampu mendeteksi objek atau kapal lain dengan jarak efektif 180-290 meter, akurasi ±10 cm, dan waktu respons kurang dari 0,1 detik.
 
-2. **Mengembangkan algoritma deteksi objek dan logika keputusan** yang dapat mengklasifikasikan zona bahaya (aman, waspada, bahaya) dan memberikan peringatan dini melalui display visual dan alarm audio bertingkat dengan tingkat alarm palsu di bawah 5%.
+2. **Mengembangkan algoritma deteksi objek dan logika keputusan** yang dapat mengklasifikasikan zona bahaya (aman, waspada, bahaya) dan memberikan peringatan dini melalui tampilan visual dan alarm audio bertingkat dengan tingkat alarm palsu di bawah 5%.
 
 3. **Melakukan validasi lapangan** sistem dalam kondisi operasional nyata di Sungai Mahakam dengan minimal 100 jam data operasional untuk mengukur kinerja teknis (akurasi, waktu respons, waktu aktif sistem) dan penerimaan pengguna.
 
-4. **Membangun ekosistem Living Lab** yang berkelanjutan dengan melibatkan KSOP Samarinda, operator tugboat, dan industri maritim dalam proses penciptaan bersama, perancangan bersama, implementasi bersama, dan evaluasi bersama.
+4. **Membangun ekosistem Laboratorium Hidup (Living Lab)** yang berkelanjutan dengan melibatkan KSOP Samarinda, operator tugboat, dan industri maritim dalam proses penciptaan bersama, perancangan bersama, implementasi bersama, dan evaluasi bersama.
 
 5. **Menghasilkan kontribusi pengetahuan** melalui publikasi ilmiah, pelatihan operator, dan rekomendasi kebijakan keselamatan maritim sungai kepada otoritas terkait.
 
@@ -127,6 +134,13 @@ Penelitian ini dirancang dengan jalur komersialisasi yang jelas, membuka peluang
 
 ## 3.1 Arsitektur Sistem
 
+> **⚠️ PENTING - Untuk Submission Final**: 
+> Semua diagram Mermaid di bawah ini HARUS diexport menjadi gambar PNG/SVG agar dapat ter-render di platform pendaftaran BESTARI SAINTEK.
+> - Gunakan Mermaid Live Editor: https://mermaid.live/
+> - Export setiap diagram sebagai PNG (resolusi tinggi)
+> - Ganti kode Mermaid dengan gambar: `![Judul Diagram](./images/nama_diagram.png)`
+> - Simpan kode Mermaid asli dalam `<details>` tag untuk dokumentasi
+
 Sistem sensor LiDAR anti-collision dirancang dengan arsitektur **three-layer** yang modular dan scalable:
 
 ### Diagram Arsitektur Sistem
@@ -163,7 +177,7 @@ graph TB
 
     subgraph Layer3["Layer 3: Output/Interface"]
         LCD["LCD 7inch Touchscreen
-        Real-time Display"]
+        Waktu-nyata Display"]
         LED["LED Indicator
         RGB Array"]
         ALARM["Audio Alarm
@@ -276,7 +290,7 @@ graph TB
 
 **Total Coverage**: 360 derajat dengan density tinggi di bagian depan (area kritis collision avoidance)
 
-Sensor mounting menggunakan **stainless steel adjustable bracket** dengan vibration damper untuk mengurangi getaran mesin. Enclosure IP67 waterproof melindungi sensor dari water spray dan high humidity.
+Sensor mounting menggunakan **stainless steel adjustable bracket** dengan vibration damper untuk mengurangi getaran mesin. Enclosure IP67 waterproof melindungi sensor dari percikan air dan kelembaban tinggi.
 
 ### Layer 2: Processing Unit
 
@@ -393,9 +407,11 @@ Tahap keempat adalah pencatatan data, di mana setiap kejadian deteksi dicatat ke
 
 Tahap kelima adalah pengulangan berkelanjutan, di mana sistem kembali ke mode pemindaian dan beroperasi 24/7 selama mesin menyala atau sampai baterai habis (jika menggunakan daya cadangan).
 
-## 3.3 Model Ekosistem Living Lab
+## 3.3 Model Ekosistem Laboratorium Hidup (Living Lab)
 
-Penelitian ini mengadopsi pendekatan **Living Lab** yang menekankan kolaborasi multi-stakeholder dalam seluruh proses penelitian:
+Penelitian ini mengadopsi pendekatan **Laboratorium Hidup** (*Living Lab*) yang menekankan kolaborasi multi-pemangku kepentingan dalam seluruh proses penelitian.
+
+> **Definisi**: Laboratorium Hidup (*Living Lab*) adalah metodologi penelitian inovasi yang melibatkan pengguna akhir dan pemangku kepentingan secara aktif dalam proses pengembangan, di mana penelitian dilakukan dalam konteks operasional nyata untuk memastikan solusi yang dikembangkan sesuai dengan kebutuhan pengguna dan dapat diterapkan secara berkelanjutan.
 
 ### Diagram Ekosistem Living Lab
 
@@ -446,7 +462,7 @@ graph LR
     PT <-->|"Technology Transfer
     Licensing"| MAR
     OPR <-->|"Early Adoption
-    Feedback"| MAR
+    Umpan Balik"| MAR
 
     style PT fill:#2196f3,color:#fff,stroke:#0d47a1,stroke-width:2px
     style KSOP fill:#4caf50,color:#fff,stroke:#2e7d32,stroke-width:2px
@@ -464,7 +480,7 @@ graph LR
 flowchart LR
     A["1. CO-CREATION
     ━━━━━━━━━
-    Workshop Stakeholders
+    Lokakarya Pemangku Kepentingan
     User Research
     Pain Points ID
     ━━━━━━━━━
@@ -482,13 +498,13 @@ flowchart LR
     ━━━━━━━━━
     Instalasi Bersama
     Field Testing
-    Real-time Feedback
+    Waktu-nyata Umpan Balik
     ━━━━━━━━━
     Output: Validated Prototype"]
 
     D["4. CO-EVALUATION
     ━━━━━━━━━
-    Evaluation Workshop
+    Lokakarya Evaluasi
     Data Analysis
     Improvement Plan
     ━━━━━━━━━
@@ -548,6 +564,26 @@ Penelitian ini menggunakan **Logic Model** sebagai kerangka perencanaan dan eval
 INPUT → ACTIVITIES → OUTPUT → OUTCOME → IMPACT
 ```
 
+### Visualisasi Logic Model
+
+```mermaid
+%%{init: {'theme':'neutral', 'themeVariables': { 'darkMode':'false'}}}%%
+graph LR
+    A["📥 INPUT<br/>━━━━━━━<br/>• SDM: 28 orang<br/>• Material: Sensor LiDAR<br/>• Budget: Rp 349,3 juta<br/>• Waktu: 9 bulan"] --> B["⚙️ ACTIVITIES<br/>━━━━━━━<br/>• Desain sistem<br/>• Development prototype<br/>• Testing & kalibrasi<br/>• Uji lapangan<br/>• Pelatihan"]
+    
+    B --> C["📦 OUTPUT<br/>━━━━━━━<br/>• Prototype fungsional<br/>• 100 jam data<br/>• 20 operator terlatih<br/>• Publikasi ilmiah<br/>• Dokumentasi lengkap"]
+    
+    C --> D["📈 OUTCOME<br/>━━━━━━━<br/>• Akurasi ≥95%<br/>• Alarm palsu <5%<br/>• Kepuasan ≥8/10<br/>• Near-miss ↓40%<br/>• Rekomendasi KSOP"]
+    
+    D --> E["🎯 IMPACT<br/>━━━━━━━<br/>• Collision ↓30%<br/>• Adopsi 10+ tugboat<br/>• Standar KSOP<br/>• Komersialisasi<br/>• Lives saved"]
+
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    style B fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    style C fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    style D fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#000
+    style E fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000
+```
+
 ### INPUT (Sumber Daya)
 
 **A. Sumber Daya Manusia (28 orang):**
@@ -568,7 +604,7 @@ INPUT → ACTIVITIES → OUTPUT → OUTCOME → IMPACT
 | Sensor LiDAR | 10 unit (8x TF03 + 3x TFA300-L) |
 | Processing Unit | Raspberry Pi 4, Arduino Mega 2560 |
 | Antarmuka Pengguna | Display, LED, alarm system |
-| Sistem Daya | Power supply dan battery backup |
+| Sistem Daya | Power supply dan baterai cadangan |
 | Perangkat Proteksi | Enclosure waterproof IP67, mounting bracket stainless steel |
 | Konektivitas | Kabel marine-grade, connector IP68 |
 | Peralatan Fabrikasi | 3D Printer Creality K2 PLUS CFS Combo untuk pembuatan prototipe cepat |
@@ -586,7 +622,7 @@ Total Budget: **Rp 349.300.000**
 | Contingency & Miscellaneous | Rp 37.849.000 | 10,8% |
 | **TOTAL** | **Rp 349.300.000** | **100%** |
 
-**Catatan Budget:** Safety Equipment (PPE/K3) standar industri lengkap mencakup kacamata safety, masker N95, helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, first aid kit maritime, APAR. Bea Cukai mencakup Bea Masuk (10%), PPN Impor (11%), PPh Pasal 22 Impor (7,5%). Contingency fund 10% dialokasikan untuk handling unforeseen expenses. Budget TIDAK termasuk biaya sewa tugboat karena menggunakan kolaborasi dengan operator lokal melalui Living Lab approach.
+**Catatan Budget:** Safety Equipment (PPE/K3) standar industri lengkap mencakup kacamata safety, masker N95, helmet ANSI-certified, life jacket USCG-approved, safety shoes steel toe, fall protection harness, first aid kit maritime, APAR. Bea Cukai mencakup Bea Masuk (10%), PPN Impor (11%), PPh Pasal 22 Impor (7,5%). Contingency fund 10% dialokasikan untuk handling unforeseen expenses. Budget TIDAK termasuk biaya sewa tugboat karena menggunakan kolaborasi dengan operator lokal melalui pendekatan Laboratorium Hidup (Living Lab).
 
 **D. Sumber Daya Waktu:** Durasi penelitian 9 bulan dengan 6 iterasi Agile development (sprint 1-2 bulan per iterasi).
 
@@ -598,8 +634,8 @@ Total Budget: **Rp 349.300.000**
 | **2** | Bulan 3-4 | Pengembangan Prototipe Awal | Perakitan perangkat keras (integrasi sensor, pengaturan mikrokontroler, integrasi periferal); Pengembangan perangkat lunak (~980 baris kode: akuisisi data, pemrosesan sinyal, logika keputusan, pengendali display, pengendali alarm, pencatat data); Pengujian indoor (10 kasus uji: deteksi dasar, klasifikasi zona, waktu respons, fungsi display, pencatatan data, operasi berkelanjutan) |
 | **3** | Bulan 5 | Pengujian dan Kalibrasi | Kalibrasi outdoor (kalibrasi jarak, uji reflektivitas, kalibrasi sudut, uji cahaya ambien); Pengujian stres (daya tahan 24 jam, stres suhu, uji getaran, uji percikan air, uji EMI, uji fluktuasi daya); Optimasi algoritma (filter rata-rata bergerak, filter Kalman, ambang batas adaptif, sensor fusion) |
 | **4** | Bulan 6-7 | Uji Coba Lapangan Fase 1 | Pemasangan sistem pada 1 tugboat percontohan di Sungai Mahakam; Pengujian lapangan intensif (minimal 100 jam data operasional); Pengumpulan data: log otomatis, log operator, wawancara, dokumentasi video; Pemantauan dan pemeliharaan mingguan |
-| **5** | Bulan 8 | Evaluasi dan Perbaikan | Lokakarya evaluasi dengan pemangku kepentingan; Analisis kesenjangan (target vs kinerja aktual); Implementasi perbaikan (kecerahan otomatis, mode hemat daya, lapisan hidrofobik, logika alarm yang ditingkatkan); Re-testing dan validasi (1 minggu mini field test) |
-| **6** | Bulan 9 | Finalisasi dan Diseminasi | Finalisasi dokumentasi (installation manual, user manual, maintenance guide, training module, research report); Mass training program (20 operator, 2 hari, sertifikasi); Publikasi ilmiah (journal submission); Stakeholder seminar dan handover ceremony ke KSOP |
+| **5** | Bulan 8 | Evaluasi dan Perbaikan | Lokakarya evaluasi dengan pemangku kepentingan; Analisis kesenjangan (target vs kinerja aktual); Implementasi perbaikan (kecerahan otomatis, mode hemat daya, lapisan hidrofobik, logika alarm yang ditingkatkan); Re-testing dan validasi (1 minggu mini uji lapangan) |
+| **6** | Bulan 9 | Finalisasi dan Diseminasi | Finalisasi dokumentasi (installation manual, user manual, maintenance guide, training module, research report); Mass training program (20 operator, 2 hari, sertifikasi); Publikasi ilmiah (journal submission); Seminar pemangku kepentingan dan handover ceremony ke KSOP |
 
 ### OUTPUT (Hasil Langsung)
 
@@ -630,7 +666,7 @@ Hasil langsung penelitian ini mencakup keluaran teknis, data, pengembangan kapas
 | **Environmental Impact** | **Pengurangan risiko tumpahan muatan** (batubara, CPO) ke Sungai Mahakam yang dapat mencemari lingkungan; **Perlindungan ekosistem sungai** melalui navigasi yang lebih aman dan terkontrol |
 | **Policy Impact** | **Adopsi sistem sebagai standar rekomendasi KSOP** untuk tugboat baru atau renovasi di Sungai Mahakam; **Replikasi regulasi** ke KSOP lain di Indonesia untuk sungai-sungai besar (Kapuas, Barito, Musi); **Policy advocacy** untuk mandatory anti-collision system pada tugboat di Indonesia (long-term vision) |
 | **Technological Impact** | **Model replikasi** teknologi LiDAR anti-collision ke aplikasi maritim lainnya (kapal penumpang sungai, ferry, kapal patroli); **Technology transfer** ke industri maritim lokal melalui licensing atau partnership; **Peningkatan kapasitas inovasi** institusi peneliti dalam R&D teknologi maritim |
-| **Social Impact** | **Peningkatan keselamatan dan quality of life** awak kapal tugboat (reduced stress, fatigue dari worry tentang collision); **Peningkatan kepercayaan public** terhadap keselamatan transportasi sungai; **Role model** kolaborasi multi-stakeholder (academia-government-industry) untuk menyelesaikan masalah sosial melalui inovasi teknologi |
+| **Social Impact** | **Peningkatan keselamatan dan quality of life** awak kapal tugboat (reduced stress, fatigue dari worry tentang collision); **Peningkatan kepercayaan public** terhadap keselamatan transportasi sungai; **Role model** kolaborasi multi-pemangku kepentingan (academia-government-industry) untuk menyelesaikan masalah sosial melalui inovasi teknologi |
 
 ## 4.2 Teori Perubahan (Theory of Change) Pathway
 
@@ -669,7 +705,7 @@ Teori Perubahan penelitian ini menggambarkan pathway logis dari input menuju imp
 | | Complete documentation package (6 dokumen) finalized | Target: Bulan 9 |
 | | Minimal 100 jam operational data terkumpul | Target: Bulan 7 |
 | | 1 artikel jurnal submitted | Target: Bulan 9 |
-| **Outcome** | Detection accuracy ≥95% | Pengukuran: field test data analysis |
+| **Outcome** | Detection accuracy ≥95% | Pengukuran: uji lapangan data analysis |
 | | Response time ≤0.1 detik | Pengukuran: automatic data log |
 | | False positive rate <5% | Pengukuran: operator log + automatic log cross-verification |
 | | System uptime ≥98% | Pengukuran: automatic log |
@@ -687,7 +723,7 @@ Teori Perubahan penelitian ini menggambarkan pathway logis dari input menuju imp
 
 ## 5.1 Overview Agile Development
 
-Penelitian ini mengadopsi **Agile Development Methodology** dengan 6 sprint/iterasi utama yang memungkinkan **continuous improvement** berdasarkan feedback dan evaluasi di setiap fase.
+Penelitian ini mengadopsi **Agile Development Methodology** dengan 6 sprint/iterasi utama yang memungkinkan **continuous improvement** berdasarkan umpan balik dan evaluasi di setiap fase.
 
 **Prinsip Agile:**
 
@@ -696,7 +732,7 @@ Penelitian ini mengadopsi **Agile Development Methodology** dengan 6 sprint/iter
 | **Iterative Progress** | Pengembangan bertahap dengan evaluasi berkala |
 | **User-Centric** | Melibatkan operator tugboat sejak awal sebagai co-creator |
 | **Fail Fast, Learn Fast** | Identifikasi masalah sedini mungkin untuk perbaikan cepat |
-| **Flexible but Focused** | Adaptif terhadap feedback namun tetap pada tujuan utama |
+| **Flexible but Focused** | Adaptif terhadap umpan balik namun tetap pada tujuan utama |
 | **Collaborative** | Kerja sama erat antara peneliti, KSOP, dan operator |
 
 ## 5.2 Timeline 6 Iterasi (9 Bulan)
@@ -812,9 +848,9 @@ FASE:      │ Persiapan  │  Development │ Test │ Field Trial │ Eval │
 | Meeting Type | Frekuensi & Durasi | Agenda & Peserta |
 |--------------|-------------------|------------------|
 | **Daily Stand-up** | Senin-Jumat, 15 menit | Yesterday, Today, Blockers |
-| **Sprint Review** | End of each iteration, 2 jam | Demo, Feedback, Approval dengan KSOP dan operator pilot |
+| **Sprint Review** | End of each iteration, 2 jam | Demo, Umpan Balik, Approval dengan KSOP dan operator pilot |
 | **Sprint Retrospective** | End of each iteration, 1 jam | What went well, What to improve (internal team only) |
-| **Stakeholder Meeting** | Monthly, 1 jam | Progress update, Issues, Next steps |
+| **Pertemuan Pemangku Kepentingan** | Monthly, 1 jam | Progress update, Issues, Next steps |
 
 **Risk Management**: Penelitian menerapkan mekanisme risk management yang sistematis dengan review risk register setiap 2 minggu untuk identify new risks yang muncul, update mitigation strategy berdasarkan effectiveness, serta escalation protocol berdasarkan severity (Critical <4 jam, High <24 jam, Medium 2-3 days, Low 1 week).
 
@@ -884,6 +920,12 @@ Mitra berkomitmen untuk mendukung **keberlanjutan** dan **peningkatan skala** ha
 
 ### A.1 TF03 LiDAR Sensor (Sensor Primer)
 
+> **📸 PENTING**: Tambahkan foto sensor TF03 di sini
+> - Download dari: https://www.dfrobot.com/product-1964.html
+> - Simpan sebagai: `images/tf03_sensor.jpg`
+> - Format: `![TF03 LiDAR Sensor](./images/tf03_sensor.jpg)`
+> - Caption: *Gambar A.1: TF03 LiDAR Sensor (Sumber: DFRobot)*
+
 **Spesifikasi Lengkap:**
 
 | Parameter | Spesifikasi | Keterangan |
@@ -907,14 +949,20 @@ Mitra berkomitmen untuk mendukung **keberlanjutan** dan **peningkatan skala** ha
 
 **Keunggulan untuk Aplikasi Tugboat:**
 - Range 180m cukup untuk early warning di sungai (typical sungai width 200-500m)
-- IP67 waterproof rating tahan terhadap water spray dan high humidity
-- Frame rate 100Hz cukup cepat untuk real-time detection pada tugboat speed 6-8 knot
+- IP67 waterproof rating tahan terhadap percikan air dan kelembaban tinggi
+- Frame rate 100Hz cukup cepat untuk waktu-nyata detection pada tugboat speed 6-8 knot
 - Low power consumption cocok untuk battery-powered system
 - UART/CAN interface mudah integrasi dengan microcontroller
 
 **Link Produk**: [https://www.dfrobot.com/product-1964.html](https://www.dfrobot.com/product-1964.html)
 
 ### A.2 TFA300-L LiDAR Sensor (Sensor Sekunder Long-Range)
+
+> **📸 PENTING**: Tambahkan foto sensor TFA300-L di sini
+> - Download dari: https://www.dfrobot.com/product-2958.html  
+> - Simpan sebagai: `images/tfa300l_sensor.jpg`
+> - Format: `![TFA300-L LiDAR Sensor](./images/tfa300l_sensor.jpg)`
+> - Caption: *Gambar A.2: TFA300-L LiDAR Sensor (Sumber: DFRobot)*
 
 **Spesifikasi Lengkap:**
 
@@ -987,7 +1035,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 | **Installation Complexity** | Medium | High (need expert) | Low | Medium |
 | **Maintenance** | Low | High (annual calibration) | Low | Medium (lens cleaning) |
 
-**Kesimpulan**: LiDAR menawarkan **sweet spot** antara performance (range, accuracy, response time) dan cost-effectiveness untuk aplikasi tugboat sungai.
+**Kesimpulan**: LiDAR menawarkan **sweet spot** antara performance (range, accuracy, waktu respons) dan cost-effectiveness untuk aplikasi tugboat sungai.
 
 ---
 
@@ -1008,7 +1056,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ### B.2 Breakdown Detail Budget
 
-**A. SENSOR DAN KOMPONEN ELEKTRONIK UTAMA** (Rp 96.246.000)
+**B.2.1 SENSOR DAN KOMPONEN ELEKTRONIK UTAMA** (Rp 96.246.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1058,7 +1106,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**B. BEA CUKAI DAN PAJAK IMPOR** (Rp 33.173.000)
+**B.2.2 BEA CUKAI DAN PAJAK IMPOR** (Rp 33.173.000)
 
 | Jenis Biaya | Perhitungan | Jumlah |
 |-------------|-------------|---------|
@@ -1075,7 +1123,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**C. TOOLS, EQUIPMENT & 3D PRINTING** (Rp 44.889.000)
+**B.2.3 TOOLS, EQUIPMENT & 3D PRINTING** (Rp 44.889.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1104,7 +1152,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**D. BIAYA OPERASIONAL LAPANGAN & SAFETY EQUIPMENT** (Rp 65.268.000)
+**B.2.4 BIAYA OPERASIONAL LAPANGAN & SAFETY EQUIPMENT** (Rp 65.268.000)
 
 | Sub-kategori | Item | Qty | Harga Satuan | Subtotal |
 |--------------|------|-----|--------------|----------|
@@ -1146,7 +1194,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 ---
 
-**E. CONTINGENCY DAN MISCELLANEOUS** (Rp 29.114.000)
+**B.2.5 CONTINGENCY DAN MISCELLANEOUS** (Rp 29.114.000)
 
 | Item | Perhitungan/Keterangan | Jumlah |
 |------|------------------------|---------|
@@ -1179,7 +1227,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 4. **Biaya Sewa Tugboat**:
    - TIDAK termasuk dalam budget
-   - Menggunakan pendekatan Living Lab dengan kolaborasi operator lokal
+   - Menggunakan pendekatan Laboratorium Hidup (Living Lab) dengan kolaborasi operator lokal
    - Akses tugboat melalui kerja sama pemangku kepentingan (kontribusi natura dari operator)
 
 5. **Potensi Efisiensi Budget**:
@@ -1217,9 +1265,9 @@ STARBOARD (Kiri)                  PORT (Kanan)
    DOI: 10.1109/AUV.2018.8729814
    Relevansi: Cost-effective implementation LiDAR untuk Unmanned Surface Vehicle (USV) dengan emphasize pada affordability dan reliability.
 
-6. **Shen, X., Pendleton, M., & Scheding, S.** (2016). Real-time 3D LiDAR data processing for maritime navigation. *2016 IEEE International Conference on Robotics and Automation (ICRA)*, 2876-2881.
+6. **Shen, X., Pendleton, M., & Scheding, S.** (2016). Waktu-nyata 3D LiDAR data processing for maritime navigation. *2016 IEEE International Conference on Robotics and Automation (ICRA)*, 2876-2881.
    DOI: 10.1109/ICRA.2016.7487451
-   Relevansi: Real-time processing algorithm untuk LiDAR data dalam maritime environment dengan consideration untuk water surface reflection.
+   Relevansi: Waktu-nyata processing algorithm untuk LiDAR data dalam maritime environment dengan consideration untuk water surface reflection.
 
 7. **Kumar, A., & Singh, M.** (2021). Kalman filter based sensor fusion for autonomous navigation in GPS-denied environment. *IEEE Sensors Journal*, 21(10), 11950-11960.
    DOI: 10.1109/JSEN.2021.3063245
@@ -1280,7 +1328,7 @@ STARBOARD (Kiri)                  PORT (Kanan)
 
 # PENUTUP
 
-Proposal penelitian ini disusun dengan penuh ketelitian dan berdasarkan **studi mendalam** terhadap permasalahan keselamatan navigasi tugboat di Sungai Mahakam Samarinda. Penelitian ini tidak hanya bertujuan menghasilkan **protoype teknologi** yang canggih, tetapi juga memastikan bahwa teknologi tersebut **applicable**, **affordable**, dan **adopted** oleh end-user melalui pendekatan Living Lab yang melibatkan kolaborasi multi-stakeholder.
+Proposal penelitian ini disusun dengan penuh ketelitian dan berdasarkan **studi mendalam** terhadap permasalahan keselamatan navigasi tugboat di Sungai Mahakam Samarinda. Penelitian ini tidak hanya bertujuan menghasilkan **protoype teknologi** yang canggih, tetapi juga memastikan bahwa teknologi tersebut **applicable**, **affordable**, dan **adopted** oleh end-user melalui pendekatan Laboratorium Hidup (Living Lab) yang melibatkan kolaborasi multi-pemangku kepentingan.
 
 Dengan dukungan penuh dari **KSOP Samarinda** sebagai mitra utama, **operator tugboat** sebagai co-creator, dan **BESTARI SAINTEK** sebagai funder, penelitian ini berpotensi memberikan **kontribusi signifikan** bagi peningkatan keselamatan transportasi sungai di Indonesia, pengurangan kerugian ekonomi akibat kecelakaan, dan perlindungan lingkungan Sungai Mahakam dari risiko pencemaran.
 
